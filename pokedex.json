@@ -1,0 +1,3258 @@
+[
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Bulbasaur",
+            "id": "001",
+            "raid_level": 1,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-21T13:00:00Z"
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Ivysaur",
+            "id": "002"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Venusaur",
+            "id": "003"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Charmander",
+            "id": "004",
+            "raid_level": 1,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-21T13:00:00Z"
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Charmeleon",
+            "id": "005"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Charizard",
+            "id": "006"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Squirtle",
+            "id": "007",
+            "raid_level": 1,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-21T13:00:00Z"
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Wartortle",
+            "id": "008"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Blastoise",
+            "id": "009"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Caterpie",
+            "id": "010"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Metapod",
+            "id": "011"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Butterfree",
+            "id": "012"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Weedle",
+            "id": "013"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Kakuna",
+            "id": "014"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Beedrill",
+            "id": "015"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Pidgey",
+            "id": "016"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Pidgeotto",
+            "id": "017"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Pidgeot",
+            "id": "018"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Rattata",
+            "id": "019"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Raticate",
+            "id": "020"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Spearow",
+            "id": "021"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Fearow",
+            "id": "022"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Ekans",
+            "id": "023"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Arbok",
+            "id": "024"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Pikachu",
+            "id": "025"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Raichu",
+            "id": "026"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Sandshrew",
+            "id": "027"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Sandslash",
+            "id": "028"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Nidoran\u2640",
+            "id": "029"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Nidorina",
+            "id": "030"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Nidoqueen",
+            "id": "031"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Nidoran\u2642",
+            "id": "032"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Nidorino",
+            "id": "033"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Nidoking",
+            "id": "034"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Clefairy",
+            "id": "035"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Clefable",
+            "id": "036"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Vulpix",
+            "id": "037"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Ninetales",
+            "id": "038"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Jigglypuff",
+            "id": "039"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Wigglytuff",
+            "id": "040"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Zubat",
+            "id": "041"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Golbat",
+            "id": "042"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Oddish",
+            "id": "043"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Gloom",
+            "id": "044"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Vileplume",
+            "id": "045"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Paras",
+            "id": "046"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Parasect",
+            "id": "047"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Venonat",
+            "id": "048"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Venomoth",
+            "id": "049",
+            "raid_level": 2,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-21T13:00:00Z"
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Diglett",
+            "id": "050"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Dugtrio",
+            "id": "051"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Meowth",
+            "id": "052"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Persian",
+            "id": "053"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Psyduck",
+            "id": "054"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Golduck",
+            "id": "055"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Mankey",
+            "id": "056"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Primeape",
+            "id": "057",
+            "raid_level": 2,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-21T13:00:00Z"
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Growlithe",
+            "id": "058"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Arcanine",
+            "id": "059"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Poliwag",
+            "id": "060"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Poliwhirl",
+            "id": "061"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Poliwrath",
+            "id": "062",
+            "raid_level": 4,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-21T13:00:00Z"
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Abra",
+            "id": "063"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Kadabra",
+            "id": "064"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Alakazam",
+            "id": "065",
+            "raid_level": 3,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-21T13:00:00Z"
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Machop",
+            "id": "066"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Machoke",
+            "id": "067"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Machamp",
+            "id": "068",
+            "raid_level": 3,
+            "perfect_cp": 1650,
+            "perfect_cp_boosted": 2063,
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Bellsprout",
+            "id": "069"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Weepinbell",
+            "id": "070"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Victreebel",
+            "id": "071"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Tentacool",
+            "id": "072"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Tentacruel",
+            "id": "073",
+            "raid_level": 2,
+            "perfect_cp": 1356,
+            "perfect_cp_boosted": 1695
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Geodude",
+            "id": "074"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Graveler",
+            "id": "075"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Golem",
+            "id": "076",
+            "raid_level": 4,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-21T13:00:00Z"
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Ponyta",
+            "id": "077"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Rapidash",
+            "id": "078"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Slowpoke",
+            "id": "079"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Slowbro",
+            "id": "080"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Magnemite",
+            "id": "081"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Magneton",
+            "id": "082"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Farfetch'd",
+            "id": "083"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Doduo",
+            "id": "084"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Dodrio",
+            "id": "085"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Seel",
+            "id": "086"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Dewgong",
+            "id": "087"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Grimer",
+            "id": "088"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Muk",
+            "id": "089",
+            "raid_level": 2,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-21T13:00:00Z"
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Shellder",
+            "id": "090",
+            "raid_level": 1,
+            "perfect_cp": 547,
+            "perfect_cp_boosted": 684,
+            "shiny": true
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Cloyster",
+            "id": "091"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Gastly",
+            "id": "092"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Haunter",
+            "id": "093"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Gengar",
+            "id": "094",
+            "raid_level": 3,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-21T13:00:00Z"
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Onix",
+            "id": "095",
+            "raid_level": 3,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-21T13:00:00Z"
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Drowzee",
+            "id": "096"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Hypno",
+            "id": "097"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Krabby",
+            "id": "098"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Kingler",
+            "id": "099"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Voltorb",
+            "id": "100"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Electrode",
+            "id": "101"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Exeggcute",
+            "id": "102"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Exeggutor",
+            "id": "103",
+            "raid_level": 2,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-21T13:00:00Z"
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Cubone",
+            "id": "104"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Marowak",
+            "id": "105"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Hitmonlee",
+            "id": "106",
+            "raid_level": 3,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-21T13:00:00Z"
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Hitmonchan",
+            "id": "107",
+            "raid_level": 3,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-21T13:00:00Z"
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Lickitung",
+            "id": "108",
+            "raid_level": 2,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-21T13:00:00Z"
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Koffing",
+            "id": "109"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Weezing",
+            "id": "110",
+            "raid_level": 2,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-21T13:00:00Z"
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Rhyhorn",
+            "id": "111"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Rhydon",
+            "id": "112",
+            "raid_level": 4,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-21T13:00:00Z"
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Chansey",
+            "id": "113"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Tangela",
+            "id": "114"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Kangaskhan",
+            "id": "115"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Horsea",
+            "id": "116"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Seadra",
+            "id": "117"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Goldeen",
+            "id": "118"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Seaking",
+            "id": "119"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Staryu",
+            "id": "120"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Starmie",
+            "id": "121",
+            "raid_level": 3,
+            "perfect_cp": 1316,
+            "perfect_cp_boosted": 1645,
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Mr. Mime",
+            "id": "122"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Scyther",
+            "id": "123",
+            "raid_level": 3,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-21T13:00:00Z"
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Jynx",
+            "id": "124",
+            "raid_level": 3,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-21T13:00:00Z"
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Electabuzz",
+            "id": "125"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Magmar",
+            "id": "126"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Pinsir",
+            "id": "127",
+            "raid_level": 3,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-21T13:00:00Z"
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Tauros",
+            "id": "128"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Magikarp",
+            "id": "129",
+            "raid_level": 1,
+            "perfect_cp": 125,
+            "perfect_cp_boosted": 157,
+            "shiny": true
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Gyarados",
+            "id": "130"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Lapras",
+            "id": "131",
+            "raid_level": 4,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-21T13:00:00Z"
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Ditto",
+            "id": "132"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Eevee",
+            "id": "133"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Vaporeon",
+            "id": "134",
+            "raid_level": 3,
+            "perfect_cp": 1804,
+            "perfect_cp_boosted": 2255,
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Jolteon",
+            "id": "135"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Flareon",
+            "id": "136"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Porygon",
+            "id": "137"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Omanyte",
+            "id": "138",
+            "raid_level": 1,
+            "perfect_cp": 768,
+            "perfect_cp_boosted": 961,
+            "shiny": true
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Omastar",
+            "id": "139",
+            "raid_level": 3,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-21T13:00:00Z"
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Kabuto",
+            "id": "140",
+            "raid_level": 1,
+            "perfect_cp": 670,
+            "perfect_cp_boosted": 837,
+            "shiny": true
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Kabutops",
+            "id": "141",
+            "raid_level": 3,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-21T13:00:00Z"
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Aerodactyl",
+            "id": "142",
+            "raid_level": 3,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-21T13:00:00Z"
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Snorlax",
+            "id": "143",
+            "raid_level": 4,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-21T13:00:00Z"
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Articuno",
+            "id": "144",
+            "raid_level": 5,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-21T13:00:00Z"
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Zapdos",
+            "id": "145",
+            "raid_level": 5,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-21T13:00:00Z"
+                    }
+                ]
+            ]
+        }
+    }
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Moltres",
+            "id": "146",
+            "raid_level": 5,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-21T13:00:00Z"
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Dratini",
+            "id": "147"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Dragonair",
+            "id": "148"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Dragonite",
+            "id": "149"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Mewtwo",
+            "id": "150",
+            "raid_level": 5,
+            "ex": true,
+            "perfect_cp": 2275,
+            "perfect_cp_boosted": 2844,
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Mew",
+            "id": "151"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Chikorita",
+            "id": "152"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Bayleef",
+            "id": "153"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Meganium",
+            "id": "154"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Cyndaquil",
+            "id": "155"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Quilava",
+            "id": "156"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Typhlosion",
+            "id": "157"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Totodile",
+            "id": "158"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Croconaw",
+            "id": "159",
+            "raid_level": 2,
+            "perfect_cp": 913,
+            "perfect_cp_boosted": 1142,
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Feraligatr",
+            "id": "160"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Sentret",
+            "id": "161"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Furret",
+            "id": "162"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Hoothoot",
+            "id": "163"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Noctowl",
+            "id": "164"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Ledyba",
+            "id": "165"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Ledian",
+            "id": "166"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Spinarak",
+            "id": "167"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Ariados",
+            "id": "168"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Crobat",
+            "id": "169"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Chinchou",
+            "id": "170"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Lanturn",
+            "id": "171"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Pichu",
+            "id": "172"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Cleffa",
+            "id": "173"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Igglybuff",
+            "id": "174"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Togepi",
+            "id": "175"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Togetic",
+            "id": "176"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Natu",
+            "id": "177"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Xatu",
+            "id": "178"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Mareep",
+            "id": "179"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Flaaffy",
+            "id": "180"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Ampharos",
+            "id": "181"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Bellossom",
+            "id": "182"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Marill",
+            "id": "183"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Azumarill",
+            "id": "184"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Sudowoodo",
+            "id": "185"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Politoed",
+            "id": "186"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Hoppip",
+            "id": "187"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Skiploom",
+            "id": "188"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Jumpluff",
+            "id": "189"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Aipom",
+            "id": "190"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Sunkern",
+            "id": "191"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Sunflora",
+            "id": "192"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Yanma",
+            "id": "193"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Wooper",
+            "id": "194"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Quagsire",
+            "id": "195"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Espeon",
+            "id": "196"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Umbreon",
+            "id": "197"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Murkrow",
+            "id": "198"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Slowking",
+            "id": "199"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Misdreavus",
+            "id": "200",
+            "raid_level": 2,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-21T13:00:00Z"
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Unown",
+            "id": "201"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Wobbuffet",
+            "id": "202"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Girafarig",
+            "id": "203"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Pineco",
+            "id": "204"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Forretress",
+            "id": "205"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Dunsparce",
+            "id": "206"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Gligar",
+            "id": "207"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Steelix",
+            "id": "208"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Snubbull",
+            "id": "209"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Granbull",
+            "id": "210",
+            "raid_level": 3,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-21T13:00:00Z"
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Qwilfish",
+            "id": "211"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Scizor",
+            "id": "212"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Shuckle",
+            "id": "213"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Heracross",
+            "id": "214"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Sneasel",
+            "id": "215",
+            "raid_level": 2,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-21T13:00:00Z"
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Teddiursa",
+            "id": "216"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Ursaring",
+            "id": "217"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Slugma",
+            "id": "218"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Magcargo",
+            "id": "219"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Swinub",
+            "id": "220"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Piloswine",
+            "id": "221",
+            "raid_level": 3,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-21T13:00:00Z"
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Corsola",
+            "id": "222"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Remoraid",
+            "id": "223"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Octillery",
+            "id": "224"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Delibird",
+            "id": "225"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Mantine",
+            "id": "226"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Skarmory",
+            "id": "227"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Houndour",
+            "id": "228"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Houndoom",
+            "id": "229",
+            "raid_level": 4,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-21T13:00:00Z"
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Kingdra",
+            "id": "230"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Phanpy",
+            "id": "231"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Donphan",
+            "id": "232"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Porygon2",
+            "id": "233"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Stantler",
+            "id": "234"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Smeargle",
+            "id": "235"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Tyrogue",
+            "id": "236"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Hitmontop",
+            "id": "237"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Smoochum",
+            "id": "238"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Elekid",
+            "id": "239"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Magby",
+            "id": "240"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Miltank",
+            "id": "241"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Blissey",
+            "id": "242"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Raikou",
+            "id": "243",
+            "raid_level": 5,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-21T13:00:00Z"
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Entei",
+            "id": "244",
+            "raid_level": 5,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-21T13:00:00Z"
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Suicune",
+            "id": "245",
+            "raid_level": 5,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-21T13:00:00Z"
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Larvitar",
+            "id": "246"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Pupitar",
+            "id": "247"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Tyranitar",
+            "id": "248",
+            "raid_level": 4,
+            "perfect_cp": 2097,
+            "perfect_cp_boosted": 2621
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Lugia",
+            "id": "249",
+            "raid_level": 5,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-21T13:00:00Z"
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Ho-Oh",
+            "id": "250",
+            "raid_level": 5,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-21T13:00:00Z"
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Celebi",
+            "id": "251"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Treecko",
+            "id": "252"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Grovyle",
+            "id": "253"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Sceptile",
+            "id": "254"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Torchic",
+            "id": "255"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Combusken",
+            "id": "256",
+            "raid_level": 2,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-21T13:00:00Z"
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Blaziken",
+            "id": "257"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Mudkip",
+            "id": "258"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Marshtomp",
+            "id": "259",
+            "raid_level": 2,
+            "perfect_cp": 924,
+            "perfect_cp_boosted": 1155,
+            "shiny": true
+
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Swampert",
+            "id": "260"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Poochyena",
+            "id": "261"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Mightyena",
+            "id": "262"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Zigzagoon",
+            "id": "263"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Linoone",
+            "id": "264"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Wurmple",
+            "id": "265"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Silcoon",
+            "id": "266"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Beautifly",
+            "id": "267"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Cascoon",
+            "id": "268"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Dustox",
+            "id": "269"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Lotad",
+            "id": "270"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Lombre",
+            "id": "271"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Ludicolo",
+            "id": "272"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Seedot",
+            "id": "273"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Nuzleaf",
+            "id": "274"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Shiftry",
+            "id": "275"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Taillow",
+            "id": "276"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Swellow",
+            "id": "277"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Wingull",
+            "id": "278"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Pelipper",
+            "id": "279"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Ralts",
+            "id": "280"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Kirlia",
+            "id": "281"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Gardevoir",
+            "id": "282"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Surskit",
+            "id": "283"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Masquerain",
+            "id": "284"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Shroomish",
+            "id": "285"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Breloom",
+            "id": "286",
+            "raid_level": 3,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-21T13:00:00Z"
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Slakoth",
+            "id": "287"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Vigoroth",
+            "id": "288"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Slaking",
+            "id": "289"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Nincada",
+            "id": "290"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Ninjask",
+            "id": "291"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Shedinja",
+            "id": "292"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Whismur",
+            "id": "293"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Loudred",
+            "id": "294"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Exploud",
+            "id": "295"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Makuhita",
+            "id": "296"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Hariyama",
+            "id": "297"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Azurill",
+            "id": "298"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Nosepass",
+            "id": "299"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Skitty",
+            "id": "300"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Delcatty",
+            "id": "301"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Sableye",
+            "id": "302",
+            "raid_level": 2,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-21T13:00:00Z"
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Mawile",
+            "id": "303",
+            "raid_level": 2,
+            "perfect_cp": 848,
+            "perfect_cp_boosted": 1060,
+            "shiny": true
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Aron",
+            "id": "304"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Lairon",
+            "id": "305"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Aggron",
+            "id": "306",
+            "raid_level": 4,
+            "perfect_cp": 1716,
+            "perfect_cp_boosted": 2145
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Meditite",
+            "id": "307"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Medicham",
+            "id": "308"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Electrike",
+            "id": "309"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Manectric",
+            "id": "310"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Plusle",
+            "id": "311"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Minun",
+            "id": "312"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Volbeat",
+            "id": "313"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Illumise",
+            "id": "314"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Roselia",
+            "id": "315"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Gulpin",
+            "id": "316"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Swalot",
+            "id": "317"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Carvanha",
+            "id": "318"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Sharpedo",
+            "id": "319",
+            "raid_level": 3,
+            "perfect_cp": 1134,
+            "perfect_cp_boosted": 1418,
+            "shiny": true
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Wailmer",
+            "id": "320",
+            "raid_level": 1,
+            "perfect_cp": 814,
+            "perfect_cp_boosted": 1017,
+            "shiny": true
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Wailord",
+            "id": "321"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Numel",
+            "id": "322"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Camerupt",
+            "id": "323"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Torkoal",
+            "id": "324"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Spoink",
+            "id": "325"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Grumpig",
+            "id": "326"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Spinda",
+            "id": "327"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Trapinch",
+            "id": "328"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Vibrava",
+            "id": "329"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Flygon",
+            "id": "330"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Cacnea",
+            "id": "331"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Cacturne",
+            "id": "332"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Swablu",
+            "id": "333",
+            "raid_level": 1,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-21T13:00:00Z"
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Altaria",
+            "id": "334"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Zangoose",
+            "id": "335"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Seviper",
+            "id": "336"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Lunatone",
+            "id": "337"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Solrock",
+            "id": "338"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Barboach",
+            "id": "339"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Whiscash",
+            "id": "340"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Corphish",
+            "id": "341"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Crawdaunt",
+            "id": "342"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Baltoy",
+            "id": "343"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Claydol",
+            "id": "344"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Lileep",
+            "id": "345"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Cradily",
+            "id": "346"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Anorith",
+            "id": "347"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Armaldo",
+            "id": "348"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Feebas",
+            "id": "349"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Milotic",
+            "id": "350"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Castform",
+            "id": "351"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Kecleon",
+            "id": "352"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Shuppet",
+            "id": "353",
+            "raid_level": 1,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-21T13:00:00Z"
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Banette",
+            "id": "354"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Duskull",
+            "id": "355",
+            "raid_level": 1,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-21T13:00:00Z"
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Dusclops",
+            "id": "356"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Tropius",
+            "id": "357"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Chimecho",
+            "id": "358"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Absol",
+            "id": "359",
+            "raid_level": 4,
+            "perfect_cp": 1303,
+            "perfect_cp_boosted": 1629,
+            "shiny": true
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Wynaut",
+            "id": "360"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Snorunt",
+            "id": "361",
+            "raid_level": 1,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-21T13:00:00Z"
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Glalie",
+            "id": "362"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Spheal",
+            "id": "363"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Sealeo",
+            "id": "364"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Walrein",
+            "id": "365",
+            "raid_level": 4,
+            "perfect_cp": 1489,
+            "perfect_cp_boosted": 1862,
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Clamperl",
+            "id": "366"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Huntail",
+            "id": "367"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Gorebyss",
+            "id": "368"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Relicanth",
+            "id": "369"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Luvdisc",
+            "id": "370"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Bagon",
+            "id": "371"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Shelgon",
+            "id": "372"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Salamence",
+            "id": "373"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Beldum",
+            "id": "374"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Metang",
+            "id": "375"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Metagross",
+            "id": "376"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Regirock",
+            "id": "377"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Regice",
+            "id": "378"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Registeel",
+            "id": "379"
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Latias",
+            "id": "380",
+            "raid_level": 5,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-21T13:00:00Z"
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Latios",
+            "id": "381",
+            "raid_level": 5,
+            "types": ["dragon", "psychic"],
+            "perfect_cp": 2082,
+            "perfect_cp_boosted": 2603,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2018-04-02T00:00:00Z",
+                        "end": "2018-05-08T00:00:00Z"
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Kyogre",
+            "id": "382",
+            "raid_level": 5,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2018-06-07T20:00:00Z",
+                        "end": "2018-06-21T13:00:00Z"
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Groudon",
+            "id": "383",
+            "raid_level": 5,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-21T13:00:00Z"
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "type": "pokemon",
+        "data": {
+            "name": "Rayquaza",
+            "id": "384",
+            "raid_level": 5,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-21T13:00:00Z"
+                    }
+                ]
+            ]
+        }
+    }
+]
