@@ -12,6 +12,8 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm.exc import NoResultFound
 from discord.ext import commands
 from os.path import exists as path_exists
+from geoalchemy2.shape import from_shape
+from shapely.geometry import Point
 import time as time_module
 import discord
 import json
@@ -591,8 +593,7 @@ class Monord:
                     count_gyms += 1
                     try:
                         gym = self.session.query(models.Gym).filter_by(
-                            latitude=entry["data"]["latitude"],
-                            longitude=entry["data"]["longitude"]
+                            location=from_shape(Point(entry["data"]["longitude"], entry["data"]["latitude"]), srid=4326)
                         ).one()
                         if gym.title != entry["data"]["title"]:
                             gym.title = entry["data"]["title"]
