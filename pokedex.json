@@ -325,7 +325,7 @@
     {
         "type": "pokemon",
         "data": {
-            "name": "Nidoran\u2640",
+            "name": "Nidoran Female",
             "id": "029",
             "types": [
                 "Poison"
@@ -356,7 +356,7 @@
     {
         "type": "pokemon",
         "data": {
-            "name": "Nidoran\u2642",
+            "name": "Nidoran Male",
             "id": "032",
             "types": [
                 "Poison"
