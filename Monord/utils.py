@@ -3,6 +3,7 @@ from . import models
 from . import es_models
 from . import config
 from . import timers
+from . import stats
 import pytz
 import asyncio
 import datetime
@@ -12,6 +13,9 @@ from sqlalchemy import func, and_, or_
 from sqlalchemy.orm.exc import NoResultFound
 import json
 import gettext
+import re
+RE_EMOJI = re.compile("\<\:(.+):(\d+)>")
+
 _ = gettext.gettext
 
 HATCH_TIME = datetime.timedelta(minutes=60)
@@ -104,6 +108,7 @@ def format_raid(cog, channel, raid):
     title = "{} (#{})".format(title, raid.id)
     if raid.ex:
         title = "EX: "+title
+
     going = cog.session.query(models.RaidGoing).filter_by(raid=raid)
 
     users = []
@@ -126,15 +131,26 @@ def format_raid(cog, channel, raid):
         image = "https://www.trainerdex.co.uk/egg/{}.png".format(raid.level)
     else:
         image = "https://www.trainerdex.co.uk/pokemon/{}.png".format(raid.pokemon.id)
+        name = raid.pokemon.name
+        if raid.pokemon.shiny:
+            name += ":sparkles:"
         if raid.pokemon.raid_level:
-            description = _("**Pokemon**: {} (Level {})").format(raid.pokemon.name, raid.pokemon.raid_level) + "\n"
+            description = _("**Pokemon**: {} (Level {})").format(name, raid.pokemon.raid_level) + "\n"
         else:
-            description = _("**Pokemon**: {}").format(raid.pokemon.name, raid.pokemon.raid_level) + "\n"
+            description = _("**Pokemon**: {}").format(name, raid.pokemon.raid_level) + "\n"
 
     description += _("**Start Time**: {}").format(format_time(cog, channel, raid.start_time)) + "\n"
     if datetime.datetime.utcnow() < raid.despawn_time - DESPAWN_TIME:
         description += _("**Hatches at**: {}").format(format_time(cog, channel, raid.despawn_time - DESPAWN_TIME)) + "\n"
     description += _("**Despawns at**: {}").format(format_time(cog, channel, raid.despawn_time)) + "\n"
+
+    if raid.pokemon is not None:
+        if None not in [raid.pokemon.perfect_cp, raid.pokemon.perfect_cp_boosted]:
+            description += _("**Perfect CP**: {} / {}").format(raid.pokemon.perfect_cp, raid.pokemon.perfect_cp_boosted) + "\n"
+        if raid.pokemon.types is not None:
+            counters_int = stats.get_counter_types(raid.pokemon.types)
+            counters = stats.from_int(counters_int)
+            description += _("**Weak against**: {}").format(", ".join([_(counter) for counter in counters])) + "\n"
 
     if datetime.datetime.utcnow() < raid.despawn_time - DESPAWN_TIME:
         description += _("**Interested ({})**").format(going.count()+num_extra) + "\n"
@@ -142,7 +158,8 @@ def format_raid(cog, channel, raid):
         description += _("**Going ({})**").format(going.count()+num_extra) + "\n"
 
     description += " | ".join(users) + "\n"
-    description += _("Press the {} below if you want to do this raid").format("todo")
+    emoji_going = config.get(cog.session, "emoji_going", channel)
+    description += _("Press the {} below if you want to do this raid").format(emoji_going)
 
     location = to_shape(raid.gym.location)
     kwargs = {
@@ -179,13 +196,23 @@ def format_raid(cog, channel, raid):
         content = None
     return {"embed": embed, "content": content}
 
+def emoji_from_string(guild, emoji):
+    match = RE_EMOJI.match(emoji)
+    if match:
+        return get_emoji_by_name(guild, match.group(1))
+    return emoji
+
 async def add_raid_reactions(session, message):
-    emoji_going = config.get(session, "emoji_going", message.channel)
-    await message.add_reaction(emoji_going)
-    await message.add_reaction(get_emoji_by_name(message.channel.guild, "raid_add_person"))
-    await message.add_reaction(get_emoji_by_name(message.channel.guild, "raid_remove_person"))
-    await message.add_reaction(get_emoji_by_name(message.channel.guild, "raid_add_time"))
-    await message.add_reaction(get_emoji_by_name(message.channel.guild, "raid_remove_time"))
+    emoji_going, emoji_add_person, emoji_remove_person, emoji_add_time, emoji_remove_time = config.get(
+        session,
+        ['emoji_going', 'emoji_add_person', 'emoji_remove_person', 'emoji_add_time', 'emoji_remove_time'],
+        message.channel
+    )
+    await message.add_reaction(emoji_from_string(message.channel.guild, emoji_going))
+    await message.add_reaction(emoji_from_string(message.channel.guild, emoji_add_person))
+    await message.add_reaction(emoji_from_string(message.channel.guild, emoji_remove_person))
+    await message.add_reaction(emoji_from_string(message.channel.guild, emoji_add_time))
+    await message.add_reaction(emoji_from_string(message.channel.guild, emoji_remove_time))
 
 async def send_raid(cog, channel, raid, extra_content=None):
     embeds = cog.session.query(models.Embed).filter_by(channel_id=channel.id, raid=raid, embed_type=EMBED_RAID)
@@ -232,7 +259,7 @@ async def create_raid(cog, time, pokemon, gym, ex, triggered_by=None, triggered_
 
     if isinstance(pokemon, int):
         pokemons = get_possible_pokemon(cog, gym, pokemon, ex)
-        if len(pokemons) != 0:
+        if len(pokemons) == 1:
             pokemon = pokemons[0]
 
 
@@ -282,6 +309,27 @@ async def create_raid(cog, time, pokemon, gym, ex, triggered_by=None, triggered_
 
     await wait_for_tasks(tasks)
 
+def check_availability(pokemon, level):
+    availability_rules = json.loads(pokemon.availability_rules)
+    if level != pokemon.raid_level:
+        return False
+    if availability_rules is None:
+        if pokemon.raid_level:
+            return True
+        return False
+    for ruleset in availability_rules:
+        available = True
+        for rule in ruleset:
+            if rule["type"] == "time":
+                start_time = datetime.datetime.strptime(rule["start"], "%Y-%m-%dT%H:%M:%SZ")
+                end_time = datetime.datetime.strptime(rule["end"], "%Y-%m-%dT%H:%M:%SZ")
+                if not start_time <= datetime.datetime.utcnow() <= end_time:
+                    available = False
+                    break
+        if available:
+            return True
+    return False
+
 def get_possible_pokemon(cog, gym, level, ex):
     pokemons = cog.session.query(models.Pokemon).filter_by(
         raid_level=level,
@@ -289,22 +337,8 @@ def get_possible_pokemon(cog, gym, level, ex):
     ).order_by("name")
     filtered_pokemons = []
     for pokemon in pokemons:
-        availability_rules = json.loads(pokemon.availability_rules)
-        if availability_rules is None:
+        if check_availability(pokemon, level):
             filtered_pokemons.append(pokemon)
-            continue
-        for ruleset in availability_rules:
-            available = True
-            for rule in ruleset:
-                if rule["type"] == "time":
-                    start_time = datetime.datetime.strptime(rule["start"], "%Y-%m-%dT%H:%M:%SZ")
-                    end_time = datetime.datetime.strptime(rule["end"], "%Y-%m-%dT%H:%M:%SZ")
-                    if not start_time <= datetime.datetime.utcnow() <= end_time:
-                        available = False
-                        break
-            if available:
-                filtered_pokemons.append(pokemon)
-
     return filtered_pokemons
 
 async def send_hatch(cog, channel, raid):
@@ -315,7 +349,7 @@ async def send_hatch(cog, channel, raid):
         content = None
 
     description = _("This raid has hatched, can you see what it is?") + "\n"
-    pokemons = get_possible_pokemon(cog, raid.gym, raid.level)
+    pokemons = get_possible_pokemon(cog, raid.gym, raid.level, raid.ex)
     for i, pokemon in enumerate(pokemons):
         if i > 9:
             break
@@ -333,7 +367,7 @@ async def send_hatch(cog, channel, raid):
     cog.session.add(embed)
     cog.session.commit()
 
-    for i in range(0, min(pokemons.count(), 10)):
+    for i in range(0, min(len(pokemons), 10)):
         await message.add_reaction(str(i)+"\u20E3")
 
 def get_subscription_channels(cog, raid):
@@ -497,4 +531,45 @@ async def unsubscribe_with_message(ctx, member, role_name):
     if unsubscribed:
         await ctx.send(_("You have been unsubscribed from {}").format(role_name))
     else:
-        await ctx.send(_("You already not subscribed to {}").format(role_name))     
+        await ctx.send(_("You already not subscribed to {}").format(role_name))
+
+async def hide_raid(cog, channel, raid, wait):
+    if wait is not None and wait > 0:
+        await asyncio.sleep(wait * 60)
+    embeds = cog.session.query(models.Embed).filter_by(channel_id=channel.id, raid=raid)
+    for embed in embeds:
+        try:
+            message = await channel.get_message(embed.message_id)
+            await message.delete()
+        except discord.errors.NotFound:
+            pass
+    cog.session.query(models.Embed).filter_by(channel_id=channel.id, raid=raid).delete()
+
+async def mark_raid_despawned(cog, raid):
+    raid.despawned = True
+
+    guilds = cog.session.query(models.GuildConfig).filter(
+        models.GuildConfig.channel_id == None,
+        models.GuildConfig.region != None,
+        func.ST_Contains(models.GuildConfig.region, raid.gym.location)
+    )
+    channels = cog.session.query(models.GuildConfig).filter(
+        or_(
+            and_(
+                models.GuildConfig.guild_id.in_([guild.guild_id for guild in guilds]),
+                models.GuildConfig.delete_after_despawn != -1,
+                models.GuildConfig.region == None
+            ),
+            and_(
+                models.GuildConfig.channel_id != None,
+                models.GuildConfig.delete_after_despawn != -1,
+                func.ST_Contains(models.GuildConfig.region, raid.gym.location)
+            )
+        )
+    )
+
+    tasks = []
+    for cfg in channels:
+        channel = cog.bot.get_channel(cfg.channel_id)
+        cog.bot.loop.create_task(hide_raid(cog, channel, raid, cfg.delete_after_despawn))
+    await wait_for_tasks(tasks)

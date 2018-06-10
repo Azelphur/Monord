@@ -5,6 +5,7 @@ from . import models
 from elasticsearch_dsl import Search
 from sqlalchemy.orm.exc import NoResultFound
 from discord.ext import commands
+from geoalchemy2.shape import to_shape
 import re
 import datetime
 import logging
@@ -45,7 +46,17 @@ class Gym(commands.Converter):
                 except elasticsearch.exceptions.NotFoundError:
                     await ctx.send(_("Gym \"{argument}\" not found").format(argument=argument))
                     return None
+
+            region = config.get(ctx.cog.session, "region", ctx.message.channel)
+            if region is None:
+                await ctx.send(_("This guild/channel does not have a region set."))
+                return None
+            region = to_shape(region)
+            points = []
+            for point in region.exterior.coords:
+                points.append({"lat": point[1], "lon": point[0]})
             s = Search(index="gym").query("match", title={'query': argument, 'fuzziness': 2})
+            s = s.filter("geo_polygon", location={"points": points})
             response = s.execute()
             if response.hits.total == 0:
                 await ctx.send(_("Gym \"{argument}\" not found").format(argument=argument))
@@ -156,6 +167,8 @@ class PokemonWithSQL(Pokemon):
     async def convert(self, ctx, argument):
         try:
             es_pokemon = await super(PokemonWithSQL, self).convert(ctx, argument)
+            if es_pokemon is None:
+                return None
             if isinstance(es_pokemon, int):
                 return (es_pokemon, es_pokemon)
             sql_pokemon = ctx.cog.session.query(models.Pokemon).get(es_pokemon.meta["id"])

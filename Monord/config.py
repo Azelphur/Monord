@@ -41,9 +41,15 @@ def region_validator(value, is_channel):
     return from_shape(s, srid=4326)
 
 def emoji_validator(value, is_channel):
-    if not isinstance(value, discord.Emoji):
-        raise ValidationError(_("Must be an emoji"))
+    # This could definitely be better, TODO
     return str(value)
+
+def integer_validator(value, is_channel):
+    try:
+        value = int(value)
+    except ValueError:
+        raise ValidationiError(_("Value must be a number"))
+    return value
 
 SETTINGS = {
     "mirror": {
@@ -62,16 +68,36 @@ SETTINGS = {
         "validators": [channel_only_validator, boolean_validator],
         "help": _("Mention subscription roles in this channel"),
     },
+    "delete_after_despawn": {
+        "validators": [integer_validator],
+        "help": _("Delete raids this many minutes after despawn, set to -1 to not delete"),
+    },
     "emoji_going": {
         "validators": [emoji_validator],
         "help": _("The emoji used for the going button reaction")
+    },
+    "emoji_add_person": {
+        "validators": [emoji_validator],
+        "help": _("The emoji used for the add person button reaction")
+    },
+    "emoji_remove_person": {
+        "validators": [emoji_validator],
+        "help": _("The emoji used for the add person button reaction")
+    },
+    "emoji_add_time": {
+        "validators": [emoji_validator],
+        "help": _("The emoji used for the add time button reaction")
+    },
+    "emoji_remove_time": {
+        "validators": [emoji_validator],
+        "help": _("The emoji used for the remove time button reaction")
     }
 }
 
 async def list_settings(ctx):
     msg = []
     for setting, d in SETTINGS.items():
-        msg.append("**{}** - {}. Default: {}".format(setting, d["help"], d["default"]))
+        msg.append("**{}** - {}.".format(setting, d["help"]))
     embed=discord.Embed(title=_("Settings"), description="\n".join(msg))
     await ctx.send(embed=embed)
 

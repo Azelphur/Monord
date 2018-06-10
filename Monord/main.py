@@ -4,6 +4,8 @@ from . import utils
 from . import converters
 from . import config
 from . import timers
+from . import stats
+from redbot.core import checks
 from elasticsearch import Elasticsearch
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
@@ -58,6 +60,7 @@ class Monord:
         embed = utils.prepare_gym_embed(gym)
         await ctx.send(embed=embed)
 
+    @checks.mod_or_permissions(manage_guild=True)
     @gym.command()
     async def add(self, ctx, latitude: float, longitude: float, ex: bool, *, title: str):
         """
@@ -71,6 +74,7 @@ class Monord:
         gym, gymdoc = utils.add_gym(self.session, latitude, longitude, ex, title)
         await ctx.send("Gym created", embed=utils.prepare_gym_embed(gymdoc))
 
+    @checks.mod_or_permissions(manage_guild=True)
     @gym.group(name="alias")
     async def alias(self, ctx):
         """
@@ -79,6 +83,7 @@ class Monord:
         if ctx.invoked_subcommand == self.alias:
             await self.send_help(ctx)
 
+    @checks.mod_or_permissions(manage_guild=True)
     @alias.command(name="add")
     async def add_alias(self, ctx, title: str, *, gym: converters.GymWithSQL):
         """
@@ -137,6 +142,7 @@ class Monord:
             alias_list.append(alias.title)
         await ctx.send(_("{} has the following aliases: {}").format(sql_gym.title, ", ".join(alias_list)))
 
+    @checks.mod_or_permissions(manage_guild=True)
     @alias.command(name="remove")
     async def remove_alias(self, ctx, title, *, gym: converters.GymWithSQL):
         if gym is None:
@@ -154,6 +160,7 @@ class Monord:
         alias.delete()
         await ctx.send(_("Alias \"{}\" on {} removed").format(title, sql_gym.title))
 
+    @checks.mod_or_permissions(manage_guild=True)
     @gym.command()
     async def remove(self, ctx, *, gym: converters.Gym):
         """
@@ -193,6 +200,11 @@ class Monord:
         es_gym, sql_gym = gym
         es_pokemon, sql_pokemon = pokemon
 
+        if not isinstance(sql_pokemon, int) and utils.check_availability(sql_pokemon, sql_pokemon.raid_level) == False:
+            await ctx.send(_("{} is not currently available in raids").format(sql_pokemon.name))
+            await self.send_help(ctx)
+            return
+
         raid = utils.get_raid_at_time(self.session, sql_gym, time)
         """if raid:
             if not isinstance(sql_pokemon, int) and raid.pokemon != sql_pokemon:
@@ -225,16 +237,6 @@ class Monord:
 
         await utils.create_raid(self, time, 5, sql_gym, True, ctx.message.author, ctx.message.channel)
 
-    async def _hide(self, channel, raid):
-        embeds = self.session.query(models.Embed).filter_by(channel_id=channel.id, raid=raid)
-        for embed in embeds:
-            try:
-                message = await channel.get_message(embed.message_id)
-                await message.delete()
-            except discord.errors.NotFound:
-                pass
-        self.session.query(models.Embed).filter_by(channel_id=channel.id, raid=raid).delete()
-
     @raid.command()
     async def hide(self, ctx, channel: discord.TextChannel, *, raid: converters.Raid):
         """
@@ -246,7 +248,7 @@ class Monord:
         if raid is None:
             await self.send_help(ctx)
             return
-        await self._hide(channel, raid)
+        await utils.hide_raid(channel, raid)
 
     @raid.command()
     async def show(self, ctx, channel: discord.TextChannel, *, raid: converters.Raid):
@@ -361,6 +363,7 @@ class Monord:
         self.session.add(raid)
         await utils.update_raid(self, raid)
 
+    @checks.mod_or_permissions(manage_guild=True)
     @commands.group(name="config")
     async def config(self, ctx):
         """
@@ -397,6 +400,7 @@ class Monord:
         except config.ValidationError as e:
             await ctx.send(e)
 
+    @checks.mod_or_permissions(manage_guild=True)
     @config.command()
     async def channel(self, ctx, key: str = None, *, value: str = None, channel: discord.TextChannel = None):
         """
@@ -410,6 +414,7 @@ class Monord:
             channel = ctx.message.channel
         await self.set_config(ctx, True, key, value, channel)
 
+    @checks.mod_or_permissions(manage_guild=True)
     @config.command()
     async def guild(self, ctx, key: str = None, *, value: str = None):
         """
@@ -558,6 +563,7 @@ class Monord:
             member_names.append(member.display_name)
         await ctx.send(_("You are in a party with: {}").format(", ".join(member_names)))
 
+    @checks.is_owner()
     @commands.command()
     async def loaddata(self, ctx, *, csv_path="pokemongodata.json"):
         """
@@ -611,8 +617,10 @@ class Monord:
                     p.ex = entry["data"].get("ex", False)
                     p.availability_rules = json.dumps(entry["data"].get("availability_rules", None))
                     p.perfect_cp = entry["data"].get("perfect_cp", None)
-                    p.perfect_cp_boosted = entry["data"].get("perfect_cp", None)
+                    p.perfect_cp_boosted = entry["data"].get("perfect_cp_boosted", None)
                     p.shiny = entry["data"].get("shiny", False)
+                    if entry["data"].get("types", None) is not None:
+                        p.types = stats.to_int(entry["data"]["types"])
                     self.session.add(p)
                     es_models.Pokemon(meta={'id': entry["data"]["id"]}, name=entry["data"]["name"]).save()
             self.session.commit()
@@ -639,27 +647,33 @@ class Monord:
             return
 
         if embed.embed_type == utils.EMBED_RAID:
-            if payload.emoji.name == "raid_going":
+            emoji_going, emoji_add_person, emoji_remove_person, emoji_add_time, emoji_remove_time = config.get(
+                self.session,
+                ['emoji_going', 'emoji_add_person', 'emoji_remove_person', 'emoji_add_time', 'emoji_remove_time'],
+                channel
+            )
+
+            if str(payload.emoji) == emoji_going:
                 await utils.toggle_going(self, member, embed.raid, [member])
-            elif payload.emoji.name == "raid_add_person":
+            elif str(payload.emoji) == emoji_add_person:
                 await utils.add_person(self, member, embed.raid, member)
-            elif payload.emoji.name == "raid_remove_person":
+            elif str(payload.emoji) == emoji_remove_person:
                 await utils.add_person(self, member, embed.raid, member, -1)
-            elif payload.emoji.name == "raid_add_time" or payload.emoji.name == "raid_remove_time":
-                if payload.emoji.name == "raid_add_time":
+            elif str(payload.emoji) == emoji_add_time or str(payload.emoji) == emoji_remove_time:
+                if str(payload.emoji) == emoji_add_time:
                     new_start_time = min(embed.raid.despawn_time, embed.raid.start_time + datetime.timedelta(minutes=5))
                 else:
-                    new_start_time = min(embed.raid.despawn_time - utils.DESPAWN_TIME - utils.HATCH_TIME, embed.raid.start_time - datetime.timedelta(minutes=5))
+                    new_start_time = max(embed.raid.despawn_time - utils.DESPAWN_TIME, embed.raid.start_time - datetime.timedelta(minutes=5))
                 if new_start_time == embed.raid.start_time:
                     # No point doing a embed update if nothing is changing.
                     return
                 embed.raid.start_time = new_start_time
                 self.session.add(embed.raid)
         elif embed.embed_type == utils.EMBED_HATCH:
-            pokemons = utils.get_possible_pokemon(self, embed.raid.gym, embed.raid.level)
+            pokemons = utils.get_possible_pokemon(self, embed.raid.gym, embed.raid.level, embed.raid.ex)
             num = int(str(payload.emoji)[0]) if str(payload.emoji)[0].isnumeric() else None
             if num is not None:
-                if num > pokemons.count():
+                if num > len(pokemons):
                     return
                 pokemon = pokemons[num]
                 await utils.hatch_raid(self, embed.raid, pokemon)

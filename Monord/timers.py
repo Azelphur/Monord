@@ -56,10 +56,12 @@ async def raid_timers(cog):
                 await utils.notify_hatch(cog, raid)
             else:
                 raid.despawned = True
+                await utils.mark_raid_despawned(cog, raid)
             cog.session.add(raid)
             cog.session.commit()
         except Exception as e:
             logger.exception("Error in raid_timers")
+            await asyncio.sleep(5)
 
 def reschedule(cog):
     if cog.raid_timers_task is None or cog.raid_timers_task.done():
