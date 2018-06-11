@@ -255,7 +255,7 @@ class Monord:
         if raid is None:
             await self.send_help(ctx)
             return
-        await utils.hide_raid(channel, raid)
+        await utils.hide_raid(self, channel, raid)
 
     @raid.command()
     async def show(self, ctx, channel: discord.TextChannel, *, raid: converters.Raid):
