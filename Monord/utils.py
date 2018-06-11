@@ -530,7 +530,7 @@ async def unsubscribe_with_message(ctx, member, role_name):
     if unsubscribed:
         await ctx.send(_("You have been unsubscribed from {}").format(role_name))
     else:
-        await ctx.send(_("You already not subscribed to {}").format(role_name))
+        await ctx.send(_("You are not subscribed to {}").format(role_name))
 
 async def hide_raid(cog, channel, raid, wait=0):
     if wait is not None and wait > 0:
