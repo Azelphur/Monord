@@ -67,7 +67,7 @@ def get_display_name(channel, member, extra=0):
         elif role.name.lower() == "valor":
             team_emoji = get_emoji_by_name(channel.guild, "valor")
             break
-        elif role.name == "instinct":
+        elif role.name.lower() == "instinct":
             team_emoji = get_emoji_by_name(channel.guild, "instinct")
             break
 
