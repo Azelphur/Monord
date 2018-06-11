@@ -378,7 +378,7 @@ class Monord:
         if ctx.invoked_subcommand is None:
             await self.send_help(ctx)
 
-    async def set_config(self, ctx, is_channel, key: str = None, value: str = None, channel: discord.TextChannel = None):
+    async def set_config(self, ctx, is_channel, key: str = None, value: str = None, channel: discord.TextChannel):
         if isinstance(ctx.message.channel, discord.abc.PrivateChannel):
             await ctx.send(_("This command is not available in DMs."))
             return
@@ -396,10 +396,10 @@ class Monord:
                 return
         try:
             if is_channel:
-                config.set_channel_config(self.session, ctx.message.channel, key, value)
+                config.set_channel_config(self.session, channel, key, value)
                 await ctx.send(_("Setting {} to \"{}\" on {}").format(key, value, channel.mention))
             else:
-                config.set_guild_config(self.session, ctx.message.channel.guild, key, value)
+                config.set_guild_config(self.session, channel.guild, key, value)
                 await ctx.send(_("Setting {} to \"{}\"").format(key, value))
         except config.InvalidSettingError:
             await ctx.send(_("{} is not a valid setting").format(key))
