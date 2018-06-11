@@ -6,6 +6,7 @@ from elasticsearch_dsl import Search
 from sqlalchemy.orm.exc import NoResultFound
 from discord.ext import commands
 from geoalchemy2.shape import to_shape
+import elasticsearch
 import re
 import datetime
 import logging
@@ -74,7 +75,7 @@ class GymWithSQL(Gym):
             es_gym = await super(GymWithSQL, self).convert(ctx, argument)
             if es_gym is None:
                 return None
-            sql_gym = ctx.cog.session.query(models.Gym).get(es_gym.meta["id"])
+            sql_gym = ctx.cog.session.query(models.Gym).get(es_gym.gym_id)
             if sql_gym is None:
                 await ctx.send(_("Gym \"{argument}\" not found").format(argument=argument))
                 return None
