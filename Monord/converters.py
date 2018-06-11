@@ -33,16 +33,16 @@ class Gym(commands.Converter):
         try:
             if not argument.isnumeric():
                 try:
-                    sql_gym = ctx.cog.session.query(models.GymAlias).filter_by(
+                    alias = ctx.cog.session.query(models.GymAlias).filter_by(
                         guild_id=ctx.message.channel.guild.id,
                         title=argument.lower()
                     ).one()
-                    argument = str(sql_gym.id)
+                    argument = str(alias.gym.id)
                 except NoResultFound:
                     pass
             if argument.isnumeric():
                 try:
-                    gym = es_models.Gym.get(id=argument)
+                    gym = es_models.Gym.get(id=int(argument))
                     return gym
                 except elasticsearch.exceptions.NotFoundError:
                     await ctx.send(_("Gym \"{argument}\" not found").format(argument=argument))
