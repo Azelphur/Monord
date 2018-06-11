@@ -532,7 +532,7 @@ async def unsubscribe_with_message(ctx, member, role_name):
     else:
         await ctx.send(_("You already not subscribed to {}").format(role_name))
 
-async def hide_raid(cog, channel, raid, wait):
+async def hide_raid(cog, channel, raid, wait=0):
     if wait is not None and wait > 0:
         await asyncio.sleep(wait * 60)
     embeds = cog.session.query(models.Embed).filter_by(channel_id=channel.id, raid=raid)
