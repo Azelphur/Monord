@@ -213,14 +213,14 @@ class Monord:
             return
 
         raid = utils.get_raid_at_time(self.session, sql_gym, time)
-        """if raid:
+        if raid:
             if not isinstance(sql_pokemon, int) and raid.pokemon != sql_pokemon:
                 raid.pokemon = sql_pokemon
                 self.session.add(raid)
                 self.session.commit()
                 return
             await ctx.send(_("That raid has already been reported"))
-            return"""
+            return
 
         await utils.create_raid(self, time, sql_pokemon, sql_gym, False, ctx.message.author, ctx.message.channel)
 
