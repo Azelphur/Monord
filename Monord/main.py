@@ -102,6 +102,8 @@ class Monord:
 
         es_gym, sql_gym = gym
 
+        title = title.lower()
+
         alias = self.session.query(models.GymAlias).filter_by(
             title=title,
             gym=sql_gym,
@@ -151,6 +153,9 @@ class Monord:
             await self.send_help(ctx)
             return
         es_gym, sql_gym = gym
+
+        title = title.lower()
+
         alias = self.session.query(models.GymAlias).filter_by(
             title=title,
             gym=sql_gym,
