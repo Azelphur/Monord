@@ -31,15 +31,14 @@ def prepare_gym_embed(gym):
     embed.set_footer(text="Gym ID {}.".format(gym.meta["id"]))
     return embed
 
-def add_gym(session, latitude, longitude, ex, title, commit=True):
+def add_gym(session, latitude, longitude, ex, title):
     gym = models.Gym(
         title=title,
         location=from_shape(Point(longitude, latitude), srid=4326),
         ex=ex,
     )
     session.add(gym)
-    if commit:
-        session.commit()
+    session.commit()
 
     gymdoc = es_models.Gym(
         meta={'id': gym.id},
