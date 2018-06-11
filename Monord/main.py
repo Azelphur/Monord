@@ -378,7 +378,7 @@ class Monord:
         if ctx.invoked_subcommand is None:
             await self.send_help(ctx)
 
-    async def set_config(self, ctx, is_channel, key: str = None, value: str = None, channel: discord.TextChannel):
+    async def set_config(self, ctx, is_channel, key: str = None, value: str = None, channel: discord.TextChannel = None):
         if isinstance(ctx.message.channel, discord.abc.PrivateChannel):
             await ctx.send(_("This command is not available in DMs."))
             return
