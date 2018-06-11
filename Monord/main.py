@@ -263,7 +263,6 @@ class Monord:
         if raid is None:
             await self.send_help(ctx)
             return
-        await self._hide(channel, raid)
         await utils.send_raid(self, channel, raid)
 
     @raid.command(name="gym")
@@ -605,7 +604,6 @@ class Monord:
                             entry["data"]["longitude"],
                             entry["data"].get("ex", False),
                             entry["data"]["title"],
-                            False
                         )
                 elif entry["type"] == "pokemon":
                     count_pokemon += 1
