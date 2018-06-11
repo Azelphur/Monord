@@ -404,7 +404,7 @@ class Monord:
 
     @checks.mod_or_permissions(manage_guild=True)
     @config.command()
-    async def channel(self, ctx, key: str = None, *, value: str = None, channel: discord.TextChannel = None):
+    async def channel(self, ctx, key: str = None, value: str = None, channel: discord.TextChannel = None):
         """
             Sets config setting for a channel
             
