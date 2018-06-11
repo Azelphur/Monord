@@ -557,6 +557,14 @@ class Monord:
         self.session.expire_all()
         await ctx.send(_("Member(s) were removed from your party"))
 
+    @party.command(name="disband")
+    async def party_disband(self, ctx):
+        self.session.query(models.Party).filter(
+            models.Party.creator_user_id == ctx.message.author.id
+        ).delete(synchronize_session=False)
+        self.session.expire_all()
+        await ctx.send(_("Party disbanded"))
+
     @party.command(name="list")
     async def party_list(self, ctx):
         party_members = self.session.query(models.Party).filter_by(creator_user_id=ctx.message.author.id)
