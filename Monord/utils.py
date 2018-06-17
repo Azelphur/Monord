@@ -572,7 +572,7 @@ async def mark_raid_despawned(cog, raid):
     for guild in cog.bot.guilds:
         role = find_role(channel.guild, _("Raid {} (#{})").format(raid.gym.title, raid.id))
         if role is not None:
-            tasks.append(role.delete(reason=_("Removed by Monord"))
+            tasks.append(role.delete(reason=_("Removed by Monord")))
 
     for cfg in channels:
         channel = cog.bot.get_channel(cfg.channel_id)

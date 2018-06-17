@@ -155,9 +155,6 @@ class Monord:
             
             <gym> - The title or ID of the gym
         """
-        if gym is None:
-            await self.send_help(ctx)
-            return
         title = gym.title
         self.session.query(models.Gym).filter_by(id=gym.meta["id"]).delete()
         es_models.Gym.get(id=gym.meta["id"]).delete()
@@ -186,7 +183,6 @@ class Monord:
 
         if not isinstance(sql_pokemon, int) and utils.check_availability(sql_pokemon, sql_pokemon.raid_level) == False:
             await ctx.send(_("{} is not currently available in raids").format(sql_pokemon.name))
-            await self.send_help(ctx)
             return
 
         raid = utils.get_raid_at_time(self.session, sql_gym, time)
@@ -247,9 +243,6 @@ class Monord:
             <channel> Channel to hide the raid from.
             <gym> Either the title of a gym, or a raid ID.
         """
-        if None in [raid, gym]:
-            await self.send_help(ctx)
-            return
         es_gym, sql_gym = gym
         raid.gym = sql_gym
         self.session.add(raid)
@@ -270,8 +263,6 @@ class Monord:
         """
             Add people as going to a raid
         """
-        if None in [raid, members]:
-            await self.send_help(ctx)
         await utils.add_raid_going(self, ctx.message.author, raid, members)
         await utils.update_raid(self, raid)
         await ctx.tick()
@@ -293,9 +284,6 @@ class Monord:
             <time> - Can be minutes (in the future), or a HH:MM time
             <raid> Either the title of a gym, or a raid ID
         """
-        if None in [time, raid]:
-            await self.send_help(ctx)
-            return
         despawn_time = pytz.utc.localize(raid.despawn_time)
         if time > despawn_time:
             await ctx.send(_("You can't set the start time to after the raid despawns"))
@@ -316,9 +304,6 @@ class Monord:
             <time> - Can be minutes (in the future), or a HH:MM time
             <raid> Either the title of a gym, or a raid ID
         """
-        if None in [time, raid]:
-            await self.send_help(ctx)
-            return
         despawn_time = pytz.utc.localize(raid.despawn_time)
         raid.despawn_time = time
         self.session.add(raid)
@@ -334,10 +319,6 @@ class Monord:
             <pokemon> - The name of the pokemon
             <raid> Either the title of a gym, or a raid ID
         """
-        if None in [pokemon, raid]:
-            await self.send_help(ctx)
-            return
-
         es_pokemon, sql_pokemon = pokemon
         raid.pokemon = sql_pokemon
         self.session.add(raid)
@@ -443,7 +424,7 @@ class Monord:
             Unsubscribe from notifications
         """
         if ctx.invoked_subcommand is None:
-            await self.send_help(ctx)
+            await ctx.send_help()
 
     @unsubscribe.group(name="pokemon")
     async def pokemon_unsubscribe(self, ctx, pokemon: converters.Pokemon):
@@ -466,8 +447,6 @@ class Monord:
         """
             Unsubscribe from notifications for raids on a gym
         """
-        if gym is None:
-            await self.send_help(ctx)
         await utils.unsubscribe_with_message(ctx, ctx.message.author, gym.title)
 
     @commands.group()
@@ -492,9 +471,6 @@ class Monord:
 
     @party.command(name="add")
     async def party_add(self, ctx, *, members: converters.MembersWithExtra):
-        if members is None:
-            await self.send_help(ctx)
-            return
         for member, extra in members:
             if self.session.query(models.Party).filter_by(creator_user_id=ctx.message.author.id, user_id=member.id).count() > 0:
                 continue
@@ -510,10 +486,6 @@ class Monord:
 
     @party.command(name="remove")
     async def party_remove(self, ctx, *members: discord.Member):
-        if members is None:
-            await self.send_help(ctx)
-            return
-
         self.session.query(models.Party).filter(
             models.Party.creator_user_id == ctx.message.author.id,
             models.Party.user_id.in_([member.id for member in members])
