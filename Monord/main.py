@@ -5,12 +5,11 @@ from . import converters
 from . import config
 from . import timers
 from . import stats
-from redbot.core import checks
+from redbot.core import checks, commands
 from elasticsearch import Elasticsearch
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 from sqlalchemy.orm.exc import NoResultFound
-from discord.ext import commands
 from os.path import exists as path_exists
 from geoalchemy2.shape import from_shape
 from shapely.geometry import Point
@@ -36,18 +35,13 @@ class Monord:
         self.time_stale = False
         timers.reschedule(self)
 
-    async def send_help(self, ctx, message=None):
-        embeds = await ctx.bot.formatter.format_help_for(ctx, ctx.command)
-        for embed in embeds:
-            await ctx.send(message, embed=embed)
-
     @commands.group(name="gym")
     async def gym(self, ctx):
         """
             Add, find and remove gyms
         """
         if ctx.invoked_subcommand is None:
-            await self.send_help(ctx)
+            await ctx.send_help()
 
     @gym.command()
     async def find(self, ctx, *, gym: converters.Gym):
@@ -56,9 +50,6 @@ class Monord:
             
             <gym> - The title or ID of the gym
         """
-        if gym is None:
-            await self.send_help(ctx)
-            return
         embed = utils.prepare_gym_embed(gym)
         await ctx.send(embed=embed)
 
@@ -83,7 +74,7 @@ class Monord:
             Add, find and remove gyms
         """
         if ctx.invoked_subcommand == self.alias:
-            await self.send_help(ctx)
+            await ctx.send_help()
 
     @checks.mod_or_permissions(manage_guild=True)
     @alias.command(name="add")
@@ -96,10 +87,6 @@ class Monord:
             <ex> - Is the gym an EX location (yes/no)
             <title> - The title of the gym
         """
-        if gym is None:
-            await self.send_help(ctx)
-            return
-
         es_gym, sql_gym = gym
 
         title = title.lower()
@@ -129,10 +116,6 @@ class Monord:
             
             <title> - The title of the gym
         """
-        if gym is None:
-            await self.send_help(ctx)
-            return
-
         es_gym, sql_gym = gym
 
         aliases = self.session.query(models.GymAlias).filter_by(
@@ -149,9 +132,6 @@ class Monord:
     @checks.mod_or_permissions(manage_guild=True)
     @alias.command(name="remove")
     async def remove_alias(self, ctx, title, *, gym: converters.GymWithSQL):
-        if gym is None:
-            await self.send_help(ctx)
-            return
         es_gym, sql_gym = gym
 
         title = title.lower()
@@ -178,9 +158,10 @@ class Monord:
         if gym is None:
             await self.send_help(ctx)
             return
+        title = gym.title
         self.session.query(models.Gym).filter_by(id=gym.meta["id"]).delete()
         es_models.Gym.get(id=gym.meta["id"]).delete()
-        await ctx.send("Gym removed")
+        await ctx.send(_("Gym \"{}\" removed").format(title))
 
     @commands.group(name="raid")
     async def raid(self, ctx):
@@ -189,7 +170,7 @@ class Monord:
         """
 
         if ctx.invoked_subcommand is None:
-            await self.send_help(ctx)
+            await ctx.send_help()
 
     @raid.command()
     async def report(self, ctx, time: converters.Time, pokemon: converters.PokemonWithSQL, *, gym: converters.GymWithSQL):
@@ -200,10 +181,6 @@ class Monord:
             <pokemon> Either the name of the pokemon, or the eggs level
             <gym> The title of the gym
         """
-        if None in [time, pokemon, gym]:
-            await self.send_help(ctx)
-            return
-
         es_gym, sql_gym = gym
         es_pokemon, sql_pokemon = pokemon
 
@@ -232,9 +209,6 @@ class Monord:
             <time> Start time of the EX raid in YYYY-MM-DD.HH:MM format
             <gym> The title of the gym
         """
-        if None in [time, gym]:
-            await self.send_help(ctx)
-            return
         es_gym, sql_gym = gym
 
         raid = utils.get_raid_at_time(self.session, sql_gym, time)
@@ -252,10 +226,8 @@ class Monord:
             <channel> Channel to hide the raid from.
             <raid> Either the title of a gym, or a raid ID.
         """
-        if raid is None:
-            await self.send_help(ctx)
-            return
         await utils.hide_raid(self, channel, raid)
+        await ctx.tick()
 
     @raid.command()
     async def show(self, ctx, channel: discord.TextChannel, *, raid: converters.Raid):
@@ -265,9 +237,6 @@ class Monord:
             <channel> Channel to hide the raid from.
             <raid> Either the title of a gym, or a raid ID.
         """
-        if raid is None:
-            await self.send_help(ctx)
-            return
         await utils.send_raid(self, channel, raid)
 
     @raid.command(name="gym")
@@ -286,6 +255,7 @@ class Monord:
         self.session.add(raid)
         self.session.commit()
         await utils.update_raid(self, raid)
+        await ctx.tick()
 
     @raid.group()
     async def going(self, ctx):
@@ -293,7 +263,7 @@ class Monord:
             Add or remove people as going to a raid
         """
         if ctx.invoked_subcommand == self.going:
-            await self.send_help(ctx)
+            await ctx.send_help()
 
     @going.group(name="add")
     async def add_person(self, ctx, raid: converters.Raid, *, members: converters.MembersWithExtra):
@@ -304,6 +274,7 @@ class Monord:
             await self.send_help(ctx)
         await utils.add_raid_going(self, ctx.message.author, raid, members)
         await utils.update_raid(self, raid)
+        await ctx.tick()
 
     @going.group(name="remove")
     async def remove_person(self, ctx, raid: converters.Raid, *members: discord.Member):
@@ -312,6 +283,7 @@ class Monord:
         """
         await utils.remove_raid_going(self, ctx.message.author, raid, members)
         await utils.update_raid(self, raid)
+        await ctx.tick()
 
     @raid.command()
     async def start(self, ctx, time: converters.Time, *, raid: converters.Raid):
@@ -334,6 +306,7 @@ class Monord:
         raid.start_time = time
         self.session.add(raid)
         await utils.update_raid(self, raid)
+        await ctx.tick()
 
     @raid.command()
     async def despawn(self, ctx, time: converters.Time, *, raid: converters.Raid):
@@ -351,6 +324,7 @@ class Monord:
         self.session.add(raid)
         await utils.update_raid(self, raid)
         timers.reschedule(self)
+        await ctx.tick()
 
     @raid.command()
     async def pokemon(self, ctx, pokemon: converters.PokemonWithSQL, *, raid: converters.Raid):
@@ -368,6 +342,7 @@ class Monord:
         raid.pokemon = sql_pokemon
         self.session.add(raid)
         await utils.update_raid(self, raid)
+        await ctx.tick()
 
     @checks.mod_or_permissions(manage_guild=True)
     @commands.group(name="config")
@@ -376,7 +351,7 @@ class Monord:
             Change configuration settings
         """
         if ctx.invoked_subcommand is None:
-            await self.send_help(ctx)
+            await ctx.send_help()
 
     async def set_config(self, ctx, is_channel, key: str = None, value: str = None, channel: discord.TextChannel = None):
         if isinstance(ctx.message.channel, discord.abc.PrivateChannel):
@@ -437,7 +412,7 @@ class Monord:
             Subscribe to notifications
         """
         if ctx.invoked_subcommand is None:
-            await self.send_help(ctx)
+            await ctx.send_help()
 
     @subscribe.group(name="pokemon")
     async def pokemon_subscribe(self, ctx, pokemon: converters.Pokemon):
@@ -446,9 +421,6 @@ class Monord:
             
             <pokemon> the name of the pokemon
         """
-        if pokemon is None:
-            await self.send_help(ctx)
-            return
         await utils.subscribe_with_message(ctx, ctx.message.author, pokemon.name)
 
     @subscribe.group(name="ex")
@@ -463,8 +435,6 @@ class Monord:
         """
             Subscribe to notifications for raids on a gym
         """
-        if gym is None:
-            await self.send_help(ctx)
         await utils.subscribe_with_message(ctx, ctx.message.author, gym.title)
 
     @commands.group(name="unsubscribe")
@@ -482,9 +452,6 @@ class Monord:
             
             <pokemon> the name of the pokemon
         """
-        if pokemon is None:
-            await self.send_help(ctx)
-            return
         await utils.unsubscribe_with_message(ctx, ctx.message.author, pokemon.name)
 
     @unsubscribe.group(name="ex")
@@ -506,13 +473,10 @@ class Monord:
     @commands.group()
     async def party(self, ctx):
         if ctx.invoked_subcommand is None:
-            await self.send_help(ctx)
+            await ctx.send_help()
 
     @party.command(name="create")
     async def party_create(self, ctx, *, members: converters.MembersWithExtra):
-        if members is None:
-            await self.send_help(ctx)
-            return
         # Disband existing party, if there is one.
         self.session.query(models.Party).filter_by(creator_user_id=ctx.message.author.id).delete()
         for member, extra in members:
@@ -524,7 +488,7 @@ class Monord:
             )
             self.session.add(p)
         self.session.commit()
-        await ctx.send(_("Party created"))
+        await ctx.tick()
 
     @party.command(name="add")
     async def party_add(self, ctx, *, members: converters.MembersWithExtra):
@@ -542,7 +506,7 @@ class Monord:
             )
             self.session.add(p)
         self.session.commit()
-        await ctx.send(_("Member(s) were added to your party"))
+        await ctx.tick()
 
     @party.command(name="remove")
     async def party_remove(self, ctx, *members: discord.Member):
@@ -555,7 +519,7 @@ class Monord:
             models.Party.user_id.in_([member.id for member in members])
         ).delete(synchronize_session=False)
         self.session.expire_all()
-        await ctx.send(_("Member(s) were removed from your party"))
+        await ctx.tick()
 
     @party.command(name="disband")
     async def party_disband(self, ctx):
@@ -563,7 +527,7 @@ class Monord:
             models.Party.creator_user_id == ctx.message.author.id
         ).delete(synchronize_session=False)
         self.session.expire_all()
-        await ctx.send(_("Party disbanded"))
+        await ctx.tick()
 
     @party.command(name="list")
     async def party_list(self, ctx):

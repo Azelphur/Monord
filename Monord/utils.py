@@ -503,7 +503,7 @@ async def subscribe(member, role_name):
         role = await member.guild.create_role(name=role_name, mentionable=True)
     if member_in_role(member, role):
         return False
-    await member.add_roles(role, reason=_("Added by PokemonGoBot"))
+    await member.add_roles(role, reason=_("Added by Monord"))
     return True
 
 async def subscribe_with_message(ctx, member, role_name):
@@ -519,9 +519,9 @@ async def unsubscribe(member, role_name):
         return False
     for role_ in member.roles:
         if role_ == role:
-            await member.remove_roles(role, reason=_("Removed by PokemonGoBot"))
+            await member.remove_roles(role, reason=_("Removed by Monord"))
             if not role.members:
-                await role.delete(reason=_("Removed by PokemonGoBot, role is empty"))
+                await role.delete(reason=_("Removed by Monord, role is empty"))
             return True
     return False
 
@@ -568,6 +568,12 @@ async def mark_raid_despawned(cog, raid):
     )
 
     tasks = []
+
+    for guild in cog.bot.guilds:
+        role = find_role(channel.guild, _("Raid {} (#{})").format(raid.gym.title, raid.id))
+        if role is not None:
+            tasks.append(role.delete(reason=_("Removed by Monord"))
+
     for cfg in channels:
         channel = cog.bot.get_channel(cfg.channel_id)
         cog.bot.loop.create_task(hide_raid(cog, channel, raid, cfg.delete_after_despawn))
