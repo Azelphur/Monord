@@ -212,7 +212,7 @@ class MembersWithExtra(commands.Converter):
         try:
             args = argument.split()
             if len(args) < 1:
-                raise commands.BadArgument(ctx, argument, _("Pokemon \"{}\" not found").format(argument))
+                raise commands.BadArgument(_("Not enough arguments").format(argument))
 
             members = []
             member = None
@@ -230,7 +230,7 @@ class MembersWithExtra(commands.Converter):
                         skip_next = True
                     members.append((member, extra))
                 else:
-                    raise commands.BadArgument(ctx, argument, _("\"{}\" is not a member").format(argument))
+                    raise commands.ConversionFailure(ctx, argument, _("\"{}\" is not a member").format(argument))
             return members
         except (commands.ConversionFailure, commands.BadArgument):
             raise

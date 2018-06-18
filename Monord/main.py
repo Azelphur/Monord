@@ -35,16 +35,15 @@ class Monord:
         self.time_stale = False
         timers.reschedule(self)
 
-    @commands.group(name="gym")
+    @commands.group(name="gym", invoke_without_command=True)
     async def gym(self, ctx):
         """
             Add, find and remove gyms
         """
-        if ctx.invoked_subcommand is None:
-            await ctx.send_help()
+        await ctx.send_help()
 
     @gym.command()
-    async def find(self, ctx, *, gym: converters.Gym):
+    async def find(self, ctx, *, gym: converters.GymWithSQL):
         """
             Find a gym, and show its location
             
@@ -65,16 +64,15 @@ class Monord:
             <title> - The title of the gym
         """
         gym, gymdoc = utils.add_gym(self.session, latitude, longitude, ex, title)
-        await ctx.send("Gym created", embed=utils.prepare_gym_embed(gymdoc))
+        await ctx.send("Gym created", embed=utils.prepare_gym_embed((gymdoc, gym)))
 
     @checks.mod_or_permissions(manage_guild=True)
-    @gym.group(name="alias")
+    @gym.group(name="alias", invoke_without_command=True)
     async def alias(self, ctx):
         """
-            Add, find and remove gyms
+            Manage aliases on gyms
         """
-        if ctx.invoked_subcommand == self.alias:
-            await ctx.send_help()
+        await ctx.send_help()
 
     @checks.mod_or_permissions(manage_guild=True)
     @alias.command(name="add")
@@ -160,14 +158,29 @@ class Monord:
         es_models.Gym.get(id=gym.meta["id"]).delete()
         await ctx.send(_("Gym \"{}\" removed").format(title))
 
-    @commands.group(name="raid")
+    @checks.mod_or_permissions(manage_guild=True)
+    @gym.group(name="set", invoke_without_command=True)
+    async def set_(self, ctx):
+        """
+            Change details on a gym
+        """
+        await ctx.send_help()
+
+    @checks.mod_or_permissions(manage_guild=True)
+    @set_.group(name="ex")
+    async def gym_set_ex(self, ctx, ex: bool, *, gym: converters.GymWithSQL):
+        es_gym, sql_gym = gym
+        sql_gym.ex = ex
+        self.session.add(sql_gym)
+        self.session.commit()
+        await ctx.tick()
+
+    @commands.group(name="raid", invoke_without_command=True)
     async def raid(self, ctx):
         """
             Report raids
         """
-
-        if ctx.invoked_subcommand is None:
-            await ctx.send_help()
+        await ctx.send_help()
 
     @raid.command()
     async def report(self, ctx, time: converters.Time, pokemon: converters.PokemonWithSQL, *, gym: converters.GymWithSQL):
@@ -250,13 +263,12 @@ class Monord:
         await utils.update_raid(self, raid)
         await ctx.tick()
 
-    @raid.group()
+    @raid.group(invoke_without_command=True)
     async def going(self, ctx):
         """
             Add or remove people as going to a raid
         """
-        if ctx.invoked_subcommand == self.going:
-            await ctx.send_help()
+        await ctx.send_help()
 
     @going.group(name="add")
     async def add_person(self, ctx, raid: converters.Raid, *, members: converters.MembersWithExtra):
@@ -326,13 +338,12 @@ class Monord:
         await ctx.tick()
 
     @checks.mod_or_permissions(manage_guild=True)
-    @commands.group(name="config")
+    @commands.group(name="config", invoke_without_command=True)
     async def config(self, ctx):
         """
             Change configuration settings
         """
-        if ctx.invoked_subcommand is None:
-            await ctx.send_help()
+        await ctx.send_help()
 
     async def set_config(self, ctx, is_channel, key: str = None, value: str = None, channel: discord.TextChannel = None):
         if isinstance(ctx.message.channel, discord.abc.PrivateChannel):
@@ -387,13 +398,12 @@ class Monord:
         """
         await self.set_config(ctx, False, key, value, ctx.message.channel)
 
-    @commands.group(name="subscribe")
+    @commands.group(name="subscribe", invoke_without_command=True)
     async def subscribe(self, ctx):
         """
             Subscribe to notifications
         """
-        if ctx.invoked_subcommand is None:
-            await ctx.send_help()
+        await ctx.send_help()
 
     @subscribe.group(name="pokemon")
     async def pokemon_subscribe(self, ctx, pokemon: converters.Pokemon):
@@ -418,13 +428,12 @@ class Monord:
         """
         await utils.subscribe_with_message(ctx, ctx.message.author, gym.title)
 
-    @commands.group(name="unsubscribe")
+    @commands.group(name="unsubscribe", invoke_without_command=True)
     async def unsubscribe(self, ctx):
         """
             Unsubscribe from notifications
         """
-        if ctx.invoked_subcommand is None:
-            await ctx.send_help()
+        await ctx.send_help()
 
     @unsubscribe.group(name="pokemon")
     async def pokemon_unsubscribe(self, ctx, pokemon: converters.Pokemon):
@@ -449,10 +458,12 @@ class Monord:
         """
         await utils.unsubscribe_with_message(ctx, ctx.message.author, gym.title)
 
-    @commands.group()
+    @commands.group(invoke_without_command=True)
     async def party(self, ctx):
-        if ctx.invoked_subcommand is None:
-            await ctx.send_help()
+        """
+            Manage your party, members of your party will be automatically added to raids when you sign up
+        """
+        await ctx.send_help()
 
     @party.command(name="create")
     async def party_create(self, ctx, *, members: converters.MembersWithExtra):
@@ -656,3 +667,4 @@ class Monord:
         self.session.query(models.Embed).filter_by(raid=deleted_embed.raid).delete()
         self.session.query(models.Raid).filter_by(id=deleted_embed.raid_id).delete()
         timers.reschedule(self)
+

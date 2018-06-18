@@ -25,10 +25,15 @@ EMBED_RAID = 1
 EMBED_HATCH = 2
 
 def prepare_gym_embed(gym):
-    title = gym.title
-    embed=discord.Embed(title=title, url="https://www.google.com/maps/dir/Current+Location/{},{}".format(gym.location['lat'], gym.location['lon']))
-    embed.set_image(url='https://maps.googleapis.com/maps/api/staticmap?center={0},{1}&zoom=15&size=250x125&maptype=roadmap&markers=color:{3}%7C{0},{1}&key={2}'.format(gym.location['lat'], gym.location['lon'], 'AIzaSyCEadifeA8X02v2OKv-orZWm8nQf1Q2EZ4', 'red'))
-    embed.set_footer(text="Gym ID {}.".format(gym.meta["id"]))
+    es_gym, sql_gym = gym
+    title = sql_gym.title
+    if sql_gym.ex:
+        description = _("This gym is EX Eligible")
+    else:
+        description = _("This gym is not EX Eligible")
+    embed=discord.Embed(title=title, url="https://www.google.com/maps/dir/Current+Location/{},{}".format(es_gym.location['lat'], es_gym.location['lon']), description=description)
+    embed.set_image(url='https://maps.googleapis.com/maps/api/staticmap?center={0},{1}&zoom=15&size=250x125&maptype=roadmap&markers=color:{3}%7C{0},{1}&key={2}'.format(es_gym.location['lat'], es_gym.location['lon'], 'AIzaSyCEadifeA8X02v2OKv-orZWm8nQf1Q2EZ4', 'red'))
+    embed.set_footer(text="Gym ID {}.".format(es_gym.meta["id"]))
     return embed
 
 def add_gym(session, latitude, longitude, ex, title):
@@ -158,6 +163,8 @@ def format_raid(cog, channel, raid):
 
     description += " | ".join(users) + "\n"
     emoji_going = config.get(cog.session, "emoji_going", channel)
+    if not raid.ex and raid.gym.ex:
+        description += _("This raid has the possibility of giving you an EX raid pass") + "\n"
     description += _("Press the {} below if you want to do this raid").format(emoji_going)
 
     location = to_shape(raid.gym.location)
