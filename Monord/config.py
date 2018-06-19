@@ -51,46 +51,61 @@ def integer_validator(value, is_channel):
         raise ValidationiError(_("Value must be a number"))
     return value
 
+def server_only_validator(value, is_channel):
+    if is_channel:
+        raise ValidationError(_("You can only set this setting per-server"))
+    return value
+
 SETTINGS = {
     "mirror": {
         "validators": [channel_only_validator, boolean_validator],
         "help": _("Mirror raids within this channel (or servers) geopoints, yes or no"),
+        "default": False,
     },
     "timezone": {
         "validators": [timezone_validator],
         "help": _("Set the server (or channels) time zone. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for a list of time zones"),
+        "default": "Europe/London"
     },
     "region": {
         "validators": [region_validator],
-        "help": "A list of coordinates in JSON format, specifying a polygon around your area.",
+        "help": "A list of coordinates in JSON format, specifying a polygon around your area",
+        "default": None
     },
     "subscriptions": {
         "validators": [channel_only_validator, boolean_validator],
         "help": _("Mention subscription roles in this channel"),
+        "default": False
     },
     "delete_after_despawn": {
         "validators": [integer_validator],
-        "help": _("Delete raids this many minutes after despawn, set to -1 to not delete"),
+        "help": _("Delete raids this many minutes after despawn"),
+        "default": None
     },
     "emoji_going": {
-        "validators": [emoji_validator],
-        "help": _("The emoji used for the going button reaction")
+        "validators": [emoji_validator, server_only_validator],
+        "help": _("The emoji used for the going button reaction"),
+        "default": "\U0001F44D"
     },
     "emoji_add_person": {
-        "validators": [emoji_validator],
-        "help": _("The emoji used for the add person button reaction")
+        "validators": [emoji_validator, server_only_validator],
+        "help": _("The emoji used for the add person button reaction"),
+        "default": "\U00002B06"
     },
     "emoji_remove_person": {
-        "validators": [emoji_validator],
-        "help": _("The emoji used for the add person button reaction")
+        "validators": [emoji_validator, server_only_validator],
+        "help": _("The emoji used for the add person button reaction"),
+        "default": "\U00002B07"
     },
     "emoji_add_time": {
-        "validators": [emoji_validator],
-        "help": _("The emoji used for the add time button reaction")
+        "validators": [emoji_validator, server_only_validator],
+        "help": _("The emoji used for the add time button reaction"),
+        "default": "\U000023E9"
     },
     "emoji_remove_time": {
-        "validators": [emoji_validator],
-        "help": _("The emoji used for the remove time button reaction")
+        "validators": [emoji_validator, server_only_validator],
+        "help": _("The emoji used for the remove time button reaction"),
+        "default": "\U000023EA"
     }
 }
 
@@ -101,7 +116,7 @@ async def list_settings(ctx):
     embed=discord.Embed(title=_("Settings"), description="\n".join(msg))
     await ctx.send(embed=embed)
 
-def get(session, keys, channel, allow_fallback=True, server_only=False):
+def get(session, keys, channel, allow_fallback=True, server_only=False, return_default=True):
     if isinstance(keys, str):
         keys = [keys]
 
@@ -137,10 +152,8 @@ def get(session, keys, channel, allow_fallback=True, server_only=False):
         if server_cfg is not None and getattr(server_cfg, key) is not None:
             result.append(getattr(server_cfg, key))
             continue
-        # Get default from sqlalchemy and return that.
-        model_field = getattr(models.GuildConfig.__table__.c, key).default
-        if model_field is not None:
-            result.append(model_field.arg)
+        if return_default:
+            result.append(SETTINGS[key]["default"])
         else:
             result.append(None)
     return result if len(result) > 1 else result[0]

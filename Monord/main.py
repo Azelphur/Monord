@@ -355,12 +355,15 @@ class Monord:
 
         if value == None:
             if key in config.SETTINGS:
-                cfg = config.get(self.session, key, channel, False, not is_channel)
+                cfg = config.get(self.session, key, channel, False, not is_channel, False)
                 await ctx.send(_("{} is set to {}").format(key, cfg))
                 return
             else:
                 await ctx.send(_("{} is not a valid setting").format(key))
                 return
+
+        if value.lower() in ["none", "null"]:
+            value = None
         try:
             if is_channel:
                 config.set_channel_config(self.session, channel, key, value)
@@ -628,6 +631,16 @@ class Monord:
                     return
                 embed.raid.start_time = new_start_time
                 self.session.add(embed.raid)
+            else:
+                emojis = [emoji_going, emoji_add_person, emoji_remove_person, emoji_add_time, emoji_remove_time]
+                for reaction in message.reactions:
+                    if str(reaction) in emojis:
+                        emojis.remove(str(reaction))
+                if emojis != []:
+                    await message.clear_reactions()
+                    await utils.add_raid_reactions(self.session, message)
+                else:
+                    await message.remove_reaction(payload.emoji, member)
         elif embed.embed_type == utils.EMBED_HATCH:
             pokemons = utils.get_possible_pokemon(self, embed.raid.gym, embed.raid.level, embed.raid.ex)
             num = int(str(payload.emoji)[0]) if str(payload.emoji)[0].isnumeric() else None

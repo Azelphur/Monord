@@ -129,6 +129,23 @@ class GuildConfig(Base):
     id = Column(Integer, primary_key=True)
     guild_id = Column(BigInteger)
     channel_id = Column(BigInteger)
+    mirror = Column(Boolean, nullable=True, default=None)
+    region = Column(Geometry('POLYGON', srid=4326), nullable=True, default=None)
+    timezone = Column(String, nullable=True, default=None)
+    subscriptions = Column(Boolean, nullable=True, default=None)
+    delete_after_despawn = Column(Integer, nullable=True, default=None)
+    emoji_going = Column(String, nullable=True, default=None)
+    emoji_add_person = Column(String, nullable=True, default=None)
+    emoji_remove_person = Column(String, nullable=True, default=None)
+    emoji_add_time = Column(String, nullable=True, default=None)
+    emoji_remove_time = Column(String, nullable=True, default=None)
+
+
+"""class GuildConfig(Base):
+    __tablename__ = 'guildconfig'
+    id = Column(Integer, primary_key=True)
+    guild_id = Column(BigInteger)
+    channel_id = Column(BigInteger)
     mirror = Column(Boolean, default=False)
     region = Column(Geometry('POLYGON', srid=4326), nullable=True, default=None)
     timezone = Column(String, default="Europe/London")
@@ -140,3 +157,4 @@ class GuildConfig(Base):
     emoji_add_time = Column(String, default="\U000023E9")
     emoji_remove_time = Column(String, default="\U000023EA")
     #__table_args__ = (UniqueConstraint('guild_id', 'key', name='_guild_id_key_uc'),)
+"""
