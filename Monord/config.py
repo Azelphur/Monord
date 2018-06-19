@@ -42,7 +42,7 @@ def region_validator(value, is_channel):
 
 def emoji_validator(value, is_channel):
     # This could definitely be better, TODO
-    return str(value)
+    return str(value) if value is not None else None
 
 def integer_validator(value, is_channel):
     try:
