@@ -51,11 +51,6 @@ def integer_validator(value, is_channel):
         raise ValidationiError(_("Value must be a number"))
     return value
 
-def server_only_validator(value, is_channel):
-    if is_channel:
-        raise ValidationError(_("You can only set this setting per-server"))
-    return value
-
 SETTINGS = {
     "mirror": {
         "validators": [channel_only_validator, boolean_validator],
@@ -83,27 +78,27 @@ SETTINGS = {
         "default": None
     },
     "emoji_going": {
-        "validators": [emoji_validator, server_only_validator],
+        "validators": [emoji_validator],
         "help": _("The emoji used for the going button reaction"),
         "default": "\U0001F44D"
     },
     "emoji_add_person": {
-        "validators": [emoji_validator, server_only_validator],
+        "validators": [emoji_validator],
         "help": _("The emoji used for the add person button reaction"),
         "default": "\U00002B06"
     },
     "emoji_remove_person": {
-        "validators": [emoji_validator, server_only_validator],
+        "validators": [emoji_validator],
         "help": _("The emoji used for the add person button reaction"),
         "default": "\U00002B07"
     },
     "emoji_add_time": {
-        "validators": [emoji_validator, server_only_validator],
+        "validators": [emoji_validator],
         "help": _("The emoji used for the add time button reaction"),
         "default": "\U000023E9"
     },
     "emoji_remove_time": {
-        "validators": [emoji_validator, server_only_validator],
+        "validators": [emoji_validator],
         "help": _("The emoji used for the remove time button reaction"),
         "default": "\U000023EA"
     }
