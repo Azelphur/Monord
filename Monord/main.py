@@ -409,7 +409,7 @@ class Monord:
         await ctx.send_help()
 
     @subscribe.group(name="pokemon")
-    async def pokemon_subscribe(self, ctx, pokemon: converters.Pokemon):
+    async def pokemon_subscribe(self, ctx, *, pokemon: converters.Pokemon):
         """
             Subscribe to notifications for a pokemon
             
@@ -425,7 +425,7 @@ class Monord:
         await utils.subscribe_with_message(ctx, ctx.message.author, _("EX Eligible"))
 
     @subscribe.group(name="gym")
-    async def gym_subscribe(self, ctx, gym: converters.Gym):
+    async def gym_subscribe(self, ctx, *, gym: converters.Gym):
         """
             Subscribe to notifications for raids on a gym
         """
@@ -455,7 +455,7 @@ class Monord:
         await utils.unsubscribe_with_message(ctx, ctx.message.author, _("EX Eligible"))
 
     @unsubscribe.group(name="gym")
-    async def gym_unsubscribe(self, ctx, gym: converters.Gym):
+    async def gym_unsubscribe(self, ctx, *, gym: converters.Gym):
         """
             Unsubscribe from notifications for raids on a gym
         """
