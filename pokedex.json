@@ -3796,7 +3796,7 @@
             "raid_level": 3,
             "perfect_cp": 1134,
             "perfect_cp_boosted": 1418,
-            "shiny": true,
+            "shiny": false,
             "types": [
                 "Water",
                 "Dark"
