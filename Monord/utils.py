@@ -223,8 +223,11 @@ async def add_raid_reactions(session, message):
 async def send_raid(cog, channel, raid, extra_content=None):
     embeds = cog.session.query(models.Embed).filter_by(channel_id=channel.id, raid=raid, embed_type=EMBED_RAID)
     for embed in embeds:
-        message = await channel.get_message(embed.message_id)
-        await message.delete()
+        try:
+            message = await channel.get_message(embed.message_id)
+            await message.delete()
+        except discord.errors.NotFound:
+            pass
     cog.session.query(models.Embed).filter_by(channel_id=channel.id, raid=raid).delete()
 
     formatted_raid = format_raid(cog, channel, raid)
