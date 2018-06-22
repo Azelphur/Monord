@@ -4429,7 +4429,16 @@
             ],
             "perfect_cp": 1764,
             "perfect_cp_boosted": 2205,
-            "raid_level": 5
+            "raid_level": 5,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-21T20:00:00Z",
+                        "end": "2010-07-19T20:00:00Z"
+                    }
+                ]
+            ]
         }
     },
     {
@@ -4464,7 +4473,16 @@
             ],
             "perfect_cp": 1292,
             "perfect_cp_boosted": 1615,
-            "raid_level": 5
+            "raid_level": 5,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-21T20:00:00Z",
+                        "end": "2010-07-19T20:00:00Z"
+                    }
+                ]
+            ]
         }
     },
     {
