@@ -4437,6 +4437,7 @@
             "types": [
                 "Ice"
             ],
+            "raid_level": 5,
             "availability_rules": [
                 [
                     {
