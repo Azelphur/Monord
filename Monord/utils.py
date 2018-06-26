@@ -76,7 +76,7 @@ def get_display_name(channel, member, extra=0):
             team_emoji = get_emoji_by_name(channel.guild, "instinct")
             break
 
-    result = member.mention
+    result = member.display_name
     if team_emoji:
         result = str(team_emoji) + result
     if extra > 0:
