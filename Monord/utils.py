@@ -161,7 +161,7 @@ def format_raid(cog, channel, raid):
     else:
         description += _("**Going ({})**").format(going.count()+num_extra) + "\n"
 
-    description += " | ".join(users) + "\n"
+    description += "\n".join(users) + "\n"
     emoji_going = config.get(cog.session, "emoji_going", channel)
     if not raid.ex and raid.gym.ex:
         description += _("This raid has the possibility of giving you an EX raid pass") + "\n"
