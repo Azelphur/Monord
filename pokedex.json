@@ -1758,6 +1758,7 @@
                     }
                 ]
             ],
+            "shiny": true,
             "types": [
                 "Ice",
                 "Flying"
