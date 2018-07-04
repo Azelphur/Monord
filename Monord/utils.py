@@ -222,13 +222,13 @@ async def add_raid_reactions(session, message):
 
 async def send_raid(cog, channel, raid, extra_content=None):
     embeds = cog.session.query(models.Embed).filter_by(channel_id=channel.id, raid=raid, embed_type=EMBED_RAID)
+    cog.session.query(models.Embed).filter_by(channel_id=channel.id, raid=raid).delete()
     for embed in embeds:
         try:
             message = await channel.get_message(embed.message_id)
             await message.delete()
         except discord.errors.NotFound:
             pass
-    cog.session.query(models.Embed).filter_by(channel_id=channel.id, raid=raid).delete()
 
     formatted_raid = format_raid(cog, channel, raid)
     if extra_content != None:
@@ -429,10 +429,10 @@ async def hatch_raid(cog, raid, pokemon):
         tasks.append(send_raid(cog, channel, raid, message))
 
     embeds = cog.session.query(models.Embed).filter_by(raid=raid, embed_type=EMBED_HATCH)
+    cog.session.query(models.Embed).filter_by(raid=raid, embed_type=EMBED_HATCH).delete()
     for embed in embeds:
         message = await channel.get_message(embed.message_id)
         tasks.append(message.delete())
-    cog.session.query(models.Embed).filter_by(raid=raid, embed_type=EMBED_HATCH).delete()
 
     await wait_for_tasks(tasks)
 
@@ -546,13 +546,13 @@ async def hide_raid(cog, channel, raid, wait=0):
     if wait is not None and wait > 0:
         await asyncio.sleep(wait * 60)
     embeds = cog.session.query(models.Embed).filter_by(channel_id=channel.id, raid=raid)
+    cog.session.query(models.Embed).filter_by(channel_id=channel.id, raid=raid).delete()
     for embed in embeds:
         try:
             message = await channel.get_message(embed.message_id)
             await message.delete()
         except discord.errors.NotFound:
             pass
-    cog.session.query(models.Embed).filter_by(channel_id=channel.id, raid=raid).delete()
 
 async def mark_raid_despawned(cog, raid):
     raid.despawned = True
