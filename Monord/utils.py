@@ -268,7 +268,7 @@ async def create_raid(cog, time, pokemon, gym, ex, triggered_by=None, triggered_
         start_time = start_time - datetime.timedelta(minutes=2)
 
     if isinstance(pokemon, int):
-        pokemons = get_possible_pokemon(cog, gym, pokemon, ex)
+        pokemons = get_possible_pokemon(cog, gym.location, time - DESPAWN_TIME, pokemon, ex)
         if len(pokemons) == 1:
             pokemon = pokemons[0]
 
@@ -319,7 +319,7 @@ async def create_raid(cog, time, pokemon, gym, ex, triggered_by=None, triggered_
 
     await wait_for_tasks(tasks)
 
-def check_availability(pokemon, location, level):
+def check_availability(pokemon, location, time, level):
     location = to_shape(location)
     availability_rules = json.loads(pokemon.availability_rules)
     if level != pokemon.raid_level:
@@ -332,9 +332,9 @@ def check_availability(pokemon, location, level):
         available = True
         for rule in ruleset:
             if rule["type"] == "time":
-                start_time = datetime.datetime.strptime(rule["start"], "%Y-%m-%dT%H:%M:%SZ")
-                end_time = datetime.datetime.strptime(rule["end"], "%Y-%m-%dT%H:%M:%SZ")
-                if not start_time <= datetime.datetime.utcnow() <= end_time:
+                start_time = pytz.utc.localize(datetime.datetime.strptime(rule["start"], "%Y-%m-%dT%H:%M:%SZ"))
+                end_time = pytz.utc.localize(datetime.datetime.strptime(rule["end"], "%Y-%m-%dT%H:%M:%SZ"))
+                if not start_time <= time <= end_time:
                     available = False
                     break
             elif rule["type"] == "region":
@@ -347,14 +347,14 @@ def check_availability(pokemon, location, level):
             return True
     return False
 
-def get_possible_pokemon(cog, gym, level, ex):
+def get_possible_pokemon(cog, location, time, level, ex):
     pokemons = cog.session.query(models.Pokemon).filter_by(
         raid_level=level,
         ex=ex
     ).order_by("name")
     filtered_pokemons = []
     for pokemon in pokemons:
-        if check_availability(pokemon, gym.location, level):
+        if check_availability(pokemon, location, time, level):
             filtered_pokemons.append(pokemon)
     return filtered_pokemons
 
@@ -366,7 +366,7 @@ async def send_hatch(cog, channel, raid):
         content = None
 
     description = _("This raid has hatched, can you see what it is?") + "\n"
-    pokemons = get_possible_pokemon(cog, raid.gym, raid.level, raid.ex)
+    pokemons = get_possible_pokemon(cog, raid.gym.location, pytz.utc.localize(raid.despawn_time - DESPAWN_TIME), raid.level, raid.ex)
     for i, pokemon in enumerate(pokemons):
         if i > 9:
             break
