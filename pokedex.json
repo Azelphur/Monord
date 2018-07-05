@@ -1775,8 +1775,16 @@
                         "type": "region",
                         "region": "asia"
                     }
+                ],
+                [
+                    {
+                        "type": "time",
+                        "start": "2018-07-06T20:00Z",
+                        "end": "2018-07-07T20:00Z"
+                    }
                 ]
             ],
+            "shiny": true,
             "types": [
                 "Ice",
                 "Flying"
