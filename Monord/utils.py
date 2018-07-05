@@ -4,6 +4,7 @@ from . import es_models
 from . import config
 from . import timers
 from . import stats
+from .regions import REGIONS
 import pytz
 import asyncio
 import datetime
@@ -318,7 +319,8 @@ async def create_raid(cog, time, pokemon, gym, ex, triggered_by=None, triggered_
 
     await wait_for_tasks(tasks)
 
-def check_availability(pokemon, level):
+def check_availability(pokemon, location, level):
+    location = to_shape(location)
     availability_rules = json.loads(pokemon.availability_rules)
     if level != pokemon.raid_level:
         return False
@@ -335,6 +337,12 @@ def check_availability(pokemon, level):
                 if not start_time <= datetime.datetime.utcnow() <= end_time:
                     available = False
                     break
+            elif rule["type"] == "region":
+                if "region" not in rule or \
+                        rule["region"] not in REGIONS or \
+                        not REGIONS[rule["region"].lower()].contains(location):
+                    available = False
+                    break                    
         if available:
             return True
     return False
@@ -346,7 +354,7 @@ def get_possible_pokemon(cog, gym, level, ex):
     ).order_by("name")
     filtered_pokemons = []
     for pokemon in pokemons:
-        if check_availability(pokemon, level):
+        if check_availability(pokemon, gym.location, level):
             filtered_pokemons.append(pokemon)
     return filtered_pokemons
 
