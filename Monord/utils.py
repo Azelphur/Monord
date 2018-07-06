@@ -222,7 +222,7 @@ async def add_raid_reactions(session, message):
     await message.add_reaction(emoji_from_string(message.channel.guild, emoji_remove_time))
 
 async def send_raid(cog, channel, raid, extra_content=None):
-    embeds = cog.session.query(models.Embed).filter_by(channel_id=channel.id, raid=raid, embed_type=EMBED_RAID)
+    embeds = list(cog.session.query(models.Embed).filter_by(channel_id=channel.id, raid=raid, embed_type=EMBED_RAID))
     cog.session.query(models.Embed).filter_by(channel_id=channel.id, raid=raid).delete()
     for embed in embeds:
         try:
@@ -242,7 +242,7 @@ async def send_raid(cog, channel, raid, extra_content=None):
 
 async def update_raid(cog, raid, exclude_channels=[]):
     cog.session.commit()
-    embeds = cog.session.query(models.Embed).filter_by(raid=raid, embed_type=EMBED_RAID)
+    embeds = list(cog.session.query(models.Embed).filter_by(raid=raid, embed_type=EMBED_RAID))
     tasks = []
     for embed in embeds:
         channel = cog.bot.get_channel(embed.channel_id)
@@ -436,7 +436,7 @@ async def hatch_raid(cog, raid, pokemon):
         message = _("{} is a {}").format(title, pokemon.name)
         tasks.append(send_raid(cog, channel, raid, message))
 
-    embeds = cog.session.query(models.Embed).filter_by(raid=raid, embed_type=EMBED_HATCH)
+    embeds = list(cog.session.query(models.Embed).filter_by(raid=raid, embed_type=EMBED_HATCH))
     cog.session.query(models.Embed).filter_by(raid=raid, embed_type=EMBED_HATCH).delete()
     for embed in embeds:
         message = await channel.get_message(embed.message_id)
@@ -553,7 +553,7 @@ async def unsubscribe_with_message(ctx, member, role_name):
 async def hide_raid(cog, channel, raid, wait=0):
     if wait is not None and wait > 0:
         await asyncio.sleep(wait * 60)
-    embeds = cog.session.query(models.Embed).filter_by(channel_id=channel.id, raid=raid)
+    embeds = list(cog.session.query(models.Embed).filter_by(channel_id=channel.id, raid=raid))
     cog.session.query(models.Embed).filter_by(channel_id=channel.id, raid=raid).delete()
     for embed in embeds:
         try:
