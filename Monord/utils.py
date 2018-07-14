@@ -257,9 +257,6 @@ async def update_raid(cog, raid, exclude_channels=[]):
     await wait_for_tasks(tasks)
 
 async def create_raid(cog, time, pokemon, gym, ex, triggered_by=None, triggered_channel=None):
-    if isinstance(pokemon, int): # User reported an egg
-        time += DESPAWN_TIME
-
     # Calculate a sensible start time.
     start_time = time - DESPAWN_TIME # Set proposed start time to hatch.
     if start_time < pytz.utc.localize(datetime.datetime.utcnow()): # If the time is in the past, fix it.
@@ -268,7 +265,7 @@ async def create_raid(cog, time, pokemon, gym, ex, triggered_by=None, triggered_
         start_time = start_time - datetime.timedelta(minutes=2)
 
     if isinstance(pokemon, int):
-        pokemons = get_possible_pokemon(cog, gym.location, time - DESPAWN_TIME, pokemon, ex)
+        pokemons = get_possible_pokemon(cog, gym.location, time - DESPAWN_TIME - HATCH_TIME, pokemon, ex)
         if len(pokemons) == 1:
             pokemon = pokemons[0]
 
@@ -366,7 +363,7 @@ async def send_hatch(cog, channel, raid):
         content = None
 
     description = _("This raid has hatched, can you see what it is?") + "\n"
-    pokemons = get_possible_pokemon(cog, raid.gym.location, pytz.utc.localize(raid.despawn_time - DESPAWN_TIME), raid.level, raid.ex)
+    pokemons = get_possible_pokemon(cog, raid.gym.location, pytz.utc.localize(raid.despawn_time - DESPAWN_TIME - HATCH_TIME), raid.level, raid.ex)
     for i, pokemon in enumerate(pokemons):
         if i > 9:
             break

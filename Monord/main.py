@@ -193,9 +193,10 @@ class Monord:
         """
         es_gym, sql_gym = gym
         es_pokemon, sql_pokemon = pokemon
-        hatch_time = time if isinstance(pokemon, int) else time - utils.DESPAWN_TIME
+        if isinstance(pokemon, int): # User reported an egg
+            time += DESPAWN_TIME
 
-        if not isinstance(sql_pokemon, int) and utils.check_availability(sql_pokemon, sql_gym.location, hatch_time, sql_pokemon.raid_level) == False:
+        if not isinstance(sql_pokemon, int) and utils.check_availability(sql_pokemon, sql_gym.location, time - utils.DESPAWN_TIME - utils.HATCH_TIME, sql_pokemon.raid_level) == False:
             await ctx.send(_("{} is not currently available in raids").format(sql_pokemon.name))
             return
 
@@ -220,6 +221,8 @@ class Monord:
             <gym> The title of the gym
         """
         es_gym, sql_gym = gym
+
+        time += DESPAWN_TIME
 
         raid = utils.get_raid_at_time(self.session, sql_gym, time)
         if raid:
@@ -643,7 +646,7 @@ class Monord:
                 else:
                     await message.remove_reaction(payload.emoji, member)
         elif embed.embed_type == utils.EMBED_HATCH:
-            pokemons = utils.get_possible_pokemon(self, embed.raid.gym.location, pytz.utc.localize(embed.raid.despawn_time - utils.DESPAWN_TIME), embed.raid.level, embed.raid.ex)
+            pokemons = utils.get_possible_pokemon(self, embed.raid.gym.location, pytz.utc.localize(embed.raid.despawn_time - utils.DESPAWN_TIME - utils.HATCH_TIME), embed.raid.level, embed.raid.ex)
             num = int(str(payload.emoji)[0]) if str(payload.emoji)[0].isnumeric() else None
             if num is not None:
                 if num > len(pokemons):
