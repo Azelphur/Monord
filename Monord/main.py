@@ -193,7 +193,7 @@ class Monord:
         """
         es_gym, sql_gym = gym
         es_pokemon, sql_pokemon = pokemon
-        if isinstance(pokemon, int): # User reported an egg
+        if isinstance(sql_pokemon, int): # User reported an egg
             time += DESPAWN_TIME
 
         if not isinstance(sql_pokemon, int) and utils.check_availability(sql_pokemon, sql_gym.location, time - utils.DESPAWN_TIME - utils.HATCH_TIME, sql_pokemon.raid_level) == False:
