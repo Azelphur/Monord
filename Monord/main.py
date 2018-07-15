@@ -222,7 +222,7 @@ class Monord:
         """
         es_gym, sql_gym = gym
 
-        time += DESPAWN_TIME
+        time += utils.DESPAWN_TIME
 
         raid = utils.get_raid_at_time(self.session, sql_gym, time)
         if raid:
