@@ -340,7 +340,7 @@ class Monord:
             pokemons = utils.get_possible_pokemon(self, raid.gym.location, pytz.utc.localize(raid.despawn_time), sql_pokemon, raid.ex)
             if len(pokemons) == 1:
                 sql_pokemon = pokemons[0]
-        raid.pokemon = sql_pokemon if not isinstance(sql_pokemon, int) else None,
+        raid.pokemon = sql_pokemon if not isinstance(sql_pokemon, int) else None
         raid.level = sql_pokemon if isinstance(sql_pokemon, int) else sql_pokemon.raid_level
         self.session.add(raid)
         await utils.update_raid(self, raid)
