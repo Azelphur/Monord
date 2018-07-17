@@ -337,7 +337,7 @@ class Monord:
         """
         es_pokemon, sql_pokemon = pokemon
         if isinstance(sql_pokemon, int):
-            pokemons = utils.get_possible_pokemon(self, raid.gym.location, raid.despawn_time, sql_pokemon, raid.ex)
+            pokemons = utils.get_possible_pokemon(self, raid.gym.location, pytz.utc.localize(raid.despawn_time), sql_pokemon, raid.ex)
             if len(pokemons) == 1:
                 sql_pokemon = pokemons[0]
         raid.pokemon = sql_pokemon if not isinstance(sql_pokemon, int) else None,
