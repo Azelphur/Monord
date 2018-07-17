@@ -336,7 +336,12 @@ class Monord:
             <raid> Either the title of a gym, or a raid ID
         """
         es_pokemon, sql_pokemon = pokemon
-        raid.pokemon = sql_pokemon
+        if isinstance(sql_pokemon, int):
+            pokemons = get_possible_pokemon(cog, gym.location, raid.despawn_time, sql_pokemon, ex)
+            if len(pokemons) == 1:
+                sql_pokemon = pokemons[0]
+        raid.pokemon = sql_pokemon if not isinstance(sql_pokemon, int) else None,
+        raid.level = sql_pokemon if isinstance(sql_pokemon, int) else sql_pokemon.raid_level
         self.session.add(raid)
         await utils.update_raid(self, raid)
         await ctx.tick()
