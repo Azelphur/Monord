@@ -1225,7 +1225,9 @@
         "data": {
             "name": "Marowak",
             "id": "105",
-            "raid_level": 3,
+            "raid_level": 4,
+            "perfect_cp": 966,
+            "perfect_cp_boosted": 1208,
             "types": [
                 "Ground"
             ]
