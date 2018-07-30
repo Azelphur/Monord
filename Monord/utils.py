@@ -236,8 +236,12 @@ async def send_raid(cog, channel, raid, extra_content=None):
         formatted_raid["content"] = extra_content + "\n" + formatted_raid["content"]
     message = await channel.send(**formatted_raid)
     embed = models.Embed(channel_id=channel.id, message_id=message.id, raid_id=raid.id, embed_type=EMBED_RAID)
+    delete_after_despawn = config.get(cog.session, "delete_after_despawn", channel)
+    if delete_after_despawn is not None:
+        embed.delete_at = raid.despawn_time + datetime.timedelta(minutes=delete_after_despawn)
     cog.session.add(embed)
     cog.session.commit()
+    timers.embed_reschedule(cog)
     await add_raid_reactions(cog.session, message)
 
 async def update_raid(cog, raid, exclude_channels=[]):
@@ -254,6 +258,13 @@ async def update_raid(cog, raid, exclude_channels=[]):
             cog.session.query(models.Embed).filter_by(message_id=embed.message_id).delete()
             continue
         tasks.append(message.edit(**format_raid(cog, channel, raid)))
+    delete_after_despawn = config.get(cog.session, "delete_after_despawn", channel)
+    if delete_after_despawn is not None:
+        delete_at = raid.despawn_time + datetime.timedelta(minutes=delete_after_despawn)
+        if embed.delete_at != delete_at:
+            embed.delete_at = delete_at
+            cog.session.add(embed)
+            cog.session.commit()
     await wait_for_tasks(tasks)
 
 async def create_raid(cog, time, pokemon, gym, ex, triggered_by=None, triggered_channel=None):
@@ -282,7 +293,7 @@ async def create_raid(cog, time, pokemon, gym, ex, triggered_by=None, triggered_
     cog.session.add(raid)
     cog.session.commit() # Required as we need raids ID in the embed
 
-    timers.reschedule(cog)
+    timers.raid_reschedule(cog)
 
     tasks = []
     if triggered_channel is not None:
@@ -547,9 +558,7 @@ async def unsubscribe_with_message(ctx, member, role_name):
     else:
         await ctx.send(_("You are not subscribed to {}").format(role_name))
 
-async def hide_raid(cog, channel, raid, wait=0):
-    if wait is not None and wait > 0:
-        await asyncio.sleep(wait * 60)
+async def hide_raid(cog, channel, raid):
     embeds = list(cog.session.query(models.Embed).filter_by(channel_id=channel.id, raid=raid))
     cog.session.query(models.Embed).filter_by(channel_id=channel.id, raid=raid).delete()
     for embed in embeds:
@@ -562,34 +571,10 @@ async def hide_raid(cog, channel, raid, wait=0):
 async def mark_raid_despawned(cog, raid):
     raid.despawned = True
 
-    guilds = cog.session.query(models.GuildConfig).filter(
-        models.GuildConfig.channel_id == None,
-        models.GuildConfig.region != None,
-        func.ST_Contains(models.GuildConfig.region, raid.gym.location)
-    )
-    channels = cog.session.query(models.GuildConfig).filter(
-        or_(
-            and_(
-                models.GuildConfig.guild_id.in_([guild.guild_id for guild in guilds]),
-                models.GuildConfig.delete_after_despawn != -1,
-                models.GuildConfig.region == None
-            ),
-            and_(
-                models.GuildConfig.channel_id != None,
-                models.GuildConfig.delete_after_despawn != -1,
-                func.ST_Contains(models.GuildConfig.region, raid.gym.location)
-            )
-        )
-    )
-
     tasks = []
 
     for guild in cog.bot.guilds:
         role = find_role(guild, _("Raid {} (#{})").format(raid.gym.title, raid.id))
         if role is not None:
             tasks.append(role.delete(reason=_("Removed by Monord")))
-
-    for cfg in channels:
-        channel = cog.bot.get_channel(cfg.channel_id)
-        cog.bot.loop.create_task(hide_raid(cog, channel, raid, cfg.delete_after_despawn))
     await wait_for_tasks(tasks)

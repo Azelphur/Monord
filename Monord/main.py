@@ -32,8 +32,11 @@ class Monord:
         models.Base.metadata.create_all(engine)
         self.session = sessionmaker(bind=engine)()
         self.raid_timers_task = None
-        self.time_stale = False
-        timers.reschedule(self)
+        self.raid_time_stale = False
+        self.embed_timers_task = None
+        self.embed_time_stale = False
+        timers.raid_reschedule(self)
+        timers.embed_reschedule(self)
 
     @commands.group(name="gym", invoke_without_command=True)
     async def gym(self, ctx):
@@ -324,7 +327,7 @@ class Monord:
         raid.despawn_time = time
         self.session.add(raid)
         await utils.update_raid(self, raid)
-        timers.reschedule(self)
+        timers.raid_reschedule(self)
         await ctx.tick()
 
     @raid.command()
@@ -691,5 +694,5 @@ class Monord:
         self.session.query(models.RaidGoing).filter_by(raid=deleted_embed.raid).delete()
         self.session.query(models.Embed).filter_by(raid=deleted_embed.raid).delete()
         self.session.query(models.Raid).filter_by(id=deleted_embed.raid_id).delete()
-        timers.reschedule(self)
+        timers.raid_reschedule(self)
 

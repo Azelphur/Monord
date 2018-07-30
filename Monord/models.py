@@ -91,6 +91,7 @@ class Embed(Base):
     raid_id = Column(Integer, ForeignKey("raid.id"))
     raid = relationship(Raid, foreign_keys=[raid_id])
     embed_type = Column(Integer)
+    delete_at = Column(DateTime, nullable=True)
 
 
 class Going(object):
