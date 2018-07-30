@@ -632,9 +632,12 @@ class Monord:
                 await utils.add_person(self, member, embed.raid, member, -1)
             elif str(payload.emoji) == emoji_add_time or str(payload.emoji) == emoji_remove_time:
                 if str(payload.emoji) == emoji_add_time:
-                    new_start_time = min(embed.raid.despawn_time, embed.raid.start_time + datetime.timedelta(minutes=5))
+                    minutes = 5 - embed.raid.start_time.minute % 5
+                    new_start_time = min(embed.raid.despawn_time, embed.raid.start_time + datetime.timedelta(minutes=minutes))
                 else:
-                    new_start_time = max(embed.raid.despawn_time - utils.DESPAWN_TIME, embed.raid.start_time - datetime.timedelta(minutes=5))
+                    minutes = embed.raid.start_time.minute % 5
+                    minutes = 5 if minutes == 0 else minutes
+                    new_start_time = max(embed.raid.despawn_time - utils.DESPAWN_TIME, embed.raid.start_time - datetime.timedelta(minutes=minutes))
                 if new_start_time == embed.raid.start_time:
                     # No point doing a embed update if nothing is changing.
                     return
