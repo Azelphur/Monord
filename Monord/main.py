@@ -210,7 +210,7 @@ class Monord:
                 self.session.add(raid)
                 self.session.commit()
                 return
-            await ctx.send(_("That raid has already been reported"))
+            await utils.send_raid(self, ctx.message.channel, raid, _("That raid has already been reported"))
             return
 
         await utils.create_raid(self, time, sql_pokemon, sql_gym, False, ctx.message.author, ctx.message.channel)
