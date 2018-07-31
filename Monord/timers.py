@@ -76,6 +76,11 @@ async def embed_timers(cog):
             while cog.embed_time_stale == False and datetime.datetime.utcnow() < embed.delete_at:
                 await asyncio.sleep(1)
 
+            # If an embed time was changed, restart the loop to check for new times
+            if cog.embed_time_stale:
+                cog.embed_time_stale = False
+                continue
+
             try:
                 channel = cog.bot.get_channel(embed.channel_id)
                 message = await channel.get_message(embed.message_id)
