@@ -45,6 +45,8 @@ def emoji_validator(value, is_channel):
     return str(value) if value is not None else None
 
 def integer_validator(value, is_channel):
+    if value is None:
+        return None
     try:
         value = int(value)
     except ValueError:
