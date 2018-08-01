@@ -38,14 +38,14 @@ class Monord:
         timers.raid_reschedule(self)
         timers.embed_reschedule(self)
 
-    @commands.group(name="gym", invoke_without_command=True)
+    @commands.group(name="gym", invoke_without_command=True, case_insensitive=True)
     async def gym(self, ctx):
         """
             Add, find and remove gyms
         """
         await ctx.send_help()
 
-    @gym.command()
+    @gym.command(case_insensitive=True)
     async def find(self, ctx, *, gym: converters.GymWithSQL):
         """
             Find a gym, and show its location
@@ -56,7 +56,7 @@ class Monord:
         await ctx.send(embed=embed)
 
     @checks.mod_or_permissions(manage_guild=True)
-    @gym.command()
+    @gym.command(case_insensitive=True)
     async def add(self, ctx, latitude: float, longitude: float, ex: bool, *, title: str):
         """
             Add a gym to the database
@@ -70,7 +70,7 @@ class Monord:
         await ctx.send("Gym created", embed=utils.prepare_gym_embed((gymdoc, gym)))
 
     @checks.mod_or_permissions(manage_guild=True)
-    @gym.group(name="alias", invoke_without_command=True)
+    @gym.group(name="alias", invoke_without_command=True, case_insensitive=True)
     async def alias(self, ctx):
         """
             Manage aliases on gyms
@@ -78,7 +78,7 @@ class Monord:
         await ctx.send_help()
 
     @checks.mod_or_permissions(manage_guild=True)
-    @alias.command(name="add")
+    @alias.command(name="add", case_insensitive=True)
     async def add_alias(self, ctx, title: str, *, gym: converters.GymWithSQL):
         """
             Add an alias for a gym
@@ -110,7 +110,7 @@ class Monord:
         self.session.commit()
         await ctx.send(_("Alias \"{}\" added for {}").format(title, sql_gym.title))
 
-    @alias.command(name="list")
+    @alias.command(name="list", case_insensitive=True)
     async def list_(self, ctx, *, gym: converters.GymWithSQL):
         """
             List aliases for a gym
@@ -131,7 +131,7 @@ class Monord:
         await ctx.send(_("{} has the following aliases: {}").format(sql_gym.title, ", ".join(alias_list)))
 
     @checks.mod_or_permissions(manage_guild=True)
-    @alias.command(name="remove")
+    @alias.command(name="remove", case_insensitive=True)
     async def remove_alias(self, ctx, title, *, gym: converters.GymWithSQL):
         es_gym, sql_gym = gym
 
@@ -149,7 +149,7 @@ class Monord:
         await ctx.send(_("Alias \"{}\" on {} removed").format(title, sql_gym.title))
 
     @checks.mod_or_permissions(manage_guild=True)
-    @gym.command()
+    @gym.command(case_insensitive=True)
     async def remove(self, ctx, *, gym: converters.Gym):
         """
             Remove a gym from the database
@@ -162,7 +162,7 @@ class Monord:
         await ctx.send(_("Gym \"{}\" removed").format(title))
 
     @checks.mod_or_permissions(manage_guild=True)
-    @gym.group(name="set", invoke_without_command=True)
+    @gym.group(name="set", invoke_without_command=True, case_insensitive=True)
     async def set_(self, ctx):
         """
             Change details on a gym
@@ -170,7 +170,7 @@ class Monord:
         await ctx.send_help()
 
     @checks.mod_or_permissions(manage_guild=True)
-    @set_.group(name="ex")
+    @set_.group(name="ex", case_insensitive=True)
     async def gym_set_ex(self, ctx, ex: bool, *, gym: converters.GymWithSQL):
         es_gym, sql_gym = gym
         sql_gym.ex = ex
@@ -178,14 +178,14 @@ class Monord:
         self.session.commit()
         await ctx.tick()
 
-    @commands.group(name="raid", invoke_without_command=True)
+    @commands.group(name="raid", invoke_without_command=True, case_insensitive=True)
     async def raid(self, ctx):
         """
             Report raids
         """
         await ctx.send_help()
 
-    @raid.command()
+    @raid.command(case_insensitive=True)
     async def report(self, ctx, time: converters.Time, pokemon: converters.PokemonWithSQL, *, gym: converters.GymWithSQL):
         """
             Report a raid
@@ -215,7 +215,7 @@ class Monord:
 
         await utils.create_raid(self, time, sql_pokemon, sql_gym, False, ctx.message.author, ctx.message.channel)
 
-    @raid.command()
+    @raid.command(case_insensitive=True)
     async def ex(self, ctx, time: converters.Time, *, gym: converters.GymWithSQL):
         """
             Report an EX raid
@@ -234,7 +234,7 @@ class Monord:
 
         await utils.create_raid(self, time, 5, sql_gym, True, ctx.message.author, ctx.message.channel)
 
-    @raid.command()
+    @raid.command(case_insensitive=True)
     async def hide(self, ctx, channel: discord.TextChannel, *, raid: converters.Raid):
         """
             Hide a raid from a channel
@@ -245,7 +245,7 @@ class Monord:
         await utils.hide_raid(self, channel, raid)
         await ctx.tick()
 
-    @raid.command()
+    @raid.command(case_insensitive=True)
     async def show(self, ctx, channel: discord.TextChannel, *, raid: converters.Raid):
         """
             Show a raid in a channel
@@ -255,7 +255,7 @@ class Monord:
         """
         await utils.send_raid(self, channel, raid)
 
-    @raid.command(name="gym")
+    @raid.command(name="gym", case_insensitive=True)
     async def raid_gym(self, ctx, raid: converters.Raid, *, gym: converters.GymWithSQL):
         """
             Correct a raids gym
@@ -270,14 +270,14 @@ class Monord:
         await utils.update_raid(self, raid)
         await ctx.tick()
 
-    @raid.group(invoke_without_command=True)
+    @raid.group(invoke_without_command=True, case_insensitive=True)
     async def going(self, ctx):
         """
             Add or remove people as going to a raid
         """
         await ctx.send_help()
 
-    @going.group(name="add")
+    @going.group(name="add", case_insensitive=True)
     async def add_person(self, ctx, raid: converters.Raid, *, members: converters.MembersWithExtra):
         """
             Add people as going to a raid
@@ -286,7 +286,7 @@ class Monord:
         await utils.update_raid(self, raid)
         await ctx.tick()
 
-    @going.group(name="remove")
+    @going.group(name="remove", case_insensitive=True)
     async def remove_person(self, ctx, raid: converters.Raid, *members: discord.Member):
         """
             Remove people from going to a raid
@@ -295,7 +295,7 @@ class Monord:
         await utils.update_raid(self, raid)
         await ctx.tick()
 
-    @raid.command()
+    @raid.command(case_insensitive=True)
     async def start(self, ctx, time: converters.Time, *, raid: converters.Raid):
         """
             Set the start time of a raid
@@ -315,7 +315,7 @@ class Monord:
         await utils.update_raid(self, raid)
         await ctx.tick()
 
-    @raid.command()
+    @raid.command(case_insensitive=True)
     async def despawn(self, ctx, time: converters.Time, *, raid: converters.Raid):
         """
             Set the despawn time of a raid
@@ -330,7 +330,7 @@ class Monord:
         timers.raid_reschedule(self)
         await ctx.tick()
 
-    @raid.command()
+    @raid.command(case_insensitive=True, alias="pokémon")
     async def pokemon(self, ctx, pokemon: converters.PokemonWithSQL, *, raid: converters.Raid):
         """
             Set the pokemon on a raid.
@@ -350,7 +350,7 @@ class Monord:
         await ctx.tick()
 
     @checks.mod_or_permissions(manage_guild=True)
-    @commands.group(name="config", invoke_without_command=True)
+    @commands.group(name="config", invoke_without_command=True, case_insensitive=True)
     async def config(self, ctx):
         """
             Change configuration settings
@@ -389,7 +389,7 @@ class Monord:
             await ctx.send(e)
 
     @checks.mod_or_permissions(manage_guild=True)
-    @config.command()
+    @config.command(case_insensitive=True)
     async def channel(self, ctx, key: str = None, value: str = None, channel: discord.TextChannel = None):
         """
             Sets config setting for a channel
@@ -403,7 +403,7 @@ class Monord:
         await self.set_config(ctx, True, key, value, channel)
 
     @checks.mod_or_permissions(manage_guild=True)
-    @config.command()
+    @config.command(case_insensitive=True)
     async def guild(self, ctx, key: str = None, *, value: str = None):
         """
             Sets config setting for this guild
@@ -413,14 +413,14 @@ class Monord:
         """
         await self.set_config(ctx, False, key, value, ctx.message.channel)
 
-    @commands.group(name="subscribe", invoke_without_command=True)
+    @commands.group(name="subscribe", invoke_without_command=True, case_insensitive=True)
     async def subscribe(self, ctx):
         """
             Subscribe to notifications
         """
         await ctx.send_help()
 
-    @subscribe.group(name="pokemon")
+    @subscribe.group(name="pokemon", case_insensitive=True, alias="pokémon")
     async def pokemon_subscribe(self, ctx, *, pokemon: converters.Pokemon):
         """
             Subscribe to notifications for a pokemon
@@ -429,28 +429,28 @@ class Monord:
         """
         await utils.subscribe_with_message(ctx, ctx.message.author, pokemon.name)
 
-    @subscribe.group(name="ex")
+    @subscribe.group(name="ex", case_insensitive=True)
     async def ex_subscribe(self, ctx):
         """
             Subscribe to notifications for raids on EX Eligible gyms
         """
         await utils.subscribe_with_message(ctx, ctx.message.author, _("EX Eligible"))
 
-    @subscribe.group(name="gym")
+    @subscribe.group(name="gym", case_insensitive=True)
     async def gym_subscribe(self, ctx, *, gym: converters.Gym):
         """
             Subscribe to notifications for raids on a gym
         """
         await utils.subscribe_with_message(ctx, ctx.message.author, gym.title)
 
-    @commands.group(name="unsubscribe", invoke_without_command=True)
+    @commands.group(name="unsubscribe", invoke_without_command=True, case_insensitive=True)
     async def unsubscribe(self, ctx):
         """
             Unsubscribe from notifications
         """
         await ctx.send_help()
 
-    @unsubscribe.group(name="pokemon")
+    @unsubscribe.group(name="pokemon", case_insensitive=True)
     async def pokemon_unsubscribe(self, ctx, pokemon: converters.Pokemon):
         """
             Unsubscribe from notifications for a pokemon
@@ -459,28 +459,28 @@ class Monord:
         """
         await utils.unsubscribe_with_message(ctx, ctx.message.author, pokemon.name)
 
-    @unsubscribe.group(name="ex")
+    @unsubscribe.group(name="ex", case_insensitive=True)
     async def ex_unsubscribe(self, ctx):
         """
             Unsubscribe from notifications for raids on EX Eligible gyms
         """
         await utils.unsubscribe_with_message(ctx, ctx.message.author, _("EX Eligible"))
 
-    @unsubscribe.group(name="gym")
+    @unsubscribe.group(name="gym", case_insensitive=True)
     async def gym_unsubscribe(self, ctx, *, gym: converters.Gym):
         """
             Unsubscribe from notifications for raids on a gym
         """
         await utils.unsubscribe_with_message(ctx, ctx.message.author, gym.title)
 
-    @commands.group(invoke_without_command=True)
+    @commands.group(invoke_without_command=True, case_insensitive=True)
     async def party(self, ctx):
         """
             Manage your party, members of your party will be automatically added to raids when you sign up
         """
         await ctx.send_help()
 
-    @party.command(name="create")
+    @party.command(name="create", case_insensitive=True)
     async def party_create(self, ctx, *, members: converters.MembersWithExtra):
         # Disband existing party, if there is one.
         self.session.query(models.Party).filter_by(creator_user_id=ctx.message.author.id).delete()
@@ -495,7 +495,7 @@ class Monord:
         self.session.commit()
         await ctx.tick()
 
-    @party.command(name="add")
+    @party.command(name="add", case_insensitive=True)
     async def party_add(self, ctx, *, members: converters.MembersWithExtra):
         for member, extra in members:
             if self.session.query(models.Party).filter_by(creator_user_id=ctx.message.author.id, user_id=member.id).count() > 0:
@@ -510,7 +510,7 @@ class Monord:
         self.session.commit()
         await ctx.tick()
 
-    @party.command(name="remove")
+    @party.command(name="remove", case_insensitive=True)
     async def party_remove(self, ctx, *members: discord.Member):
         self.session.query(models.Party).filter(
             models.Party.creator_user_id == ctx.message.author.id,
@@ -519,7 +519,7 @@ class Monord:
         self.session.expire_all()
         await ctx.tick()
 
-    @party.command(name="disband")
+    @party.command(name="disband", case_insensitive=True)
     async def party_disband(self, ctx):
         self.session.query(models.Party).filter(
             models.Party.creator_user_id == ctx.message.author.id
@@ -527,7 +527,7 @@ class Monord:
         self.session.expire_all()
         await ctx.tick()
 
-    @party.command(name="list")
+    @party.command(name="list", case_insensitive=True)
     async def party_list(self, ctx):
         party_members = self.session.query(models.Party).filter_by(creator_user_id=ctx.message.author.id)
         member_names = []
@@ -540,7 +540,7 @@ class Monord:
         await ctx.send(_("You are in a party with: {}").format(", ".join(member_names)))
 
     @checks.is_owner()
-    @commands.command()
+    @commands.command(case_insensitive=True)
     async def loaddata(self, ctx, *, csv_path="pokemongodata.json"):
         """
             Load pokemon and gyms from json file
