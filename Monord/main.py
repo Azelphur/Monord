@@ -184,7 +184,7 @@ class Monord:
         es_gym, sql_gym = gym
         sql_gym.title = title
         es_gym.title = title
-        es_title.save()
+        es_gym.save()
         self.session.add(sql_gym)
         self.session.commit()
         await ctx.tick()
