@@ -178,6 +178,17 @@ class Monord:
         self.session.commit()
         await ctx.tick()
 
+    @checks.mod_or_permissions(manage_guild=True)
+    @set_.group(name="title")
+    async def gym_set_title(self, ctx, title: str, *, gym: converters.GymWithSQL):
+        es_gym, sql_gym = gym
+        sql_gym.title = title
+        es_gym.title = title
+        es_title.save()
+        self.session.add(sql_gym)
+        self.session.commit()
+        await ctx.tick()
+
     @commands.group(name="raid", invoke_without_command=True)
     async def raid(self, ctx):
         """
