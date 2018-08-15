@@ -60,6 +60,7 @@ class Gym(commands.Converter):
                 points.append({"lat": point[1], "lon": point[0]})
             s = Search(index="gym").query("match", title={'query': argument, 'fuzziness': 2})
             s = s.filter("geo_polygon", location={"points": points})
+            s.doc_type(es_models.Gym)
             response = s.execute()
             if response.hits.total == 0:
                 raise commands.ConversionFailure(ctx, argument, _("Gym \"{}\" not found").format(argument))
