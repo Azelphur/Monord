@@ -50,6 +50,15 @@
             "raid_level": 1,
             "types": [
                 "Fire"
+            ],
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2018-07-19T20:00:00Z",
+                        "end": "2018-08-16T20:00:00Z"
+                    }
+                ]
             ]
         }
     },
@@ -1340,15 +1349,6 @@
             "name": "Rhydon",
             "id": "112",
             "raid_level": 4,
-            "availability_rules": [
-                [
-                    {
-                        "type": "time",
-                        "start": "2010-06-07T20:00:00Z",
-                        "end": "2010-06-21T20:00:00Z"
-                    }
-                ]
-            ],
             "types": [
                 "Ground",
                 "Rock"
@@ -1370,6 +1370,9 @@
         "data": {
             "name": "Tangela",
             "id": "114",
+            "raid_level": 3,
+            "perfect_cp": 1262,
+            "perfect_cp_boosted": 1577,
             "types": [
                 "Grass"
             ]
@@ -1539,6 +1542,15 @@
             "raid_level": 2,
             "types": [
                 "Fire"
+            ],
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2018-07-19T20:00:00Z",
+                        "end": "2018-08-16T20:00:00Z"
+                    }
+                ]
             ]
         }
     },
@@ -1688,6 +1700,15 @@
             "raid_level": 3,
             "types": [
                 "Fire"
+            ],
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2018-07-19T20:00:00Z",
+                        "end": "2018-08-16T20:00:00Z"
+                    }
+                ]
             ]
         }
     },
@@ -1699,6 +1720,15 @@
             "raid_level": 3,
             "types": [
                 "Normal"
+            ],
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2018-07-19T20:00:00Z",
+                        "end": "2018-08-16T20:00:00Z"
+                    }
+                ]
             ]
         }
     },
@@ -2785,15 +2815,6 @@
             "name": "Piloswine",
             "id": "221",
             "raid_level": 3,
-            "availability_rules": [
-                [
-                    {
-                        "type": "time",
-                        "start": "2010-06-07T20:00:00Z",
-                        "end": "2010-06-21T20:00:00Z"
-                    }
-                ]
-            ],
             "types": [
                 "Ice",
                 "Ground"
@@ -2884,6 +2905,15 @@
             "types": [
                 "Dark",
                 "Fire"
+            ],
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2018-07-19T20:00:00Z",
+                        "end": "2018-08-16T20:00:00Z"
+                    }
+                ]
             ]
         }
     },
@@ -3915,6 +3945,9 @@
         "data": {
             "name": "Roselia",
             "id": "315",
+            "raid_level": 2,
+            "perfect_cp": 982,
+            "perfect_cp_boosted": 1227,
             "types": [
                 "Grass",
                 "Poison"
@@ -3985,15 +4018,6 @@
             "perfect_cp": 814,
             "perfect_cp_boosted": 1017,
             "shiny": true,
-            "availability_rules": [
-                [
-                    {
-                        "type": "time",
-                        "start": "2010-06-07T20:00:00Z",
-                        "end": "2010-06-21T20:00:00Z"
-                    }
-                ]
-            ],
             "types": [
                 "Water"
             ]
