@@ -323,6 +323,8 @@ async def create_raid(cog, time, pokemon, gym, ex, triggered_by=None, triggered_
         channel = cog.bot.get_channel(cfg.channel_id)
         if channel == triggered_channel:
             continue # Don't broadcast twice in the same channel
+        if channel == None:
+            continue # Channel is missing, don't broadcast to it.
         tasks.append(send_raid(cog, channel, raid))
 
     await wait_for_tasks(tasks)
