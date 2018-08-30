@@ -233,7 +233,10 @@ async def send_raid(cog, channel, raid, extra_content=None):
 
     formatted_raid = format_raid(cog, channel, raid)
     if extra_content != None:
-        formatted_raid["content"] = extra_content + "\n" + formatted_raid["content"]
+        if formatted_raid["content"] is not None:
+            formatted_raid["content"] = extra_content + "\n" + formatted_raid["content"]
+        else:
+            formatted_raid["content"] = extra_content
     message = await channel.send(**formatted_raid)
     embed = models.Embed(channel_id=channel.id, message_id=message.id, raid_id=raid.id, embed_type=EMBED_RAID)
     delete_after_despawn = config.get(cog.session, "delete_after_despawn", channel)
