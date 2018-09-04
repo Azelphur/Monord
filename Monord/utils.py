@@ -135,7 +135,10 @@ def format_raid(cog, channel, raid):
         description = _("**Level**: {}").format(raid.level) + "\n"
         image = "https://www.trainerdex.co.uk/egg/{}.png".format(raid.level)
     else:
-        image = "https://www.trainerdex.co.uk/pokemon/{}.png".format(raid.pokemon.id)
+        if raid.pokemon.shiny and random.randrange(1,26) == 1 and raid.pokemon.id not in (114,132):
+            image = "https://www.trainerdex.co.uk/pokemon/{}_shiny.png".format(raid.pokemon.id)
+        else:
+            image = "https://www.trainerdex.co.uk/pokemon/{}.png".format(raid.pokemon.id)
         name = raid.pokemon.name
         if raid.pokemon.shiny:
             name += ":sparkles:"
