@@ -1869,6 +1869,7 @@
             "name": "Articuno",
             "id": "144",
             "raid_level": 5,
+            "shiny": true,
             "availability_rules": [
                 [
                     {
@@ -1902,6 +1903,13 @@
                         "type": "region",
                         "region": "asia"
                     }
+                ],
+                [
+                    {
+                        "type": "time",
+                        "start": "2018-09-13T20:00:00Z",
+                        "end": "2018-09-20T18:00:00Z"
+                    }
                 ]
             ],
             "types": [
@@ -1916,6 +1924,7 @@
             "name": "Zapdos",
             "id": "145",
             "raid_level": 5,
+            "shiny": true,
             "availability_rules": [
                 [
                     {
@@ -1949,6 +1958,13 @@
                         "type": "region",
                         "region": "asia"
                     }
+                ],
+                [
+                    {
+                        "type": "time",
+                        "start": "2018-09-13T20:00:00Z",
+                        "end": "2018-09-20T18:00:00Z"
+                    }
                 ]
             ],
             "types": [
@@ -1963,14 +1979,48 @@
             "name": "Moltres",
             "id": "146",
             "raid_level": 5,
+            "shiny": true,
             "availability_rules": [
-                [
-                    {
-                        "type": "time",
-                        "start": "2010-06-07T20:00:00Z",
-                        "end": "2010-06-21T20:00:00Z"
-                    }
-                ]
+              [
+                  {
+                      "type": "time",
+                      "start": "2018-09-08T09:00:00Z",
+                      "end": "2018-09-08T12:00:00Z"
+                  },
+                  {
+                      "type": "region",
+                      "region": "europe"
+                  }
+              ],
+              [
+                  {
+                      "type": "time",
+                      "start": "2018-09-08T19:00:00Z",
+                      "end": "2018-09-08T22:00:00Z"
+                  },
+                  {
+                      "type": "region",
+                      "region": "americas"
+                  }
+              ],
+              [
+                  {
+                      "type": "time",
+                      "start": "2018-09-08T15:00:00Z",
+                      "end": "2018-09-08T18:00:00Z"
+                  },
+                  {
+                      "type": "region",
+                      "region": "asia"
+                  }
+              ],
+              [
+                  {
+                      "type": "time",
+                      "start": "2018-09-13T20:00:00Z",
+                      "end": "2018-09-20T18:00:00Z"
+                  }
+              ]
             ],
             "types": [
                 "Fire",
@@ -2015,9 +2065,18 @@
             "name": "Mewtwo",
             "id": "150",
             "raid_level": 5,
-            "ex": true,
+            "shiny": true,
             "perfect_cp": 2275,
             "perfect_cp_boosted": 2844,
+            "availability_rules": [
+              [
+                  {
+                      "type": "time",
+                      "start": "2018-09-20T20:00:00Z",
+                      "end": "2018-10-23T18:00:00Z"
+                  }
+              ]
+            ],
             "types": [
                 "Psychic"
             ]
