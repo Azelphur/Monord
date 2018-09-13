@@ -19,8 +19,8 @@ RE_EMOJI = re.compile("\<\:(.+):(\d+)>")
 
 _ = gettext.gettext
 
-HATCH_TIME = datetime.timedelta(minutes=60)
-DESPAWN_TIME = datetime.timedelta(minutes=45)
+HATCH_TIME = datetime.timedelta(minutes=15)
+DESPAWN_TIME = datetime.timedelta(minutes=90)
 
 EMBED_RAID = 1
 EMBED_HATCH = 2
