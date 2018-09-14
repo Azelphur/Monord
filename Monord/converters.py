@@ -119,7 +119,7 @@ class Time(commands.Converter):
 
             cleaned_start_time = argument.rstrip("m")
             cleaned_start_time = cleaned_start_time.rstrip("mins")
-            if cleaned_start_time.isnumeric() and int(cleaned_start_time) <= 60:
+            if cleaned_start_time.isnumeric() and int(cleaned_start_time) <= max(utils.HATCH_TIME, utils.DESPAWN_TIME):
                 return datetime.datetime.utcnow().replace(tzinfo=pytz.utc) + datetime.timedelta(minutes=int(cleaned_start_time))
 
             for t_format_24h, t_format_12h in [("%H:%M", "%I:%M%p"), ("%H%M", "%I%M%p"), ("%H.%M", "%I.%M:%p")]:
