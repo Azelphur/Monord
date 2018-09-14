@@ -1478,15 +1478,6 @@
             "name": "Scyther",
             "id": "123",
             "raid_level": 3,
-            "availability_rules": [
-                [
-                    {
-                        "type": "time",
-                        "start": "2010-06-07T20:00:00Z",
-                        "end": "2010-06-21T20:00:00Z"
-                    }
-                ]
-            ],
             "types": [
                 "Bug",
                 "Flying"
