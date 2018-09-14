@@ -15,6 +15,7 @@ from sqlalchemy.orm.exc import NoResultFound
 import json
 import gettext
 import re
+import random
 RE_EMOJI = re.compile("\<\:(.+):(\d+)>")
 
 _ = gettext.gettext
