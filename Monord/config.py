@@ -33,6 +33,8 @@ def timezone_validator(value, is_channel):
     return value
 
 def region_validator(value, is_channel):
+    if value is None:
+        return value
     try:
         j = json.loads(value)
     except json.decoder.JSONDecodeError:
