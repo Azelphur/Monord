@@ -5098,5 +5098,17 @@
         "Flying"
       ]
     }
+  },
+  {
+    "type": "pokemon",
+    "data": {
+      "name": "Deoxys",
+      "id": "386",
+      "raid_level": 5,
+      "ex": true,
+      "types": [
+        "Psychic"
+      ]
+    }
   }
 ]
