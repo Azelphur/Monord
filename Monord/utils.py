@@ -219,11 +219,14 @@ async def add_raid_reactions(session, message):
         ['emoji_going', 'emoji_add_person', 'emoji_remove_person', 'emoji_add_time', 'emoji_remove_time'],
         message.channel
     )
-    await message.add_reaction(emoji_from_string(message.channel.guild, emoji_going))
-    await message.add_reaction(emoji_from_string(message.channel.guild, emoji_add_person))
-    await message.add_reaction(emoji_from_string(message.channel.guild, emoji_remove_person))
-    await message.add_reaction(emoji_from_string(message.channel.guild, emoji_add_time))
-    await message.add_reaction(emoji_from_string(message.channel.guild, emoji_remove_time))
+    try:
+        await message.add_reaction(emoji_from_string(message.channel.guild, emoji_going))
+        await message.add_reaction(emoji_from_string(message.channel.guild, emoji_add_person))
+        await message.add_reaction(emoji_from_string(message.channel.guild, emoji_remove_person))
+        await message.add_reaction(emoji_from_string(message.channel.guild, emoji_add_time))
+        await message.add_reaction(emoji_from_string(message.channel.guild, emoji_remove_time))
+    except discord.errors.NotFound:
+        pass
 
 async def send_raid(cog, channel, raid, extra_content=None):
     embeds = list(cog.session.query(models.Embed).filter_by(channel_id=channel.id, raid=raid, embed_type=EMBED_RAID))
