@@ -2037,6 +2037,8 @@
       "id": "146",
       "raid_level": 5,
       "shiny": true,
+      "perfect_cp": 1870,
+      "perfect_cp_boosted": 2337,
       "availability_rules": [
         [
           {
