@@ -2135,7 +2135,7 @@
       "name": "Mewtwo",
       "id": "150",
       "raid_level": 5,
-      "shiny": true,
+      "shiny": false,
       "perfect_cp": 2275,
       "perfect_cp_boosted": 2844,
       "availability_rules": [
