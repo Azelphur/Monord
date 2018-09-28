@@ -6,12 +6,14 @@
       "id": "001",
       "shiny": true,
       "raid_level": 1,
+      "perfect_cp": 560,
+      "perfect_cp_boosted": 701,
       "availability_rules": [
         [
           {
             "type": "time",
             "start": "2018-09-13T20:00:00Z",
-            "end": "2018-09-20T20:00:00Z"
+            "end": "2018-10-20T20:00:00Z"
           }
         ]
       ],
@@ -50,6 +52,8 @@
       "id": "004",
       "shiny": true,
       "raid_level": 1,
+      "perfect_cp": 475,
+      "perfect_cp_boosted": 593,
       "availability_rules": [
         [
           {
@@ -92,12 +96,14 @@
       "id": "007",
       "shiny": true,
       "raid_level": 1,
+      "perfect_cp": 462,
+      "perfect_cp_boosted": 577,
       "availability_rules": [
         [
           {
             "type": "time",
             "start": "2018-09-13T20:00:00Z",
-            "end": "2018-09-20T20:00:00Z"
+            "end": "2018-10-20T20:00:00Z"
           }
         ]
       ],
@@ -750,7 +756,7 @@
           {
             "type": "time",
             "start": "2018-09-13T20:00:00Z",
-            "end": "2018-09-20T20:00:00Z"
+            "end": "2018-10-20T20:00:00Z"
           }
         ]
       ],
@@ -892,7 +898,7 @@
           {
             "type": "time",
             "start": "2018-09-13T20:00:00Z",
-            "end": "2018-09-20T20:00:00Z"
+            "end": "2018-10-20T20:00:00Z"
           }
         ]
       ],
@@ -970,6 +976,9 @@
     "data": {
       "name": "Magneton",
       "id": "082",
+      "raid_level": 2,
+      "perfect_cp": 1278,
+      "perfect_cp_boosted": 1598,
       "types": [
         "Electric",
         "Steel"
@@ -1293,7 +1302,7 @@
           {
             "type": "time",
             "start": "2018-09-13T20:00:00Z",
-            "end": "2018-09-20T20:00:00Z"
+            "end": "2018-10-20T20:00:00Z"
           }
         ]
       ],
@@ -1313,7 +1322,7 @@
           {
             "type": "time",
             "start": "2018-09-13T20:00:00Z",
-            "end": "2018-09-20T20:00:00Z"
+            "end": "2018-10-20T20:00:00Z"
           }
         ]
       ],
@@ -1328,6 +1337,8 @@
       "name": "Lickitung",
       "id": "108",
       "raid_level": 2,
+      "perfect_cp": 755,
+      "perfect_cp_boosted": 944,
       "availability_rules": [
         [
           {
@@ -1532,7 +1543,7 @@
           {
             "type": "time",
             "start": "2018-09-13T20:00:00Z",
-            "end": "2018-09-20T20:00:00Z"
+            "end": "2018-10-20T20:00:00Z"
           }
         ]
       ],
@@ -1569,12 +1580,14 @@
       "name": "Electabuzz",
       "id": "125",
       "raid_level": 2,
+      "perfect_cp": 1255,
+      "perfect_cp_boosted": 1568,
       "availability_rules": [
         [
           {
             "type": "time",
             "start": "2018-09-13T20:00:00Z",
-            "end": "2018-09-20T20:00:00Z"
+            "end": "2018-10-20T20:00:00Z"
           }
         ]
       ],
@@ -1592,12 +1605,14 @@
       "types": [
         "Fire"
       ],
+      "perfect_cp": 1288,
+      "perfect_cp_boosted": 1610,
       "availability_rules": [
         [
           {
             "type": "time",
-            "start": "2018-07-19T20:00:00Z",
-            "end": "2018-08-16T20:00:00Z"
+            "start": "2018-09-19T20:00:00Z",
+            "end": "2018-10-16T20:00:00Z"
           }
         ],
         [
@@ -1676,7 +1691,7 @@
           {
             "type": "time",
             "start": "2018-09-13T20:00:00Z",
-            "end": "2018-09-20T20:00:00Z"
+            "end": "2018-10-20T20:00:00Z"
           }
         ]
       ],
@@ -1911,7 +1926,7 @@
           {
             "type": "time",
             "start": "2018-09-13T20:00:00Z",
-            "end": "2018-09-20T20:00:00Z"
+            "end": "2018-10-20T20:00:00Z"
           }
         ]
       ],
@@ -2097,12 +2112,14 @@
       ],
       "shiny": true,
       "raid_level": 1,
+      "perfect_cp": 491,
+      "perfect_cp_boosted": 614,
       "availability_rules": [
         [
           {
             "type": "time",
             "start": "2018-09-13T20:00:00Z",
-            "end": "2018-09-20T20:00:00Z"
+            "end": "2018-10-20T20:00:00Z"
           }
         ]
       ]
@@ -5104,6 +5121,8 @@
     "data": {
       "name": "Deoxys",
       "id": "386",
+      "perfect_cp": 1570,
+      "perfect_cp_boosted": 1963,
       "raid_level": 5,
       "ex": true,
       "types": [
