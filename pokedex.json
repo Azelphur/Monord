@@ -5147,5 +5147,18 @@
         "Psychic"
       ]
     }
+  },
+  {
+    "type": "pokemon",
+    "data": {
+      "name": "Bidoof",
+      "id": "399",
+      "raid_level": 1,
+      "perfect_cp": 412,
+      "perfect_cp_boosted": 515,
+      "types": [
+        "Normal"  
+      ]
+    }
   }
 ]
