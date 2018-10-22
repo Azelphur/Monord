@@ -398,9 +398,13 @@ async def send_hatch(cog, channel, raid):
         description=description
     )
     embed.set_footer(text="Raid ID {}.".format(raid.id))
+
     message = await channel.send(content, embed=embed)
 
     embed = models.Embed(channel_id=channel.id, message_id=message.id, raid=raid, embed_type=EMBED_HATCH)
+    delete_after_despawn = config.get(cog.session, "delete_after_despawn", channel)
+    if delete_after_despawn is not None:
+        embed.delete_at = raid.despawn_time + datetime.timedelta(minutes=delete_after_despawn)
     cog.session.add(embed)
     cog.session.commit()
 
