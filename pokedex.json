@@ -5147,5 +5147,58 @@
         "Psychic"
       ]
     }
+  },
+  {
+    "type": "pokemon",
+    "data": {
+      "name": "Bidoof",
+      "id": "399",
+      "raid_level": 1,
+      "perfect_cp": 412,
+      "perfect_cp_boosted": 515,
+      "types": [
+        "Normal"
+      ]
+    }
+  },
+  {
+    "type": "pokemon",
+    "data": {
+      "name": "Kricketot",
+      "id": "401",
+      "raid_level": 1,
+      "perfect_cp": 229,
+      "perfect_cp_boosted": 286,
+      "types": [
+        "Bug"
+      ]
+    }
+  },
+  {
+    "type": "pokemon",
+    "data": {
+      "name": "Shinx",
+      "id": "403",
+	  "shiny": true,
+      "raid_level": 1,
+      "perfect_cp": 500,
+      "perfect_cp_boosted": 625,
+      "types": [
+        "Electric"
+      ]
+    }
+  },
+  {
+    "type": "pokemon",
+    "data": {
+      "name": "Buneary",
+      "id": "427",
+      "raid_level": 1,
+      "perfect_cp": 719,
+      "perfect_cp_boosted": 899,
+      "types": [
+        "Normal"		
+      ]
+    }
   }
 ]
