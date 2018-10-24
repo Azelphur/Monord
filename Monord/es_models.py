@@ -11,6 +11,9 @@ class Gym(DocType):
     class Meta:
         index = 'gym'
 
+    class Index:
+        name = 'gym'
+
 Gym.init()
 
 
@@ -20,6 +23,9 @@ class Pokemon(DocType):
     class Meta:
         index = 'pokemon'
 
+    class Index:
+        name = 'pokemon'
+
 Pokemon.init()
 
 
@@ -28,5 +34,8 @@ class Pokestop(DocType):
 
     class Meta:
         index = 'pokestop'
+
+    class Index:
+        name = 'pokestop'
 
 Pokestop.init()
