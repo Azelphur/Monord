@@ -5189,16 +5189,38 @@
     }
   },
   {
-    "type": "pokemon",
-    "data": {
-      "name": "Buneary",
-      "id": "427",
-      "raid_level": 1,
-      "perfect_cp": 719,
-      "perfect_cp_boosted": 899,
-      "types": [
-        "Normal"		
-      ]
-    }
-  }
+		"type": "pokemon",
+		"data": {
+			"name": "Buneary",
+			"id": "427",
+			"raid_level": 1,
+			"perfect_cp": 719,
+			"perfect_cp_boosted": 899,
+			"types": [
+				"Normal"
+			]
+		}
+	},
+	{
+		"type": "pokemon",
+		"data": {
+			"name": "Giratina",
+			"id": "487",
+			"raid_level": 5,
+			"perfect_cp": 1931,
+			"perfect_cp_boosted": 2414,
+			"availability_rules": [
+				[{
+					"type": "time",
+					"start": "2018-10-23T20:00:00Z",
+					"end": "2018-11-20T20:00:00Z"
+				}]
+			],
+			"types": [
+				"Ghost",
+				"Dragon"
+			]
+		}
+	}
 ]
+
