@@ -357,8 +357,6 @@ class Monord:
                 possibilities += "- " + p.name + "\n"
             possibilities += "\n"
 
-        for p in pokemon:
-            possibilities += p.name + "\n"
         await ctx.send(possibilities)
 
     @raid.command(case_insensitive=True, alias="pok??mon")
