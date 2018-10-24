@@ -341,6 +341,26 @@ class Monord:
         timers.raid_reschedule(self)
         await ctx.tick()
 
+    @raid.command(case_insensitive=True)
+    async def possibilities(self, ctx, *, gym: converters.GymWithSQL):
+        es_gym, sql_gym = gym
+        now = pytz.utc.localize(datetime.datetime.now())
+        pokemon = utils.get_possible_pokemon(self, sql_gym.location, now, 5, True)
+        possibilities = "EX:\n"
+        for p in pokemon:
+            possibilities += "- " + p.name + "\n"
+        possibilities += "\n"
+        for i in range(1, 6):
+            pokemon = utils.get_possible_pokemon(self, sql_gym.location, now, i, False)
+            possibilities += "Level {}\n".format(i)
+            for p in pokemon:
+                possibilities += "- " + p.name + "\n"
+            possibilities += "\n"
+
+        for p in pokemon:
+            possibilities += p.name + "\n"
+        await ctx.send(possibilities)
+
     @raid.command(case_insensitive=True, alias="pok??mon")
     async def pokemon(self, ctx, pokemon: converters.PokemonWithSQL, *, raid: converters.Raid):
         """
