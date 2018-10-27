@@ -307,17 +307,17 @@
       "name": "Raichu",
       "id": "026",
       "raid_level": 3,
+      "types": [
+        "Electric"
+      ],
       "availability_rules": [
         [
           {
             "type": "time",
-            "start": "2018-10-07T20:00:00Z",
-            "end": "2018-11-21T20:00:00Z"
+            "start": "2010-06-07T20:00:00Z",
+            "end": "2010-06-21T20:00:00Z"
           }
         ]
-      ],
-      "types": [
-        "Electric"
       ]
     }
   },
@@ -751,17 +751,17 @@
       "name": "Alakazam",
       "id": "065",
       "raid_level": 3,
+      "types": [
+        "Psychic"
+      ],
       "availability_rules": [
         [
           {
             "type": "time",
-            "start": "2018-09-13T20:00:00Z",
-            "end": "2018-11-20T20:00:00Z"
+            "start": "2010-06-07T20:00:00Z",
+            "end": "2010-06-21T20:00:00Z"
           }
         ]
-      ],
-      "types": [
-        "Psychic"
       ]
     }
   },
@@ -795,15 +795,6 @@
       "perfect_cp_boosted": 2063,
       "types": [
         "Fighting"
-      ],
-      "availability_rules": [
-        [
-          {
-            "type": "time",
-            "start": "2010-06-07T20:00:00Z",
-            "end": "2010-06-21T20:00:00Z"
-          }
-        ]
       ]
     }
   },
@@ -959,6 +950,15 @@
       "types": [
         "Water",
         "Psychic"
+      ],
+      "availability_rules": [
+        [
+          {
+            "type": "time",
+            "start": "2010-06-07T20:00:00Z",
+            "end": "2010-06-21T20:00:00Z"
+          }
+        ]
       ]
     }
   },
@@ -994,6 +994,15 @@
       "types": [
         "Electric",
         "Steel"
+      ],
+      "availability_rules": [
+        [
+          {
+            "type": "time",
+            "start": "2010-06-07T20:00:00Z",
+            "end": "2010-06-21T20:00:00Z"
+          }
+        ]
       ]
     }
   },
@@ -1143,15 +1152,6 @@
       "name": "Gengar",
       "id": "094",
       "raid_level": 3,
-      "availability_rules": [
-        [
-          {
-            "type": "time",
-            "start": "2010-06-07T20:00:00Z",
-            "end": "2010-06-21T20:00:00Z"
-          }
-        ]
-      ],
       "types": [
         "Ghost",
         "Poison"
@@ -1187,6 +1187,15 @@
       "raid_level": 1,
       "types": [
         "Psychic"
+      ],
+      "availability_rules": [
+        [
+          {
+            "type": "time",
+            "start": "2010-06-07T20:00:00Z",
+            "end": "2010-06-21T20:00:00Z"
+          }
+        ]
       ]
     }
   },
@@ -1259,18 +1268,18 @@
       "raid_level": 2,
       "perfect_cp": 1666,
       "perfect_cp_boosted": 2083,
+      "types": [
+        "Grass",
+        "Psychic"
+      ],
       "availability_rules": [
         [
           {
             "type": "time",
-            "start": "2018-10-07T20:00:00Z",
-            "end": "2018-11-21T20:00:00Z"
+            "start": "2010-06-07T20:00:00Z",
+            "end": "2010-06-21T20:00:00Z"
           }
         ]
-      ],
-      "types": [
-        "Grass",
-        "Psychic"
       ]
     }
   },
@@ -1290,15 +1299,6 @@
       "name": "Marowak",
       "id": "105",
       "raid_level": 4,
-      "availability_rules": [
-        [
-          {
-            "type": "time",
-            "start": "2010-10-07T20:00:00Z",
-            "end": "2010-11-21T20:00:00Z"
-          }
-        ]
-      ],
       "perfect_cp": 966,
       "perfect_cp_boosted": 1208,
       "types": [
@@ -1418,6 +1418,15 @@
       "types": [
         "Ground",
         "Rock"
+      ],
+      "availability_rules": [
+        [
+          {
+            "type": "time",
+            "start": "2010-06-07T20:00:00Z",
+            "end": "2010-06-21T20:00:00Z"
+          }
+        ]
       ]
     }
   },
@@ -1574,18 +1583,18 @@
       "name": "Jynx",
       "id": "124",
       "raid_level": 3,
+      "types": [
+        "Ice",
+        "Psychic"
+      ],
       "availability_rules": [
         [
           {
             "type": "time",
-            "start": "2018-10-07T20:00:00Z",
-            "end": "2018-11-21T20:00:00Z"
+            "start": "2010-06-07T20:00:00Z",
+            "end": "2010-06-21T20:00:00Z"
           }
         ]
-      ],
-      "types": [
-        "Ice",
-        "Psychic"
       ]
     }
   },
@@ -1681,6 +1690,15 @@
       "shiny": true,
       "types": [
         "Water"
+      ],
+      "availability_rules": [
+        [
+          {
+            "type": "time",
+            "start": "2010-06-07T20:00:00Z",
+            "end": "2010-06-21T20:00:00Z"
+          }
+        ]
       ]
     }
   },
@@ -2461,6 +2479,7 @@
     "data": {
       "name": "Togetic",
       "id": "176",
+      "raid_level": 4,
       "types": [
         "Fairy",
         "Flying"
@@ -2725,15 +2744,6 @@
       "name": "Misdreavus",
       "id": "200",
       "raid_level": 2,
-      "availability_rules": [
-        [
-          {
-            "type": "time",
-            "start": "2010-06-07T20:00:00Z",
-            "end": "2010-06-21T20:00:00Z"
-          }
-        ]
-      ],
       "types": [
         "Ghost"
       ]
@@ -2839,15 +2849,6 @@
       "name": "Granbull",
       "id": "210",
       "raid_level": 3,
-      "availability_rules": [
-        [
-          {
-            "type": "time",
-            "start": "2010-06-07T20:00:00Z",
-            "end": "2010-06-21T20:00:00Z"
-          }
-        ]
-      ],
       "types": [
         "Fairy"
       ]
@@ -2903,15 +2904,6 @@
       "name": "Sneasel",
       "id": "215",
       "raid_level": 2,
-      "availability_rules": [
-        [
-          {
-            "type": "time",
-            "start": "2010-06-07T20:00:00Z",
-            "end": "2010-06-21T20:00:00Z"
-          }
-        ]
-      ],
       "types": [
         "Dark",
         "Ice"
@@ -3075,15 +3067,6 @@
       "types": [
         "Dark",
         "Fire"
-      ],
-      "availability_rules": [
-        [
-          {
-            "type": "time",
-            "start": "2018-10-07T20:00:00Z",
-            "end": "2018-11-16T20:00:00Z"
-          }
-        ]
       ]
     }
   },
@@ -3720,15 +3703,6 @@
       "name": "Kirlia",
       "id": "281",
       "raid_level": 2,
-      "availability_rules": [
-        [
-          {
-            "type": "time",
-            "start": "2018-10-07T20:00:00Z",
-            "end": "2018-11-13T20:00:00Z"
-          }
-        ]
-      ],
       "types": [
         "Psychic",
         "Fairy"
@@ -3970,15 +3944,6 @@
       "name": "Sableye",
       "id": "302",
       "raid_level": 2,
-      "availability_rules": [
-        [
-          {
-            "type": "time",
-            "start": "2010-06-07T20:00:00Z",
-            "end": "2010-06-21T20:00:00Z"
-          }
-        ]
-      ],
       "types": [
         "Dark",
         "Ghost"
@@ -4051,18 +4016,18 @@
       "name": "Meditite",
       "id": "307",
       "raid_level": 1,
+      "types": [
+        "Fighting",
+        "Psychic"
+      ],
       "availability_rules": [
         [
           {
             "type": "time",
-            "start": "2018-10-07T20:00:00Z",
-            "end": "2018-11-13T20:00:00Z"
+            "start": "2010-06-07T20:00:00Z",
+            "end": "2010-06-21T20:00:00Z"
           }
         ]
-      ],
-      "types": [
-        "Fighting",
-        "Psychic"
       ]
     }
   },
@@ -4210,15 +4175,6 @@
       "perfect_cp": 1134,
       "perfect_cp_boosted": 1418,
       "shiny": true,
-      "availability_rules": [
-        [
-          {
-            "type": "time",
-            "start": "2010-06-07T20:00:00Z",
-            "end": "2010-06-21T20:00:00Z"
-          }
-        ]
-      ],
       "types": [
         "Water",
         "Dark"
@@ -4231,20 +4187,20 @@
       "name": "Wailmer",
       "id": "320",
       "raid_level": 1,
-      "availability_rules": [
-        [
-          {
-            "type": "time",
-            "start": "2018-10-07T20:00:00Z",
-            "end": "2018-11-13T20:00:00Z"
-          }
-        ]
-      ],
       "perfect_cp": 814,
       "perfect_cp_boosted": 1017,
       "shiny": true,
       "types": [
         "Water"
+      ],
+      "availability_rules": [
+        [
+          {
+            "type": "time",
+            "start": "2010-06-07T20:00:00Z",
+            "end": "2010-06-21T20:00:00Z"
+          }
+        ]
       ]
     }
   },
@@ -4512,6 +4468,15 @@
       "types": [
         "Ground",
         "Psychic"
+      ],
+      "availability_rules": [
+        [
+          {
+            "type": "time",
+            "start": "2010-06-07T20:00:00Z",
+            "end": "2010-06-21T20:00:00Z"
+          }
+        ]
       ]
     }
   },
@@ -4605,15 +4570,6 @@
       "name": "Shuppet",
       "id": "353",
       "raid_level": 1,
-      "availability_rules": [
-        [
-          {
-            "type": "time",
-            "start": "2010-06-07T20:00:00Z",
-            "end": "2010-06-21T20:00:00Z"
-          }
-        ]
-      ],
       "types": [
         "Ghost"
       ]
@@ -4635,15 +4591,6 @@
       "name": "Duskull",
       "id": "355",
       "raid_level": 1,
-      "availability_rules": [
-        [
-          {
-            "type": "time",
-            "start": "2010-06-07T20:00:00Z",
-            "end": "2010-06-21T20:00:00Z"
-          }
-        ]
-      ],
       "types": [
         "Ghost"
       ]
@@ -4710,15 +4657,6 @@
       "name": "Snorunt",
       "id": "361",
       "raid_level": 1,
-      "availability_rules": [
-        [
-          {
-            "type": "time",
-            "start": "2010-06-07T20:00:00Z",
-            "end": "2010-06-21T20:00:00Z"
-          }
-        ]
-      ],
       "types": [
         "Ice"
       ]
@@ -5158,6 +5096,15 @@
       "perfect_cp_boosted": 515,
       "types": [
         "Normal"
+      ],
+      "availability_rules": [
+        [
+          {
+            "type": "time",
+            "start": "2010-06-07T20:00:00Z",
+            "end": "2010-06-21T20:00:00Z"
+          }
+        ]
       ]
     }
   },
@@ -5171,6 +5118,15 @@
       "perfect_cp_boosted": 286,
       "types": [
         "Bug"
+      ],
+      "availability_rules": [
+        [
+          {
+            "type": "time",
+            "start": "2010-06-07T20:00:00Z",
+            "end": "2010-06-21T20:00:00Z"
+          }
+        ]
       ]
     }
   },
@@ -5198,10 +5154,19 @@
       "perfect_cp_boosted": 899,
       "types": [
         "Normal"
+      ],
+      "availability_rules": [
+        [
+          {
+            "type": "time",
+            "start": "2010-06-07T20:00:00Z",
+            "end": "2010-06-21T20:00:00Z"
+          }
+        ]
       ]
     }
   },
-  {	      
+  {   
     "type": "pokemon",
     "data": {
       "name": "Giratina",
