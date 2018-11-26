@@ -7,7 +7,7 @@
             "shiny": true,
             "raid_level": 1,
             "perfect_cp": 637,
-            "perfect_cp_boosted": 701,
+            "perfect_cp_boosted": 796,
             "availability_rules": [
                 [
                     {
@@ -34,7 +34,8 @@
                 "Poison"
             ],
             "perfect_cp": 970,
-            "perfect_boosted": 1213
+            "perfect_boosted": 1213,
+            "perfect_cp_boosted": 1213
         }
     },
     {
@@ -47,7 +48,8 @@
                 "Poison"
             ],
             "perfect_cp": 1554,
-            "perfect_boosted": 1943
+            "perfect_boosted": 1943,
+            "perfect_cp_boosted": 1943
         }
     },
     {
@@ -58,7 +60,7 @@
             "shiny": true,
             "raid_level": 1,
             "perfect_cp": 560,
-            "perfect_cp_boosted": 593,
+            "perfect_cp_boosted": 700,
             "availability_rules": [
                 [
                     {
@@ -83,7 +85,8 @@
                 "Fire"
             ],
             "perfect_cp": 944,
-            "perfect_boosted": 1180
+            "perfect_boosted": 1180,
+            "perfect_cp_boosted": 1180
         }
     },
     {
@@ -96,7 +99,8 @@
                 "Flying"
             ],
             "perfect_cp": 1651,
-            "perfect_boosted": 2064
+            "perfect_boosted": 2064,
+            "perfect_cp_boosted": 2064
         }
     },
     {
@@ -107,7 +111,7 @@
             "shiny": true,
             "raid_level": 1,
             "perfect_cp": 540,
-            "perfect_cp_boosted": 577,
+            "perfect_cp_boosted": 675,
             "availability_rules": [
                 [
                     {
@@ -132,7 +136,8 @@
                 "Water"
             ],
             "perfect_cp": 850,
-            "perfect_boosted": 1063
+            "perfect_boosted": 1063,
+            "perfect_cp_boosted": 1063
         }
     },
     {
@@ -144,7 +149,8 @@
                 "Water"
             ],
             "perfect_cp": 1409,
-            "perfect_boosted": 1761
+            "perfect_boosted": 1761,
+            "perfect_cp_boosted": 1761
         }
     },
     {
@@ -156,7 +162,8 @@
                 "Bug"
             ],
             "perfect_cp": 249,
-            "perfect_boosted": 312
+            "perfect_boosted": 312,
+            "perfect_cp_boosted": 312
         }
     },
     {
@@ -168,7 +175,8 @@
                 "Bug"
             ],
             "perfect_cp": 257,
-            "perfect_boosted": 321
+            "perfect_boosted": 321,
+            "perfect_cp_boosted": 321
         }
     },
     {
@@ -181,7 +189,8 @@
                 "Flying"
             ],
             "perfect_cp": 1044,
-            "perfect_boosted": 1305
+            "perfect_boosted": 1305,
+            "perfect_cp_boosted": 1305
         }
     },
     {
@@ -194,7 +203,8 @@
                 "Poison"
             ],
             "perfect_cp": 260,
-            "perfect_boosted": 325
+            "perfect_boosted": 325,
+            "perfect_cp_boosted": 325
         }
     },
     {
@@ -207,7 +217,8 @@
                 "Poison"
             ],
             "perfect_cp": 246,
-            "perfect_boosted": 308
+            "perfect_boosted": 308,
+            "perfect_cp_boosted": 308
         }
     },
     {
@@ -220,7 +231,8 @@
                 "Poison"
             ],
             "perfect_cp": 1054,
-            "perfect_boosted": 1318
+            "perfect_boosted": 1318,
+            "perfect_cp_boosted": 1318
         }
     },
     {
@@ -233,7 +245,8 @@
                 "Flying"
             ],
             "perfect_cp": 388,
-            "perfect_boosted": 486
+            "perfect_boosted": 486,
+            "perfect_cp_boosted": 486
         }
     },
     {
@@ -246,7 +259,8 @@
                 "Flying"
             ],
             "perfect_cp": 682,
-            "perfect_boosted": 853
+            "perfect_boosted": 853,
+            "perfect_cp_boosted": 853
         }
     },
     {
@@ -259,7 +273,8 @@
                 "Flying"
             ],
             "perfect_cp": 1216,
-            "perfect_boosted": 1521
+            "perfect_boosted": 1521,
+            "perfect_cp_boosted": 1521
         }
     },
     {
@@ -272,7 +287,8 @@
                 "Normal"
             ],
             "perfect_cp": 419,
-            "perfect_boosted": 524
+            "perfect_boosted": 524,
+            "perfect_cp_boosted": 524
         }
     },
     {
@@ -285,7 +301,8 @@
                 "Normal"
             ],
             "perfect_cp": 974,
-            "perfect_boosted": 1217
+            "perfect_boosted": 1217,
+            "perfect_cp_boosted": 1217
         }
     },
     {
@@ -298,7 +315,8 @@
                 "Flying"
             ],
             "perfect_cp": 456,
-            "perfect_boosted": 570
+            "perfect_boosted": 570,
+            "perfect_cp_boosted": 570
         }
     },
     {
@@ -311,7 +329,8 @@
                 "Flying"
             ],
             "perfect_cp": 1141,
-            "perfect_boosted": 1426
+            "perfect_boosted": 1426,
+            "perfect_cp_boosted": 1426
         }
     },
     {
@@ -323,7 +342,8 @@
                 "Poison"
             ],
             "perfect_cp": 529,
-            "perfect_boosted": 662
+            "perfect_boosted": 662,
+            "perfect_cp_boosted": 662
         }
     },
     {
@@ -335,7 +355,8 @@
                 "Poison"
             ],
             "perfect_cp": 1097,
-            "perfect_boosted": 1372
+            "perfect_boosted": 1372,
+            "perfect_cp_boosted": 1372
         }
     },
     {
@@ -347,7 +368,8 @@
                 "Electric"
             ],
             "perfect_cp": 536,
-            "perfect_boosted": 670
+            "perfect_boosted": 670,
+            "perfect_cp_boosted": 670
         }
     },
     {
@@ -370,7 +392,8 @@
                 ]
             ],
             "perfect_cp": 1306,
-            "perfect_boosted": 1633
+            "perfect_boosted": 1633,
+            "perfect_cp_boosted": 1633
         }
     },
     {
@@ -383,7 +406,8 @@
                 "Steel"
             ],
             "perfect_cp": 739,
-            "perfect_boosted": 924
+            "perfect_boosted": 924,
+            "perfect_cp_boosted": 924
         }
     },
     {
@@ -396,7 +420,8 @@
                 "Steel"
             ],
             "perfect_cp": 1390,
-            "perfect_boosted": 1737
+            "perfect_boosted": 1737,
+            "perfect_cp_boosted": 1737
         }
     },
     {
@@ -408,7 +433,8 @@
                 "Poison"
             ],
             "perfect_cp": 466,
-            "perfect_boosted": 583
+            "perfect_boosted": 583,
+            "perfect_cp_boosted": 583
         }
     },
     {
@@ -420,7 +446,8 @@
                 "Poison"
             ],
             "perfect_cp": 748,
-            "perfect_boosted": 935
+            "perfect_boosted": 935,
+            "perfect_cp_boosted": 935
         }
     },
     {
@@ -433,7 +460,8 @@
                 "Ground"
             ],
             "perfect_cp": 1421,
-            "perfect_boosted": 1777
+            "perfect_boosted": 1777,
+            "perfect_cp_boosted": 1777
         }
     },
     {
@@ -445,7 +473,8 @@
                 "Poison"
             ],
             "perfect_cp": 491,
-            "perfect_boosted": 614
+            "perfect_boosted": 614,
+            "perfect_cp_boosted": 614
         }
     },
     {
@@ -457,7 +486,8 @@
                 "Poison"
             ],
             "perfect_cp": 796,
-            "perfect_boosted": 995
+            "perfect_boosted": 995,
+            "perfect_cp_boosted": 995
         }
     },
     {
@@ -470,7 +500,8 @@
                 "Ground"
             ],
             "perfect_cp": 1466,
-            "perfect_boosted": 1833
+            "perfect_boosted": 1833,
+            "perfect_cp_boosted": 1833
         }
     },
     {
@@ -482,7 +513,8 @@
                 "Fairy"
             ],
             "perfect_cp": 660,
-            "perfect_boosted": 825
+            "perfect_boosted": 825,
+            "perfect_cp_boosted": 825
         }
     },
     {
@@ -494,7 +526,8 @@
                 "Fairy"
             ],
             "perfect_cp": 1392,
-            "perfect_boosted": 1741
+            "perfect_boosted": 1741,
+            "perfect_cp_boosted": 1741
         }
     },
     {
@@ -506,7 +539,8 @@
                 "Ice"
             ],
             "perfect_cp": 504,
-            "perfect_boosted": 631
+            "perfect_boosted": 631,
+            "perfect_cp_boosted": 631
         }
     },
     {
@@ -519,7 +553,8 @@
                 "Fairy"
             ],
             "perfect_cp": 1319,
-            "perfect_boosted": 1649
+            "perfect_boosted": 1649,
+            "perfect_cp_boosted": 1649
         }
     },
     {
@@ -532,7 +567,8 @@
                 "Fairy"
             ],
             "perfect_cp": 413,
-            "perfect_boosted": 517
+            "perfect_boosted": 517,
+            "perfect_cp_boosted": 517
         }
     },
     {
@@ -545,7 +581,8 @@
                 "Fairy"
             ],
             "perfect_cp": 1101,
-            "perfect_boosted": 1376
+            "perfect_boosted": 1376,
+            "perfect_cp_boosted": 1376
         }
     },
     {
@@ -558,7 +595,8 @@
                 "Flying"
             ],
             "perfect_cp": 381,
-            "perfect_boosted": 476
+            "perfect_boosted": 476,
+            "perfect_cp_boosted": 476
         }
     },
     {
@@ -571,7 +609,8 @@
                 "Flying"
             ],
             "perfect_cp": 1129,
-            "perfect_boosted": 1412
+            "perfect_boosted": 1412,
+            "perfect_cp_boosted": 1412
         }
     },
     {
@@ -584,7 +623,8 @@
                 "Poison"
             ],
             "perfect_cp": 702,
-            "perfect_boosted": 877
+            "perfect_boosted": 877,
+            "perfect_cp_boosted": 877
         }
     },
     {
@@ -597,7 +637,8 @@
                 "Poison"
             ],
             "perfect_cp": 960,
-            "perfect_boosted": 1200
+            "perfect_boosted": 1200,
+            "perfect_cp_boosted": 1200
         }
     },
     {
@@ -610,7 +651,8 @@
                 "Poison"
             ],
             "perfect_cp": 1462,
-            "perfect_boosted": 1828
+            "perfect_boosted": 1828,
+            "perfect_cp_boosted": 1828
         }
     },
     {
@@ -623,7 +665,8 @@
                 "Grass"
             ],
             "perfect_cp": 581,
-            "perfect_boosted": 727
+            "perfect_boosted": 727,
+            "perfect_cp_boosted": 727
         }
     },
     {
@@ -636,7 +679,8 @@
                 "Grass"
             ],
             "perfect_cp": 1062,
-            "perfect_boosted": 1328
+            "perfect_boosted": 1328,
+            "perfect_cp_boosted": 1328
         }
     },
     {
@@ -649,7 +693,8 @@
                 "Poison"
             ],
             "perfect_cp": 573,
-            "perfect_boosted": 717
+            "perfect_boosted": 717,
+            "perfect_cp_boosted": 717
         }
     },
     {
@@ -672,7 +717,8 @@
                 "Poison"
             ],
             "perfect_cp": 1190,
-            "perfect_boosted": 1487
+            "perfect_boosted": 1487,
+            "perfect_cp_boosted": 1487
         }
     },
     {
@@ -685,7 +731,8 @@
                 "Steel"
             ],
             "perfect_cp": 394,
-            "perfect_boosted": 493
+            "perfect_boosted": 493,
+            "perfect_cp_boosted": 493
         }
     },
     {
@@ -698,7 +745,8 @@
                 "Steel"
             ],
             "perfect_cp": 1094,
-            "perfect_boosted": 1368
+            "perfect_boosted": 1368,
+            "perfect_cp_boosted": 1368
         }
     },
     {
@@ -710,7 +758,8 @@
                 "Dark"
             ],
             "perfect_cp": 455,
-            "perfect_boosted": 569
+            "perfect_boosted": 569,
+            "perfect_cp_boosted": 569
         }
     },
     {
@@ -722,7 +771,8 @@
                 "Dark"
             ],
             "perfect_cp": 1012,
-            "perfect_boosted": 1265
+            "perfect_boosted": 1265,
+            "perfect_cp_boosted": 1265
         }
     },
     {
@@ -734,7 +784,8 @@
                 "Water"
             ],
             "perfect_cp": 632,
-            "perfect_boosted": 790
+            "perfect_boosted": 790,
+            "perfect_cp_boosted": 790
         }
     },
     {
@@ -746,7 +797,8 @@
                 "Water"
             ],
             "perfect_cp": 1400,
-            "perfect_boosted": 1750
+            "perfect_boosted": 1750,
+            "perfect_cp_boosted": 1750
         }
     },
     {
@@ -758,7 +810,8 @@
                 "Fighting"
             ],
             "perfect_cp": 665,
-            "perfect_boosted": 832
+            "perfect_boosted": 832,
+            "perfect_cp_boosted": 832
         }
     },
     {
@@ -780,7 +833,8 @@
                 "Fighting"
             ],
             "perfect_cp": 1307,
-            "perfect_boosted": 1634
+            "perfect_boosted": 1634,
+            "perfect_cp_boosted": 1634
         }
     },
     {
@@ -792,7 +846,8 @@
                 "Fire"
             ],
             "perfect_cp": 710,
-            "perfect_boosted": 888
+            "perfect_boosted": 888,
+            "perfect_cp_boosted": 888
         }
     },
     {
@@ -804,7 +859,8 @@
                 "Fire"
             ],
             "perfect_cp": 1731,
-            "perfect_boosted": 2164
+            "perfect_boosted": 2164,
+            "perfect_cp_boosted": 2164
         }
     },
     {
@@ -816,7 +872,8 @@
                 "Water"
             ],
             "perfect_cp": 473,
-            "perfect_boosted": 592
+            "perfect_boosted": 592,
+            "perfect_cp_boosted": 592
         }
     },
     {
@@ -828,7 +885,8 @@
                 "Water"
             ],
             "perfect_cp": 811,
-            "perfect_boosted": 1013
+            "perfect_boosted": 1013,
+            "perfect_cp_boosted": 1013
         }
     },
     {
@@ -851,7 +909,8 @@
                 "Fighting"
             ],
             "perfect_cp": 1477,
-            "perfect_boosted": 1847
+            "perfect_boosted": 1847,
+            "perfect_cp_boosted": 1847
         }
     },
     {
@@ -863,7 +922,8 @@
                 "Psychic"
             ],
             "perfect_cp": 767,
-            "perfect_boosted": 958
+            "perfect_boosted": 958,
+            "perfect_cp_boosted": 958
         }
     },
     {
@@ -875,7 +935,8 @@
                 "Psychic"
             ],
             "perfect_cp": 1176,
-            "perfect_boosted": 1471
+            "perfect_boosted": 1471,
+            "perfect_cp_boosted": 1471
         }
     },
     {
@@ -897,7 +958,8 @@
                 ]
             ],
             "perfect_cp": 1747,
-            "perfect_boosted": 2184
+            "perfect_boosted": 2184,
+            "perfect_cp_boosted": 2184
         }
     },
     {
@@ -909,7 +971,8 @@
                 "Fighting"
             ],
             "perfect_cp": 730,
-            "perfect_boosted": 913
+            "perfect_boosted": 913,
+            "perfect_cp_boosted": 913
         }
     },
     {
@@ -921,7 +984,8 @@
                 "Fighting"
             ],
             "perfect_cp": 1160,
-            "perfect_boosted": 1451
+            "perfect_boosted": 1451,
+            "perfect_cp_boosted": 1451
         }
     },
     {
@@ -931,7 +995,7 @@
             "id": "068",
             "raid_level": 3,
             "perfect_cp": 1746,
-            "perfect_cp_boosted": 2063,
+            "perfect_cp_boosted": 2183,
             "types": [
                 "Fighting"
             ],
@@ -957,7 +1021,8 @@
                 "Poison"
             ],
             "perfect_cp": 590,
-            "perfect_boosted": 738
+            "perfect_boosted": 738,
+            "perfect_cp_boosted": 738
         }
     },
     {
@@ -970,7 +1035,8 @@
                 "Poison"
             ],
             "perfect_cp": 921,
-            "perfect_boosted": 1151
+            "perfect_boosted": 1151,
+            "perfect_cp_boosted": 1151
         }
     },
     {
@@ -983,7 +1049,8 @@
                 "Poison"
             ],
             "perfect_cp": 1389,
-            "perfect_boosted": 1736
+            "perfect_boosted": 1736,
+            "perfect_cp_boosted": 1736
         }
     },
     {
@@ -996,7 +1063,8 @@
                 "Poison"
             ],
             "perfect_cp": 594,
-            "perfect_boosted": 743
+            "perfect_boosted": 743,
+            "perfect_cp_boosted": 743
         }
     },
     {
@@ -1006,7 +1074,7 @@
             "id": "073",
             "raid_level": 2,
             "perfect_cp": 1384,
-            "perfect_cp_boosted": 1695,
+            "perfect_cp_boosted": 1730,
             "availability_rules": [
                 [
                     {
@@ -1033,7 +1101,8 @@
                 "Electric"
             ],
             "perfect_cp": 739,
-            "perfect_boosted": 923
+            "perfect_boosted": 923,
+            "perfect_cp_boosted": 923
         }
     },
     {
@@ -1046,7 +1115,8 @@
                 "Electric"
             ],
             "perfect_cp": 1084,
-            "perfect_boosted": 1355
+            "perfect_boosted": 1355,
+            "perfect_cp_boosted": 1355
         }
     },
     {
@@ -1069,7 +1139,8 @@
                 "Electric"
             ],
             "perfect_cp": 1685,
-            "perfect_boosted": 2106
+            "perfect_boosted": 2106,
+            "perfect_cp_boosted": 2106
         }
     },
     {
@@ -1081,7 +1152,8 @@
                 "Fire"
             ],
             "perfect_cp": 969,
-            "perfect_boosted": 1212
+            "perfect_boosted": 1212,
+            "perfect_cp_boosted": 1212
         }
     },
     {
@@ -1093,7 +1165,8 @@
                 "Fire"
             ],
             "perfect_cp": 1406,
-            "perfect_boosted": 1757
+            "perfect_boosted": 1757,
+            "perfect_cp_boosted": 1757
         }
     },
     {
@@ -1106,7 +1179,8 @@
                 "Psychic"
             ],
             "perfect_cp": 700,
-            "perfect_boosted": 876
+            "perfect_boosted": 876,
+            "perfect_cp_boosted": 876
         }
     },
     {
@@ -1116,7 +1190,7 @@
             "id": "080",
             "raid_level": 2,
             "perfect_cp": 1454,
-            "perfect_cp_boosted": 1773,
+            "perfect_cp_boosted": 1817,
             "types": [
                 "Water",
                 "Psychic"
@@ -1142,7 +1216,7 @@
                 "Electric",
                 "Steel"
             ],
-            "raid_level": 2,
+            "raid_level": 1,
             "availability_rules": [
                 [
                     {
@@ -1153,8 +1227,10 @@
                 ]
             ],
             "perfect_cp": 778,
-            "perfect_boosted": 973
-        }
+            "perfect_boosted": 973,
+            "perfect_cp_boosted": 973
+        },
+        "availability_rules": []
     },
     {
         "type": "pokemon",
@@ -1163,7 +1239,7 @@
             "id": "082",
             "raid_level": 2,
             "perfect_cp": 1420,
-            "perfect_cp_boosted": 1598,
+            "perfect_cp_boosted": 1775,
             "types": [
                 "Electric",
                 "Steel"
@@ -1190,7 +1266,8 @@
                 "Flying"
             ],
             "perfect_cp": 706,
-            "perfect_boosted": 883
+            "perfect_boosted": 883,
+            "perfect_cp_boosted": 883
         }
     },
     {
@@ -1203,7 +1280,8 @@
                 "Flying"
             ],
             "perfect_cp": 686,
-            "perfect_boosted": 857
+            "perfect_boosted": 857,
+            "perfect_cp_boosted": 857
         }
     },
     {
@@ -1216,7 +1294,8 @@
                 "Flying"
             ],
             "perfect_cp": 1349,
-            "perfect_boosted": 1687
+            "perfect_boosted": 1687,
+            "perfect_cp_boosted": 1687
         }
     },
     {
@@ -1228,7 +1307,8 @@
                 "Water"
             ],
             "perfect_cp": 555,
-            "perfect_boosted": 694
+            "perfect_boosted": 694,
+            "perfect_cp_boosted": 694
         }
     },
     {
@@ -1241,7 +1321,8 @@
                 "Ice"
             ],
             "perfect_cp": 1134,
-            "perfect_boosted": 1418
+            "perfect_boosted": 1418,
+            "perfect_cp_boosted": 1418
         }
     },
     {
@@ -1254,7 +1335,8 @@
                 "Dark"
             ],
             "perfect_cp": 785,
-            "perfect_boosted": 981
+            "perfect_boosted": 981,
+            "perfect_cp_boosted": 981
         }
     },
     {
@@ -1277,7 +1359,8 @@
                 "Dark"
             ],
             "perfect_cp": 1575,
-            "perfect_boosted": 1969
+            "perfect_boosted": 1969,
+            "perfect_cp_boosted": 1969
         }
     },
     {
@@ -1287,7 +1370,7 @@
             "id": "090",
             "raid_level": 1,
             "perfect_cp": 617,
-            "perfect_cp_boosted": 684,
+            "perfect_cp_boosted": 771,
             "shiny": true,
             "availability_rules": [
                 [
@@ -1314,7 +1397,8 @@
                 "Ice"
             ],
             "perfect_cp": 1455,
-            "perfect_boosted": 1819
+            "perfect_boosted": 1819,
+            "perfect_cp_boosted": 1819
         }
     },
     {
@@ -1327,7 +1411,8 @@
                 "Poison"
             ],
             "perfect_cp": 702,
-            "perfect_boosted": 878
+            "perfect_boosted": 878,
+            "perfect_cp_boosted": 878
         }
     },
     {
@@ -1340,7 +1425,8 @@
                 "Poison"
             ],
             "perfect_cp": 1121,
-            "perfect_boosted": 1402
+            "perfect_boosted": 1402,
+            "perfect_cp_boosted": 1402
         }
     },
     {
@@ -1363,7 +1449,8 @@
                         "end": "2010-06-07T20:00:00Z"
                     }
                 ]
-            ]
+            ],
+            "perfect_cp_boosted": 2055
         }
     },
     {
@@ -1386,7 +1473,8 @@
                 "Ground"
             ],
             "perfect_cp": 629,
-            "perfect_boosted": 787
+            "perfect_boosted": 787,
+            "perfect_cp_boosted": 787
         }
     },
     {
@@ -1408,7 +1496,8 @@
                 ]
             ],
             "perfect_cp": 594,
-            "perfect_boosted": 743
+            "perfect_boosted": 743,
+            "perfect_cp_boosted": 743
         }
     },
     {
@@ -1420,7 +1509,8 @@
                 "Psychic"
             ],
             "perfect_cp": 1194,
-            "perfect_boosted": 1493
+            "perfect_boosted": 1493,
+            "perfect_cp_boosted": 1493
         }
     },
     {
@@ -1432,7 +1522,8 @@
                 "Water"
             ],
             "perfect_cp": 892,
-            "perfect_boosted": 1115
+            "perfect_boosted": 1115,
+            "perfect_cp_boosted": 1115
         }
     },
     {
@@ -1444,7 +1535,8 @@
                 "Water"
             ],
             "perfect_cp": 1616,
-            "perfect_boosted": 2020
+            "perfect_boosted": 2020,
+            "perfect_cp_boosted": 2020
         }
     },
     {
@@ -1456,7 +1548,8 @@
                 "Electric"
             ],
             "perfect_cp": 577,
-            "perfect_boosted": 721
+            "perfect_boosted": 721,
+            "perfect_cp_boosted": 721
         }
     },
     {
@@ -1468,7 +1561,8 @@
                 "Electric"
             ],
             "perfect_cp": 1199,
-            "perfect_boosted": 1499
+            "perfect_boosted": 1499,
+            "perfect_cp_boosted": 1499
         }
     },
     {
@@ -1481,7 +1575,8 @@
                 "Psychic"
             ],
             "perfect_cp": 671,
-            "perfect_boosted": 839
+            "perfect_boosted": 839,
+            "perfect_cp_boosted": 839
         }
     },
     {
@@ -1489,9 +1584,9 @@
         "data": {
             "name": "Exeggutor",
             "id": "103",
-            "raid_level": 2,
+            "raid_level": 4,
             "perfect_cp": 1722,
-            "perfect_cp_boosted": 2083,
+            "perfect_cp_boosted": 2153,
             "types": [
                 "Grass",
                 "Dragon"
@@ -1506,7 +1601,8 @@
                 ]
             ],
             "perfect_boosted": 2153
-        }
+        },
+        "availability_rules": []
     },
     {
         "type": "pokemon",
@@ -1517,7 +1613,8 @@
                 "Ground"
             ],
             "perfect_cp": 582,
-            "perfect_boosted": 728
+            "perfect_boosted": 728,
+            "perfect_cp_boosted": 728
         }
     },
     {
@@ -1527,7 +1624,7 @@
             "id": "105",
             "raid_level": 4,
             "perfect_cp": 1048,
-            "perfect_cp_boosted": 1208,
+            "perfect_cp_boosted": 1311,
             "types": [
                 "Fire",
                 "Ghost"
@@ -1542,7 +1639,8 @@
                     }
                 ]
             ]
-        }
+        },
+        "availability_rules": []
     },
     {
         "type": "pokemon",
@@ -1563,7 +1661,8 @@
                 "Fighting"
             ],
             "perfect_cp": 1472,
-            "perfect_boosted": 1840
+            "perfect_boosted": 1840,
+            "perfect_cp_boosted": 1840
         }
     },
     {
@@ -1585,7 +1684,8 @@
                 "Fighting"
             ],
             "perfect_cp": 1332,
-            "perfect_boosted": 1665
+            "perfect_boosted": 1665,
+            "perfect_cp_boosted": 1665
         }
     },
     {
@@ -1595,7 +1695,7 @@
             "id": "108",
             "raid_level": 2,
             "perfect_cp": 806,
-            "perfect_cp_boosted": 944,
+            "perfect_cp_boosted": 1008,
             "availability_rules": [
                 [
                     {
@@ -1620,7 +1720,8 @@
                 "Poison"
             ],
             "perfect_cp": 694,
-            "perfect_boosted": 867
+            "perfect_boosted": 867,
+            "perfect_cp_boosted": 867
         }
     },
     {
@@ -1642,7 +1743,8 @@
                 "Poison"
             ],
             "perfect_cp": 1310,
-            "perfect_boosted": 1637
+            "perfect_boosted": 1637,
+            "perfect_cp_boosted": 1637
         }
     },
     {
@@ -1655,7 +1757,8 @@
                 "Rock"
             ],
             "perfect_cp": 943,
-            "perfect_boosted": 1179
+            "perfect_boosted": 1179,
+            "perfect_cp_boosted": 1179
         }
     },
     {
@@ -1678,7 +1781,8 @@
                 ]
             ],
             "perfect_cp": 1816,
-            "perfect_boosted": 2270
+            "perfect_boosted": 2270,
+            "perfect_cp_boosted": 2270
         }
     },
     {
@@ -1690,7 +1794,8 @@
                 "Normal"
             ],
             "perfect_cp": 717,
-            "perfect_boosted": 896
+            "perfect_boosted": 896,
+            "perfect_cp_boosted": 896
         }
     },
     {
@@ -1709,7 +1814,7 @@
                 ]
             ],
             "perfect_cp": 1278,
-            "perfect_cp_boosted": 1577,
+            "perfect_cp_boosted": 1598,
             "types": [
                 "Grass"
             ],
@@ -1725,7 +1830,8 @@
                 "Normal"
             ],
             "perfect_cp": 1477,
-            "perfect_boosted": 1847
+            "perfect_boosted": 1847,
+            "perfect_cp_boosted": 1847
         }
     },
     {
@@ -1737,7 +1843,8 @@
                 "Water"
             ],
             "perfect_cp": 603,
-            "perfect_boosted": 754
+            "perfect_boosted": 754,
+            "perfect_cp_boosted": 754
         }
     },
     {
@@ -1749,7 +1856,8 @@
                 "Water"
             ],
             "perfect_cp": 1196,
-            "perfect_boosted": 1495
+            "perfect_boosted": 1495,
+            "perfect_cp_boosted": 1495
         }
     },
     {
@@ -1761,7 +1869,8 @@
                 "Water"
             ],
             "perfect_cp": 658,
-            "perfect_boosted": 823
+            "perfect_boosted": 823,
+            "perfect_cp_boosted": 823
         }
     },
     {
@@ -1773,7 +1882,8 @@
                 "Water"
             ],
             "perfect_cp": 1235,
-            "perfect_boosted": 1544
+            "perfect_boosted": 1544,
+            "perfect_cp_boosted": 1544
         }
     },
     {
@@ -1785,7 +1895,8 @@
                 "Water"
             ],
             "perfect_cp": 661,
-            "perfect_boosted": 826
+            "perfect_boosted": 826,
+            "perfect_cp_boosted": 826
         }
     },
     {
@@ -1795,7 +1906,7 @@
             "id": "121",
             "raid_level": 3,
             "perfect_cp": 1476,
-            "perfect_cp_boosted": 1645,
+            "perfect_cp_boosted": 1846,
             "availability_rules": [
                 [
                     {
@@ -1822,7 +1933,8 @@
                 "Fairy"
             ],
             "perfect_cp": 1273,
-            "perfect_boosted": 1591
+            "perfect_boosted": 1591,
+            "perfect_cp_boosted": 1591
         }
     },
     {
@@ -1845,7 +1957,8 @@
                 "Flying"
             ],
             "perfect_cp": 1546,
-            "perfect_boosted": 1933
+            "perfect_boosted": 1933,
+            "perfect_cp_boosted": 1933
         }
     },
     {
@@ -1868,7 +1981,8 @@
                 ]
             ],
             "perfect_cp": 1460,
-            "perfect_boosted": 1825
+            "perfect_boosted": 1825,
+            "perfect_cp_boosted": 1825
         }
     },
     {
@@ -1878,7 +1992,7 @@
             "id": "125",
             "raid_level": 2,
             "perfect_cp": 1333,
-            "perfect_cp_boosted": 1568,
+            "perfect_cp_boosted": 1667,
             "availability_rules": [
                 [
                     {
@@ -1892,7 +2006,8 @@
                 "Electric"
             ],
             "perfect_boosted": 1667
-        }
+        },
+        "availability_rules": []
     },
     {
         "type": "pokemon",
@@ -1904,7 +2019,7 @@
                 "Fire"
             ],
             "perfect_cp": 1367,
-            "perfect_cp_boosted": 1610,
+            "perfect_cp_boosted": 1710,
             "availability_rules": [
                 [
                     {
@@ -1936,7 +2051,8 @@
                 "Bug"
             ],
             "perfect_cp": 1690,
-            "perfect_boosted": 2113
+            "perfect_boosted": 2113,
+            "perfect_cp_boosted": 2113
         }
     },
     {
@@ -1948,7 +2064,8 @@
                 "Normal"
             ],
             "perfect_cp": 1497,
-            "perfect_boosted": 1872
+            "perfect_boosted": 1872,
+            "perfect_cp_boosted": 1872
         }
     },
     {
@@ -1958,7 +2075,7 @@
             "id": "129",
             "raid_level": 1,
             "perfect_cp": 157,
-            "perfect_cp_boosted": 157,
+            "perfect_cp_boosted": 196,
             "shiny": true,
             "types": [
                 "Water"
@@ -1985,7 +2102,8 @@
                 "Flying"
             ],
             "perfect_cp": 1937,
-            "perfect_boosted": 2422
+            "perfect_boosted": 2422,
+            "perfect_cp_boosted": 2422
         }
     },
     {
@@ -2008,7 +2126,8 @@
                 "Ice"
             ],
             "perfect_cp": 1509,
-            "perfect_boosted": 1886
+            "perfect_boosted": 1886,
+            "perfect_cp_boosted": 1886
         }
     },
     {
@@ -2020,7 +2139,8 @@
                 "Normal"
             ],
             "perfect_cp": 475,
-            "perfect_boosted": 594
+            "perfect_boosted": 594,
+            "perfect_cp_boosted": 594
         }
     },
     {
@@ -2032,7 +2152,8 @@
                 "Normal"
             ],
             "perfect_cp": 612,
-            "perfect_boosted": 765
+            "perfect_boosted": 765,
+            "perfect_cp_boosted": 765
         }
     },
     {
@@ -2042,7 +2163,7 @@
             "id": "134",
             "raid_level": 3,
             "perfect_cp": 1779,
-            "perfect_cp_boosted": 2255,
+            "perfect_cp_boosted": 2225,
             "availability_rules": [
                 [
                     {
@@ -2056,7 +2177,8 @@
                 "Water"
             ],
             "perfect_boosted": 2225
-        }
+        },
+        "availability_rules": []
     },
     {
         "type": "pokemon",
@@ -2077,8 +2199,10 @@
                 "Electric"
             ],
             "perfect_cp": 1650,
-            "perfect_boosted": 2063
-        }
+            "perfect_boosted": 2063,
+            "perfect_cp_boosted": 2063
+        },
+        "availability_rules": []
     },
     {
         "type": "pokemon",
@@ -2099,8 +2223,10 @@
                 ]
             ],
             "perfect_cp": 1730,
-            "perfect_boosted": 2163
-        }
+            "perfect_boosted": 2163,
+            "perfect_cp_boosted": 2163
+        },
+        "availability_rules": []
     },
     {
         "type": "pokemon",
@@ -2121,7 +2247,8 @@
                 ]
             ],
             "perfect_cp": 982,
-            "perfect_boosted": 1228
+            "perfect_boosted": 1228,
+            "perfect_cp_boosted": 1228
         }
     },
     {
@@ -2140,7 +2267,7 @@
                 ]
             ],
             "perfect_cp": 882,
-            "perfect_cp_boosted": 961,
+            "perfect_cp_boosted": 1103,
             "shiny": true,
             "types": [
                 "Rock",
@@ -2169,7 +2296,8 @@
                 "Water"
             ],
             "perfect_cp": 1592,
-            "perfect_boosted": 1990
+            "perfect_boosted": 1990,
+            "perfect_cp_boosted": 1990
         }
     },
     {
@@ -2178,7 +2306,7 @@
             "name": "Kabuto",
             "id": "140",
             "perfect_cp": 783,
-            "perfect_cp_boosted": 837,
+            "perfect_cp_boosted": 979,
             "shiny": true,
             "raid_level": 1,
             "availability_rules": [
@@ -2217,7 +2345,8 @@
                 "Water"
             ],
             "perfect_cp": 1550,
-            "perfect_boosted": 1938
+            "perfect_boosted": 1938,
+            "perfect_cp_boosted": 1938
         }
     },
     {
@@ -2241,7 +2370,8 @@
                 "Flying"
             ],
             "perfect_cp": 1590,
-            "perfect_boosted": 1988
+            "perfect_boosted": 1988,
+            "perfect_cp_boosted": 1988
         }
     },
     {
@@ -2263,7 +2393,8 @@
                 "Normal"
             ],
             "perfect_cp": 1843,
-            "perfect_boosted": 2304
+            "perfect_boosted": 2304,
+            "perfect_cp_boosted": 2304
         }
     },
     {
@@ -2287,7 +2418,8 @@
                 "Flying"
             ],
             "perfect_cp": 1743,
-            "perfect_boosted": 2179
+            "perfect_boosted": 2179,
+            "perfect_cp_boosted": 2179
         }
     },
     {
@@ -2311,7 +2443,8 @@
                 "Flying"
             ],
             "perfect_cp": 2015,
-            "perfect_boosted": 2519
+            "perfect_boosted": 2519,
+            "perfect_cp_boosted": 2519
         }
     },
     {
@@ -2322,7 +2455,7 @@
             "raid_level": 5,
             "shiny": true,
             "perfect_cp": 1980,
-            "perfect_cp_boosted": 2337,
+            "perfect_cp_boosted": 2475,
             "availability_rules": [
                 [
                     {
@@ -2350,7 +2483,7 @@
             "shiny": true,
             "raid_level": 1,
             "perfect_cp": 574,
-            "perfect_cp_boosted": 614,
+            "perfect_cp_boosted": 717,
             "availability_rules": [
                 [
                     {
@@ -2372,7 +2505,8 @@
                 "Dragon"
             ],
             "perfect_cp": 1017,
-            "perfect_boosted": 1271
+            "perfect_boosted": 1271,
+            "perfect_cp_boosted": 1271
         }
     },
     {
@@ -2385,7 +2519,8 @@
                 "Flying"
             ],
             "perfect_cp": 2167,
-            "perfect_boosted": 2709
+            "perfect_boosted": 2709,
+            "perfect_cp_boosted": 2709
         }
     },
     {
@@ -2396,7 +2531,7 @@
             "raid_level": 5,
             "shiny": false,
             "perfect_cp": 2387,
-            "perfect_cp_boosted": 2844,
+            "perfect_cp_boosted": 2984,
             "availability_rules": [
                 [
                     {
@@ -2421,7 +2556,8 @@
                 "Psychic"
             ],
             "perfect_cp": 1865,
-            "perfect_boosted": 2332
+            "perfect_boosted": 2332,
+            "perfect_cp_boosted": 2332
         }
     },
     {
@@ -2433,7 +2569,8 @@
                 "Grass"
             ],
             "perfect_cp": 534,
-            "perfect_boosted": 668
+            "perfect_boosted": 668,
+            "perfect_cp_boosted": 668
         }
     },
     {
@@ -2445,7 +2582,8 @@
                 "Grass"
             ],
             "perfect_cp": 831,
-            "perfect_boosted": 1039
+            "perfect_boosted": 1039,
+            "perfect_cp_boosted": 1039
         }
     },
     {
@@ -2457,7 +2595,8 @@
                 "Grass"
             ],
             "perfect_cp": 1377,
-            "perfect_boosted": 1721
+            "perfect_boosted": 1721,
+            "perfect_cp_boosted": 1721
         }
     },
     {
@@ -2469,7 +2608,8 @@
                 "Fire"
             ],
             "perfect_cp": 560,
-            "perfect_boosted": 700
+            "perfect_boosted": 700,
+            "perfect_cp_boosted": 700
         }
     },
     {
@@ -2481,7 +2621,8 @@
                 "Fire"
             ],
             "perfect_cp": 944,
-            "perfect_boosted": 1180
+            "perfect_boosted": 1180,
+            "perfect_cp_boosted": 1180
         }
     },
     {
@@ -2493,7 +2634,8 @@
                 "Fire"
             ],
             "perfect_cp": 1651,
-            "perfect_boosted": 2064
+            "perfect_boosted": 2064,
+            "perfect_cp_boosted": 2064
         }
     },
     {
@@ -2505,7 +2647,8 @@
                 "Water"
             ],
             "perfect_cp": 646,
-            "perfect_boosted": 808
+            "perfect_boosted": 808,
+            "perfect_cp_boosted": 808
         }
     },
     {
@@ -2515,7 +2658,7 @@
             "id": "159",
             "raid_level": 2,
             "perfect_cp": 984,
-            "perfect_cp_boosted": 1142,
+            "perfect_cp_boosted": 1230,
             "availability_rules": [
                 [
                     {
@@ -2540,7 +2683,8 @@
                 "Water"
             ],
             "perfect_cp": 1632,
-            "perfect_boosted": 2040
+            "perfect_boosted": 2040,
+            "perfect_cp_boosted": 2040
         }
     },
     {
@@ -2552,7 +2696,8 @@
                 "Normal"
             ],
             "perfect_cp": 353,
-            "perfect_boosted": 441
+            "perfect_boosted": 441,
+            "perfect_cp_boosted": 441
         }
     },
     {
@@ -2564,7 +2709,8 @@
                 "Normal"
             ],
             "perfect_cp": 1004,
-            "perfect_boosted": 1255
+            "perfect_boosted": 1255,
+            "perfect_cp_boosted": 1255
         }
     },
     {
@@ -2577,7 +2723,8 @@
                 "Flying"
             ],
             "perfect_cp": 387,
-            "perfect_boosted": 484
+            "perfect_boosted": 484,
+            "perfect_cp_boosted": 484
         }
     },
     {
@@ -2590,7 +2737,8 @@
                 "Flying"
             ],
             "perfect_cp": 1156,
-            "perfect_boosted": 1446
+            "perfect_boosted": 1446,
+            "perfect_cp_boosted": 1446
         }
     },
     {
@@ -2603,7 +2751,8 @@
                 "Flying"
             ],
             "perfect_cp": 416,
-            "perfect_boosted": 520
+            "perfect_boosted": 520,
+            "perfect_cp_boosted": 520
         }
     },
     {
@@ -2616,7 +2765,8 @@
                 "Flying"
             ],
             "perfect_cp": 769,
-            "perfect_boosted": 961
+            "perfect_boosted": 961,
+            "perfect_cp_boosted": 961
         }
     },
     {
@@ -2629,7 +2779,8 @@
                 "Poison"
             ],
             "perfect_cp": 466,
-            "perfect_boosted": 583
+            "perfect_boosted": 583,
+            "perfect_cp_boosted": 583
         }
     },
     {
@@ -2642,7 +2793,8 @@
                 "Poison"
             ],
             "perfect_cp": 1012,
-            "perfect_boosted": 1265
+            "perfect_boosted": 1265,
+            "perfect_cp_boosted": 1265
         }
     },
     {
@@ -2655,7 +2807,8 @@
                 "Flying"
             ],
             "perfect_cp": 1512,
-            "perfect_boosted": 1890
+            "perfect_boosted": 1890,
+            "perfect_cp_boosted": 1890
         }
     },
     {
@@ -2668,7 +2821,8 @@
                 "Electric"
             ],
             "perfect_cp": 639,
-            "perfect_boosted": 799
+            "perfect_boosted": 799,
+            "perfect_cp_boosted": 799
         }
     },
     {
@@ -2681,8 +2835,11 @@
                 "Electric"
             ],
             "perfect_cp": 1191,
-            "perfect_boosted": 1489
-        }
+            "perfect_boosted": 1489,
+            "perfect_cp_boosted": 1489,
+            "raid_level": 2
+        },
+        "availability_rules": []
     },
     {
         "type": "pokemon",
@@ -2693,7 +2850,8 @@
                 "Electric"
             ],
             "perfect_cp": 270,
-            "perfect_boosted": 338
+            "perfect_boosted": 338,
+            "perfect_cp_boosted": 338
         }
     },
     {
@@ -2705,7 +2863,8 @@
                 "Fairy"
             ],
             "perfect_cp": 383,
-            "perfect_boosted": 479
+            "perfect_boosted": 479,
+            "perfect_cp_boosted": 479
         }
     },
     {
@@ -2718,7 +2877,8 @@
                 "Fairy"
             ],
             "perfect_cp": 306,
-            "perfect_boosted": 382
+            "perfect_boosted": 382,
+            "perfect_cp_boosted": 382
         }
     },
     {
@@ -2730,7 +2890,8 @@
                 "Fairy"
             ],
             "perfect_cp": 375,
-            "perfect_boosted": 470
+            "perfect_boosted": 470,
+            "perfect_cp_boosted": 470
         }
     },
     {
@@ -2753,7 +2914,8 @@
                         "end": "2010-06-07T20:00:00Z"
                     }
                 ]
-            ]
+            ],
+            "perfect_cp_boosted": 1220
         }
     },
     {
@@ -2766,7 +2928,8 @@
                 "Flying"
             ],
             "perfect_cp": 630,
-            "perfect_boosted": 787
+            "perfect_boosted": 787,
+            "perfect_cp_boosted": 787
         }
     },
     {
@@ -2779,7 +2942,8 @@
                 "Flying"
             ],
             "perfect_cp": 1250,
-            "perfect_boosted": 1563
+            "perfect_boosted": 1563,
+            "perfect_cp_boosted": 1563
         }
     },
     {
@@ -2791,8 +2955,11 @@
                 "Electric"
             ],
             "perfect_cp": 566,
-            "perfect_boosted": 708
-        }
+            "perfect_boosted": 708,
+            "perfect_cp_boosted": 708,
+            "raid_level": 1
+        },
+        "availability_rules": []
     },
     {
         "type": "pokemon",
@@ -2803,7 +2970,8 @@
                 "Electric"
             ],
             "perfect_cp": 869,
-            "perfect_boosted": 1086
+            "perfect_boosted": 1086,
+            "perfect_cp_boosted": 1086
         }
     },
     {
@@ -2815,7 +2983,8 @@
                 "Electric"
             ],
             "perfect_cp": 1630,
-            "perfect_boosted": 2037
+            "perfect_boosted": 2037,
+            "perfect_cp_boosted": 2037
         }
     },
     {
@@ -2827,7 +2996,8 @@
                 "Grass"
             ],
             "perfect_cp": 1303,
-            "perfect_boosted": 1629
+            "perfect_boosted": 1629,
+            "perfect_cp_boosted": 1629
         }
     },
     {
@@ -2840,7 +3010,8 @@
                 "Fairy"
             ],
             "perfect_cp": 263,
-            "perfect_boosted": 329
+            "perfect_boosted": 329,
+            "perfect_cp_boosted": 329
         }
     },
     {
@@ -2853,7 +3024,8 @@
                 "Fairy"
             ],
             "perfect_cp": 907,
-            "perfect_boosted": 1134
+            "perfect_boosted": 1134,
+            "perfect_cp_boosted": 1134
         }
     },
     {
@@ -2875,7 +3047,8 @@
                 "Rock"
             ],
             "perfect_cp": 1227,
-            "perfect_boosted": 1534
+            "perfect_boosted": 1534,
+            "perfect_cp_boosted": 1534
         }
     },
     {
@@ -2887,7 +3060,8 @@
                 "Water"
             ],
             "perfect_cp": 1399,
-            "perfect_boosted": 1749
+            "perfect_boosted": 1749,
+            "perfect_cp_boosted": 1749
         }
     },
     {
@@ -2900,7 +3074,8 @@
                 "Flying"
             ],
             "perfect_cp": 342,
-            "perfect_boosted": 428
+            "perfect_boosted": 428,
+            "perfect_cp_boosted": 428
         }
     },
     {
@@ -2913,7 +3088,8 @@
                 "Flying"
             ],
             "perfect_cp": 557,
-            "perfect_boosted": 697
+            "perfect_boosted": 697,
+            "perfect_cp_boosted": 697
         }
     },
     {
@@ -2926,7 +3102,8 @@
                 "Flying"
             ],
             "perfect_cp": 935,
-            "perfect_boosted": 1168
+            "perfect_boosted": 1168,
+            "perfect_cp_boosted": 1168
         }
     },
     {
@@ -2938,7 +3115,8 @@
                 "Normal"
             ],
             "perfect_cp": 770,
-            "perfect_boosted": 963
+            "perfect_boosted": 963,
+            "perfect_cp_boosted": 963
         }
     },
     {
@@ -2950,7 +3128,8 @@
                 "Grass"
             ],
             "perfect_cp": 226,
-            "perfect_boosted": 282
+            "perfect_boosted": 282,
+            "perfect_cp_boosted": 282
         }
     },
     {
@@ -2962,7 +3141,8 @@
                 "Grass"
             ],
             "perfect_cp": 1223,
-            "perfect_boosted": 1529
+            "perfect_boosted": 1529,
+            "perfect_cp_boosted": 1529
         }
     },
     {
@@ -2975,7 +3155,8 @@
                 "Flying"
             ],
             "perfect_cp": 840,
-            "perfect_boosted": 1050
+            "perfect_boosted": 1050,
+            "perfect_cp_boosted": 1050
         }
     },
     {
@@ -2988,7 +3169,8 @@
                 "Ground"
             ],
             "perfect_cp": 366,
-            "perfect_boosted": 458
+            "perfect_boosted": 458,
+            "perfect_cp_boosted": 458
         }
     },
     {
@@ -3001,7 +3183,8 @@
                 "Ground"
             ],
             "perfect_cp": 1138,
-            "perfect_boosted": 1423
+            "perfect_boosted": 1423,
+            "perfect_cp_boosted": 1423
         }
     },
     {
@@ -3013,8 +3196,11 @@
                 "Psychic"
             ],
             "perfect_cp": 1811,
-            "perfect_boosted": 2264
-        }
+            "perfect_boosted": 2264,
+            "perfect_cp_boosted": 2264,
+            "raid_level": 3
+        },
+        "availability_rules": []
     },
     {
         "type": "pokemon",
@@ -3025,8 +3211,11 @@
                 "Dark"
             ],
             "perfect_cp": 1221,
-            "perfect_boosted": 1526
-        }
+            "perfect_boosted": 1526,
+            "perfect_cp_boosted": 1526,
+            "raid_level": 3
+        },
+        "availability_rules": []
     },
     {
         "type": "pokemon",
@@ -3038,7 +3227,8 @@
                 "Flying"
             ],
             "perfect_cp": 892,
-            "perfect_boosted": 1116
+            "perfect_boosted": 1116,
+            "perfect_cp_boosted": 1116
         }
     },
     {
@@ -3051,7 +3241,8 @@
                 "Psychic"
             ],
             "perfect_cp": 1454,
-            "perfect_boosted": 1817
+            "perfect_boosted": 1817,
+            "perfect_cp_boosted": 1817
         }
     },
     {
@@ -3073,7 +3264,8 @@
                         "end": "2010-06-07T20:00:00Z"
                     }
                 ]
-            ]
+            ],
+            "perfect_cp_boosted": 1376
         }
     },
     {
@@ -3085,7 +3277,8 @@
                 "Psychic"
             ],
             "perfect_cp": 677,
-            "perfect_boosted": 846
+            "perfect_boosted": 846,
+            "perfect_cp_boosted": 846
         }
     },
     {
@@ -3097,7 +3290,8 @@
                 "Psychic"
             ],
             "perfect_cp": 586,
-            "perfect_boosted": 733
+            "perfect_boosted": 733,
+            "perfect_cp_boosted": 733
         }
     },
     {
@@ -3110,7 +3304,8 @@
                 "Psychic"
             ],
             "perfect_cp": 1169,
-            "perfect_boosted": 1462
+            "perfect_boosted": 1462,
+            "perfect_cp_boosted": 1462
         }
     },
     {
@@ -3122,7 +3317,8 @@
                 "Bug"
             ],
             "perfect_cp": 633,
-            "perfect_boosted": 791
+            "perfect_boosted": 791,
+            "perfect_cp_boosted": 791
         }
     },
     {
@@ -3135,7 +3331,8 @@
                 "Steel"
             ],
             "perfect_cp": 1304,
-            "perfect_boosted": 1630
+            "perfect_boosted": 1630,
+            "perfect_cp_boosted": 1630
         }
     },
     {
@@ -3147,7 +3344,8 @@
                 "Normal"
             ],
             "perfect_cp": 965,
-            "perfect_boosted": 1206
+            "perfect_boosted": 1206,
+            "perfect_cp_boosted": 1206
         }
     },
     {
@@ -3160,7 +3358,8 @@
                 "Flying"
             ],
             "perfect_cp": 1061,
-            "perfect_boosted": 1326
+            "perfect_boosted": 1326,
+            "perfect_cp_boosted": 1326
         }
     },
     {
@@ -3173,7 +3372,8 @@
                 "Ground"
             ],
             "perfect_cp": 1379,
-            "perfect_boosted": 1724
+            "perfect_boosted": 1724,
+            "perfect_cp_boosted": 1724
         }
     },
     {
@@ -3185,7 +3385,8 @@
                 "Fairy"
             ],
             "perfect_cp": 707,
-            "perfect_boosted": 884
+            "perfect_boosted": 884,
+            "perfect_cp_boosted": 884
         }
     },
     {
@@ -3207,7 +3408,8 @@
                         "end": "2010-06-07T20:00:00Z"
                     }
                 ]
-            ]
+            ],
+            "perfect_cp_boosted": 1823
         }
     },
     {
@@ -3220,7 +3422,8 @@
                 "Poison"
             ],
             "perfect_cp": 1172,
-            "perfect_boosted": 1465
+            "perfect_boosted": 1465,
+            "perfect_cp_boosted": 1465
         }
     },
     {
@@ -3233,7 +3436,8 @@
                 "Steel"
             ],
             "perfect_cp": 1714,
-            "perfect_boosted": 2143
+            "perfect_boosted": 2143,
+            "perfect_cp_boosted": 2143
         }
     },
     {
@@ -3246,7 +3450,8 @@
                 "Rock"
             ],
             "perfect_cp": 231,
-            "perfect_boosted": 289
+            "perfect_boosted": 289,
+            "perfect_cp_boosted": 289
         }
     },
     {
@@ -3259,7 +3464,8 @@
                 "Fighting"
             ],
             "perfect_cp": 1772,
-            "perfect_boosted": 2215
+            "perfect_boosted": 2215,
+            "perfect_cp_boosted": 2215
         }
     },
     {
@@ -3282,7 +3488,8 @@
                         "end": "2010-06-07T20:00:00Z"
                     }
                 ]
-            ]
+            ],
+            "perfect_cp_boosted": 1465
         }
     },
     {
@@ -3294,7 +3501,8 @@
                 "Normal"
             ],
             "perfect_cp": 759,
-            "perfect_boosted": 949
+            "perfect_boosted": 949,
+            "perfect_cp_boosted": 949
         }
     },
     {
@@ -3306,7 +3514,8 @@
                 "Normal"
             ],
             "perfect_cp": 1682,
-            "perfect_boosted": 2103
+            "perfect_boosted": 2103,
+            "perfect_cp_boosted": 2103
         }
     },
     {
@@ -3318,7 +3527,8 @@
                 "Fire"
             ],
             "perfect_cp": 511,
-            "perfect_boosted": 639
+            "perfect_boosted": 639,
+            "perfect_cp_boosted": 639
         }
     },
     {
@@ -3331,7 +3541,8 @@
                 "Rock"
             ],
             "perfect_cp": 972,
-            "perfect_boosted": 1215
+            "perfect_boosted": 1215,
+            "perfect_cp_boosted": 1215
         }
     },
     {
@@ -3344,7 +3555,8 @@
                 "Ground"
             ],
             "perfect_cp": 423,
-            "perfect_boosted": 529
+            "perfect_boosted": 529,
+            "perfect_cp_boosted": 529
         }
     },
     {
@@ -3367,7 +3579,8 @@
                 "Ground"
             ],
             "perfect_cp": 1340,
-            "perfect_boosted": 1675
+            "perfect_boosted": 1675,
+            "perfect_cp_boosted": 1675
         }
     },
     {
@@ -3380,7 +3593,8 @@
                 "Rock"
             ],
             "perfect_cp": 787,
-            "perfect_boosted": 984
+            "perfect_boosted": 984,
+            "perfect_cp_boosted": 984
         }
     },
     {
@@ -3392,7 +3606,8 @@
                 "Water"
             ],
             "perfect_cp": 521,
-            "perfect_boosted": 651
+            "perfect_boosted": 651,
+            "perfect_cp_boosted": 651
         }
     },
     {
@@ -3404,7 +3619,8 @@
                 "Water"
             ],
             "perfect_cp": 1322,
-            "perfect_boosted": 1653
+            "perfect_boosted": 1653,
+            "perfect_cp_boosted": 1653
         }
     },
     {
@@ -3417,7 +3633,8 @@
                 "Flying"
             ],
             "perfect_cp": 625,
-            "perfect_boosted": 781
+            "perfect_boosted": 781,
+            "perfect_cp_boosted": 781
         }
     },
     {
@@ -3430,7 +3647,8 @@
                 "Flying"
             ],
             "perfect_cp": 1204,
-            "perfect_boosted": 1506
+            "perfect_boosted": 1506,
+            "perfect_cp_boosted": 1506
         }
     },
     {
@@ -3443,7 +3661,8 @@
                 "Flying"
             ],
             "perfect_cp": 1204,
-            "perfect_boosted": 1506
+            "perfect_boosted": 1506,
+            "perfect_cp_boosted": 1506
         }
     },
     {
@@ -3456,7 +3675,8 @@
                 "Fire"
             ],
             "perfect_cp": 705,
-            "perfect_boosted": 881
+            "perfect_boosted": 881,
+            "perfect_cp_boosted": 881
         }
     },
     {
@@ -3479,7 +3699,8 @@
                         "end": "2010-06-07T20:00:00Z"
                     }
                 ]
-            ]
+            ],
+            "perfect_cp_boosted": 1882
         }
     },
     {
@@ -3492,7 +3713,8 @@
                 "Dragon"
             ],
             "perfect_cp": 1509,
-            "perfect_boosted": 1887
+            "perfect_boosted": 1887,
+            "perfect_cp_boosted": 1887
         }
     },
     {
@@ -3504,7 +3726,8 @@
                 "Ground"
             ],
             "perfect_cp": 689,
-            "perfect_boosted": 862
+            "perfect_boosted": 862,
+            "perfect_cp_boosted": 862
         }
     },
     {
@@ -3526,7 +3749,8 @@
                 "Ground"
             ],
             "perfect_cp": 1722,
-            "perfect_boosted": 2152
+            "perfect_boosted": 2152,
+            "perfect_cp_boosted": 2152
         }
     },
     {
@@ -3538,7 +3762,8 @@
                 "Normal"
             ],
             "perfect_cp": 1549,
-            "perfect_boosted": 1936
+            "perfect_boosted": 1936,
+            "perfect_cp_boosted": 1936
         }
     },
     {
@@ -3550,7 +3775,8 @@
                 "Normal"
             ],
             "perfect_cp": 1236,
-            "perfect_boosted": 1546
+            "perfect_boosted": 1546,
+            "perfect_cp_boosted": 1546
         }
     },
     {
@@ -3562,7 +3788,8 @@
                 "Normal"
             ],
             "perfect_cp": 246,
-            "perfect_boosted": 308
+            "perfect_boosted": 308,
+            "perfect_cp_boosted": 308
         }
     },
     {
@@ -3574,7 +3801,8 @@
                 "Fighting"
             ],
             "perfect_cp": 281,
-            "perfect_boosted": 351
+            "perfect_boosted": 351,
+            "perfect_cp_boosted": 351
         }
     },
     {
@@ -3586,7 +3814,8 @@
                 "Fighting"
             ],
             "perfect_cp": 1232,
-            "perfect_boosted": 1540
+            "perfect_boosted": 1540,
+            "perfect_cp_boosted": 1540
         }
     },
     {
@@ -3599,7 +3828,8 @@
                 "Psychic"
             ],
             "perfect_cp": 738,
-            "perfect_boosted": 922
+            "perfect_boosted": 922,
+            "perfect_cp_boosted": 922
         }
     },
     {
@@ -3611,7 +3841,8 @@
                 "Electric"
             ],
             "perfect_cp": 689,
-            "perfect_boosted": 861
+            "perfect_boosted": 861,
+            "perfect_cp_boosted": 861
         }
     },
     {
@@ -3623,7 +3854,8 @@
                 "Fire"
             ],
             "perfect_cp": 756,
-            "perfect_boosted": 945
+            "perfect_boosted": 945,
+            "perfect_cp_boosted": 945
         }
     },
     {
@@ -3635,7 +3867,8 @@
                 "Normal"
             ],
             "perfect_cp": 1345,
-            "perfect_boosted": 1682
+            "perfect_boosted": 1682,
+            "perfect_cp_boosted": 1682
         }
     },
     {
@@ -3647,7 +3880,8 @@
                 "Normal"
             ],
             "perfect_cp": 1575,
-            "perfect_boosted": 1969
+            "perfect_boosted": 1969,
+            "perfect_cp_boosted": 1969
         }
     },
     {
@@ -3669,7 +3903,8 @@
                 "Electric"
             ],
             "perfect_cp": 1972,
-            "perfect_boosted": 2466
+            "perfect_boosted": 2466,
+            "perfect_cp_boosted": 2466
         }
     },
     {
@@ -3691,7 +3926,8 @@
                 "Fire"
             ],
             "perfect_cp": 1984,
-            "perfect_boosted": 2480
+            "perfect_boosted": 2480,
+            "perfect_cp_boosted": 2480
         }
     },
     {
@@ -3713,7 +3949,8 @@
                 "Water"
             ],
             "perfect_cp": 1704,
-            "perfect_boosted": 2130
+            "perfect_boosted": 2130,
+            "perfect_cp_boosted": 2130
         }
     },
     {
@@ -3726,7 +3963,8 @@
                 "Ground"
             ],
             "perfect_cp": 594,
-            "perfect_boosted": 743
+            "perfect_boosted": 743,
+            "perfect_cp_boosted": 743
         }
     },
     {
@@ -3739,7 +3977,8 @@
                 "Ground"
             ],
             "perfect_cp": 1009,
-            "perfect_boosted": 1261
+            "perfect_boosted": 1261,
+            "perfect_cp_boosted": 1261
         }
     },
     {
@@ -3749,7 +3988,7 @@
             "id": "248",
             "raid_level": 4,
             "perfect_cp": 2191,
-            "perfect_cp_boosted": 2621,
+            "perfect_cp_boosted": 2739,
             "types": [
                 "Rock",
                 "Dark"
@@ -3786,7 +4025,8 @@
                 "Flying"
             ],
             "perfect_cp": 2115,
-            "perfect_boosted": 2645
+            "perfect_boosted": 2645,
+            "perfect_cp_boosted": 2645
         }
     },
     {
@@ -3809,7 +4049,8 @@
                 "Flying"
             ],
             "perfect_cp": 2207,
-            "perfect_boosted": 2759
+            "perfect_boosted": 2759,
+            "perfect_cp_boosted": 2759
         }
     },
     {
@@ -3822,7 +4063,8 @@
                 "Grass"
             ],
             "perfect_cp": 1865,
-            "perfect_boosted": 2332
+            "perfect_boosted": 2332,
+            "perfect_cp_boosted": 2332
         }
     },
     {
@@ -3834,7 +4076,8 @@
                 "Grass"
             ],
             "perfect_cp": 601,
-            "perfect_boosted": 752
+            "perfect_boosted": 752,
+            "perfect_cp_boosted": 752
         }
     },
     {
@@ -3846,7 +4089,8 @@
                 "Grass"
             ],
             "perfect_cp": 956,
-            "perfect_boosted": 1195
+            "perfect_boosted": 1195,
+            "perfect_cp_boosted": 1195
         }
     },
     {
@@ -3858,7 +4102,8 @@
                 "Grass"
             ],
             "perfect_cp": 1575,
-            "perfect_boosted": 1969
+            "perfect_boosted": 1969,
+            "perfect_cp_boosted": 1969
         }
     },
     {
@@ -3870,7 +4115,8 @@
                 "Fire"
             ],
             "perfect_cp": 624,
-            "perfect_boosted": 781
+            "perfect_boosted": 781,
+            "perfect_cp_boosted": 781
         }
     },
     {
@@ -3893,7 +4139,8 @@
                 "Fighting"
             ],
             "perfect_cp": 944,
-            "perfect_boosted": 1180
+            "perfect_boosted": 1180,
+            "perfect_cp_boosted": 1180
         }
     },
     {
@@ -3906,7 +4153,8 @@
                 "Fighting"
             ],
             "perfect_cp": 1627,
-            "perfect_boosted": 2034
+            "perfect_boosted": 2034,
+            "perfect_cp_boosted": 2034
         }
     },
     {
@@ -3918,7 +4166,8 @@
                 "Water"
             ],
             "perfect_cp": 644,
-            "perfect_boosted": 805
+            "perfect_boosted": 805,
+            "perfect_cp_boosted": 805
         }
     },
     {
@@ -3928,7 +4177,7 @@
             "id": "259",
             "raid_level": 2,
             "perfect_cp": 1015,
-            "perfect_cp_boosted": 1155,
+            "perfect_cp_boosted": 1269,
             "shiny": true,
             "availability_rules": [
                 [
@@ -3956,7 +4205,8 @@
                 "Ground"
             ],
             "perfect_cp": 1699,
-            "perfect_boosted": 2124
+            "perfect_boosted": 2124,
+            "perfect_cp_boosted": 2124
         }
     },
     {
@@ -3968,7 +4218,8 @@
                 "Dark"
             ],
             "perfect_cp": 387,
-            "perfect_boosted": 484
+            "perfect_boosted": 484,
+            "perfect_cp_boosted": 484
         }
     },
     {
@@ -3980,7 +4231,8 @@
                 "Dark"
             ],
             "perfect_cp": 1100,
-            "perfect_boosted": 1375
+            "perfect_boosted": 1375,
+            "perfect_cp_boosted": 1375
         }
     },
     {
@@ -3992,7 +4244,8 @@
                 "Normal"
             ],
             "perfect_cp": 290,
-            "perfect_boosted": 363
+            "perfect_boosted": 363,
+            "perfect_cp_boosted": 363
         }
     },
     {
@@ -4004,7 +4257,8 @@
                 "Normal"
             ],
             "perfect_cp": 949,
-            "perfect_boosted": 1187
+            "perfect_boosted": 1187,
+            "perfect_cp_boosted": 1187
         }
     },
     {
@@ -4016,7 +4270,8 @@
                 "Bug"
             ],
             "perfect_cp": 330,
-            "perfect_boosted": 413
+            "perfect_boosted": 413,
+            "perfect_cp_boosted": 413
         }
     },
     {
@@ -4028,7 +4283,8 @@
                 "Bug"
             ],
             "perfect_cp": 316,
-            "perfect_boosted": 395
+            "perfect_boosted": 395,
+            "perfect_cp_boosted": 395
         }
     },
     {
@@ -4041,7 +4297,8 @@
                 "Flying"
             ],
             "perfect_cp": 1009,
-            "perfect_boosted": 1261
+            "perfect_boosted": 1261,
+            "perfect_cp_boosted": 1261
         }
     },
     {
@@ -4053,7 +4310,8 @@
                 "Bug"
             ],
             "perfect_cp": 316,
-            "perfect_boosted": 395
+            "perfect_boosted": 395,
+            "perfect_cp_boosted": 395
         }
     },
     {
@@ -4066,7 +4324,8 @@
                 "Poison"
             ],
             "perfect_cp": 699,
-            "perfect_boosted": 874
+            "perfect_boosted": 874,
+            "perfect_cp_boosted": 874
         }
     },
     {
@@ -4079,7 +4338,8 @@
                 "Grass"
             ],
             "perfect_cp": 342,
-            "perfect_boosted": 427
+            "perfect_boosted": 427,
+            "perfect_cp_boosted": 427
         }
     },
     {
@@ -4092,7 +4352,8 @@
                 "Grass"
             ],
             "perfect_cp": 684,
-            "perfect_boosted": 855
+            "perfect_boosted": 855,
+            "perfect_cp_boosted": 855
         }
     },
     {
@@ -4105,7 +4366,8 @@
                 "Grass"
             ],
             "perfect_cp": 1327,
-            "perfect_boosted": 1659
+            "perfect_boosted": 1659,
+            "perfect_cp_boosted": 1659
         }
     },
     {
@@ -4117,7 +4379,8 @@
                 "Grass"
             ],
             "perfect_cp": 342,
-            "perfect_boosted": 427
+            "perfect_boosted": 427,
+            "perfect_cp_boosted": 427
         }
     },
     {
@@ -4130,7 +4393,8 @@
                 "Dark"
             ],
             "perfect_cp": 701,
-            "perfect_boosted": 876
+            "perfect_boosted": 876,
+            "perfect_cp_boosted": 876
         }
     },
     {
@@ -4143,7 +4407,8 @@
                 "Dark"
             ],
             "perfect_cp": 1333,
-            "perfect_boosted": 1666
+            "perfect_boosted": 1666,
+            "perfect_cp_boosted": 1666
         }
     },
     {
@@ -4156,7 +4421,8 @@
                 "Flying"
             ],
             "perfect_cp": 437,
-            "perfect_boosted": 546
+            "perfect_boosted": 546,
+            "perfect_cp_boosted": 546
         }
     },
     {
@@ -4169,7 +4435,8 @@
                 "Flying"
             ],
             "perfect_cp": 1097,
-            "perfect_boosted": 1371
+            "perfect_boosted": 1371,
+            "perfect_cp_boosted": 1371
         }
     },
     {
@@ -4182,7 +4449,8 @@
                 "Flying"
             ],
             "perfect_cp": 437,
-            "perfect_boosted": 546
+            "perfect_boosted": 546,
+            "perfect_cp_boosted": 546
         }
     },
     {
@@ -4195,7 +4463,8 @@
                 "Flying"
             ],
             "perfect_cp": 1215,
-            "perfect_boosted": 1519
+            "perfect_boosted": 1519,
+            "perfect_cp_boosted": 1519
         }
     },
     {
@@ -4208,7 +4477,8 @@
                 "Fairy"
             ],
             "perfect_cp": 308,
-            "perfect_boosted": 385
+            "perfect_boosted": 385,
+            "perfect_cp_boosted": 385
         }
     },
     {
@@ -4231,7 +4501,8 @@
                         "end": "2010-06-07T20:00:00Z"
                     }
                 ]
-            ]
+            ],
+            "perfect_cp_boosted": 690
         }
     },
     {
@@ -4244,7 +4515,8 @@
                 "Fairy"
             ],
             "perfect_cp": 1767,
-            "perfect_boosted": 2209
+            "perfect_boosted": 2209,
+            "perfect_cp_boosted": 2209
         }
     },
     {
@@ -4257,7 +4529,8 @@
                 "Water"
             ],
             "perfect_cp": 452,
-            "perfect_boosted": 565
+            "perfect_boosted": 565,
+            "perfect_cp_boosted": 565
         }
     },
     {
@@ -4270,7 +4543,8 @@
                 "Flying"
             ],
             "perfect_cp": 1297,
-            "perfect_boosted": 1622
+            "perfect_boosted": 1622,
+            "perfect_cp_boosted": 1622
         }
     },
     {
@@ -4282,7 +4556,8 @@
                 "Grass"
             ],
             "perfect_cp": 463,
-            "perfect_boosted": 578
+            "perfect_boosted": 578,
+            "perfect_cp_boosted": 578
         }
     },
     {
@@ -4305,7 +4580,8 @@
                 "Fighting"
             ],
             "perfect_cp": 1502,
-            "perfect_boosted": 1877
+            "perfect_boosted": 1877,
+            "perfect_cp_boosted": 1877
         }
     },
     {
@@ -4317,7 +4593,8 @@
                 "Normal"
             ],
             "perfect_cp": 572,
-            "perfect_boosted": 716
+            "perfect_boosted": 716,
+            "perfect_cp_boosted": 716
         }
     },
     {
@@ -4329,7 +4606,8 @@
                 "Normal"
             ],
             "perfect_cp": 1124,
-            "perfect_boosted": 1405
+            "perfect_boosted": 1405,
+            "perfect_cp_boosted": 1405
         }
     },
     {
@@ -4341,7 +4619,8 @@
                 "Normal"
             ],
             "perfect_cp": 2532,
-            "perfect_boosted": 3165
+            "perfect_boosted": 3165,
+            "perfect_cp_boosted": 3165
         }
     },
     {
@@ -4354,7 +4633,8 @@
                 "Ground"
             ],
             "perfect_cp": 439,
-            "perfect_boosted": 549
+            "perfect_boosted": 549,
+            "perfect_cp_boosted": 549
         }
     },
     {
@@ -4367,7 +4647,8 @@
                 "Flying"
             ],
             "perfect_cp": 1109,
-            "perfect_boosted": 1387
+            "perfect_boosted": 1387,
+            "perfect_cp_boosted": 1387
         }
     },
     {
@@ -4380,7 +4661,8 @@
                 "Ghost"
             ],
             "perfect_cp": 224,
-            "perfect_boosted": 281
+            "perfect_boosted": 281,
+            "perfect_cp_boosted": 281
         }
     },
     {
@@ -4392,7 +4674,8 @@
                 "Normal"
             ],
             "perfect_cp": 383,
-            "perfect_boosted": 479
+            "perfect_boosted": 479,
+            "perfect_cp_boosted": 479
         }
     },
     {
@@ -4404,7 +4687,8 @@
                 "Normal"
             ],
             "perfect_cp": 758,
-            "perfect_boosted": 948
+            "perfect_boosted": 948,
+            "perfect_cp_boosted": 948
         }
     },
     {
@@ -4416,7 +4700,8 @@
                 "Normal"
             ],
             "perfect_cp": 1341,
-            "perfect_boosted": 1677
+            "perfect_boosted": 1677,
+            "perfect_cp_boosted": 1677
         }
     },
     {
@@ -4439,7 +4724,8 @@
                 "Fighting"
             ],
             "perfect_cp": 467,
-            "perfect_boosted": 583
+            "perfect_boosted": 583,
+            "perfect_cp_boosted": 583
         }
     },
     {
@@ -4451,7 +4737,8 @@
                 "Fighting"
             ],
             "perfect_cp": 1616,
-            "perfect_boosted": 2020
+            "perfect_boosted": 2020,
+            "perfect_cp_boosted": 2020
         }
     },
     {
@@ -4464,7 +4751,8 @@
                 "Fairy"
             ],
             "perfect_cp": 208,
-            "perfect_boosted": 260
+            "perfect_boosted": 260,
+            "perfect_cp_boosted": 260
         }
     },
     {
@@ -4476,7 +4764,8 @@
                 "Rock"
             ],
             "perfect_cp": 567,
-            "perfect_boosted": 709
+            "perfect_boosted": 709,
+            "perfect_cp_boosted": 709
         }
     },
     {
@@ -4488,7 +4777,8 @@
                 "Normal"
             ],
             "perfect_cp": 422,
-            "perfect_boosted": 527
+            "perfect_boosted": 527,
+            "perfect_cp_boosted": 527
         }
     },
     {
@@ -4500,7 +4790,8 @@
                 "Normal"
             ],
             "perfect_cp": 854,
-            "perfect_boosted": 1068
+            "perfect_boosted": 1068,
+            "perfect_cp_boosted": 1068
         }
     },
     {
@@ -4523,7 +4814,8 @@
                         "end": "2010-06-07T20:00:00Z"
                     }
                 ]
-            ]
+            ],
+            "perfect_cp_boosted": 1054
         }
     },
     {
@@ -4533,7 +4825,7 @@
             "id": "303",
             "raid_level": 2,
             "perfect_cp": 934,
-            "perfect_cp_boosted": 1060,
+            "perfect_cp_boosted": 1167,
             "shiny": true,
             "types": [
                 "Steel",
@@ -4561,7 +4853,8 @@
                 "Rock"
             ],
             "perfect_cp": 747,
-            "perfect_boosted": 934
+            "perfect_boosted": 934,
+            "perfect_cp_boosted": 934
         }
     },
     {
@@ -4574,7 +4867,8 @@
                 "Rock"
             ],
             "perfect_cp": 1174,
-            "perfect_boosted": 1468
+            "perfect_boosted": 1468,
+            "perfect_cp_boosted": 1468
         }
     },
     {
@@ -4584,7 +4878,7 @@
             "id": "306",
             "raid_level": 4,
             "perfect_cp": 1714,
-            "perfect_cp_boosted": 2145,
+            "perfect_cp_boosted": 2143,
             "availability_rules": [
                 [
                     {
@@ -4599,7 +4893,8 @@
                 "Rock"
             ],
             "perfect_boosted": 2143
-        }
+        },
+        "availability_rules": []
     },
     {
         "type": "pokemon",
@@ -4621,7 +4916,8 @@
                 ]
             ],
             "perfect_cp": 396,
-            "perfect_boosted": 495
+            "perfect_boosted": 495,
+            "perfect_cp_boosted": 495
         }
     },
     {
@@ -4634,7 +4930,8 @@
                 "Psychic"
             ],
             "perfect_cp": 817,
-            "perfect_boosted": 1022
+            "perfect_boosted": 1022,
+            "perfect_cp_boosted": 1022
         }
     },
     {
@@ -4646,7 +4943,8 @@
                 "Electric"
             ],
             "perfect_cp": 551,
-            "perfect_boosted": 689
+            "perfect_boosted": 689,
+            "perfect_cp_boosted": 689
         }
     },
     {
@@ -4668,8 +4966,10 @@
                 "Electric"
             ],
             "perfect_cp": 1337,
-            "perfect_boosted": 1672
-        }
+            "perfect_boosted": 1672,
+            "perfect_cp_boosted": 1672
+        },
+        "availability_rules": []
     },
     {
         "type": "pokemon",
@@ -4680,7 +4980,8 @@
                 "Electric"
             ],
             "perfect_cp": 1016,
-            "perfect_boosted": 1270
+            "perfect_boosted": 1270,
+            "perfect_cp_boosted": 1270
         }
     },
     {
@@ -4692,7 +4993,8 @@
                 "Electric"
             ],
             "perfect_cp": 968,
-            "perfect_boosted": 1210
+            "perfect_boosted": 1210,
+            "perfect_cp_boosted": 1210
         }
     },
     {
@@ -4704,7 +5006,8 @@
                 "Bug"
             ],
             "perfect_cp": 1012,
-            "perfect_boosted": 1265
+            "perfect_boosted": 1265,
+            "perfect_cp_boosted": 1265
         }
     },
     {
@@ -4716,7 +5019,8 @@
                 "Bug"
             ],
             "perfect_cp": 1012,
-            "perfect_boosted": 1265
+            "perfect_boosted": 1265,
+            "perfect_cp_boosted": 1265
         }
     },
     {
@@ -4735,7 +5039,7 @@
                 ]
             ],
             "perfect_cp": 1068,
-            "perfect_cp_boosted": 1227,
+            "perfect_cp_boosted": 1335,
             "types": [
                 "Grass",
                 "Poison"
@@ -4752,7 +5056,8 @@
                 "Poison"
             ],
             "perfect_cp": 495,
-            "perfect_boosted": 618
+            "perfect_boosted": 618,
+            "perfect_cp_boosted": 618
         }
     },
     {
@@ -4764,7 +5069,8 @@
                 "Poison"
             ],
             "perfect_cp": 1130,
-            "perfect_boosted": 1413
+            "perfect_boosted": 1413,
+            "perfect_cp_boosted": 1413
         }
     },
     {
@@ -4777,7 +5083,8 @@
                 "Dark"
             ],
             "perfect_cp": 583,
-            "perfect_boosted": 729
+            "perfect_boosted": 729,
+            "perfect_cp_boosted": 729
         }
     },
     {
@@ -4787,7 +5094,7 @@
             "id": "319",
             "raid_level": 3,
             "perfect_cp": 1246,
-            "perfect_cp_boosted": 1418,
+            "perfect_cp_boosted": 1558,
             "shiny": true,
             "types": [
                 "Water",
@@ -4812,7 +5119,7 @@
             "id": "320",
             "raid_level": 1,
             "perfect_cp": 838,
-            "perfect_cp_boosted": 1017,
+            "perfect_cp_boosted": 1048,
             "shiny": true,
             "types": [
                 "Water"
@@ -4838,7 +5145,8 @@
                 "Water"
             ],
             "perfect_cp": 1302,
-            "perfect_boosted": 1628
+            "perfect_boosted": 1628,
+            "perfect_cp_boosted": 1628
         }
     },
     {
@@ -4851,7 +5159,8 @@
                 "Ground"
             ],
             "perfect_cp": 604,
-            "perfect_boosted": 755
+            "perfect_boosted": 755,
+            "perfect_cp_boosted": 755
         }
     },
     {
@@ -4864,7 +5173,8 @@
                 "Ground"
             ],
             "perfect_cp": 1253,
-            "perfect_boosted": 1566
+            "perfect_boosted": 1566,
+            "perfect_cp_boosted": 1566
         }
     },
     {
@@ -4876,7 +5186,8 @@
                 "Fire"
             ],
             "perfect_cp": 1196,
-            "perfect_boosted": 1495
+            "perfect_boosted": 1495,
+            "perfect_cp_boosted": 1495
         }
     },
     {
@@ -4888,7 +5199,8 @@
                 "Psychic"
             ],
             "perfect_cp": 762,
-            "perfect_boosted": 953
+            "perfect_boosted": 953,
+            "perfect_cp_boosted": 953
         }
     },
     {
@@ -4900,7 +5212,8 @@
                 "Psychic"
             ],
             "perfect_cp": 1354,
-            "perfect_boosted": 1692
+            "perfect_boosted": 1692,
+            "perfect_cp_boosted": 1692
         }
     },
     {
@@ -4912,7 +5225,8 @@
                 "Normal"
             ],
             "perfect_cp": 697,
-            "perfect_boosted": 872
+            "perfect_boosted": 872,
+            "perfect_cp_boosted": 872
         }
     },
     {
@@ -4924,7 +5238,8 @@
                 "Ground"
             ],
             "perfect_cp": 728,
-            "perfect_boosted": 910
+            "perfect_boosted": 910,
+            "perfect_cp_boosted": 910
         }
     },
     {
@@ -4937,7 +5252,8 @@
                 "Dragon"
             ],
             "perfect_cp": 699,
-            "perfect_boosted": 875
+            "perfect_boosted": 875,
+            "perfect_cp_boosted": 875
         }
     },
     {
@@ -4950,7 +5266,8 @@
                 "Dragon"
             ],
             "perfect_cp": 1520,
-            "perfect_boosted": 1901
+            "perfect_boosted": 1901,
+            "perfect_cp_boosted": 1901
         }
     },
     {
@@ -4962,7 +5279,8 @@
                 "Grass"
             ],
             "perfect_cp": 709,
-            "perfect_boosted": 887
+            "perfect_boosted": 887,
+            "perfect_cp_boosted": 887
         }
     },
     {
@@ -4975,7 +5293,8 @@
                 "Dark"
             ],
             "perfect_cp": 1313,
-            "perfect_boosted": 1641
+            "perfect_boosted": 1641,
+            "perfect_cp_boosted": 1641
         }
     },
     {
@@ -4998,7 +5317,8 @@
                 "Flying"
             ],
             "perfect_cp": 470,
-            "perfect_boosted": 588
+            "perfect_boosted": 588,
+            "perfect_cp_boosted": 588
         }
     },
     {
@@ -5011,7 +5331,8 @@
                 "Flying"
             ],
             "perfect_cp": 1145,
-            "perfect_boosted": 1432
+            "perfect_boosted": 1432,
+            "perfect_cp_boosted": 1432
         }
     },
     {
@@ -5023,7 +5344,8 @@
                 "Normal"
             ],
             "perfect_cp": 1381,
-            "perfect_boosted": 1727
+            "perfect_boosted": 1727,
+            "perfect_cp_boosted": 1727
         }
     },
     {
@@ -5035,7 +5357,8 @@
                 "Poison"
             ],
             "perfect_cp": 1203,
-            "perfect_boosted": 1504
+            "perfect_boosted": 1504,
+            "perfect_cp_boosted": 1504
         }
     },
     {
@@ -5048,7 +5371,8 @@
                 "Psychic"
             ],
             "perfect_cp": 1330,
-            "perfect_boosted": 1662
+            "perfect_boosted": 1662,
+            "perfect_cp_boosted": 1662
         }
     },
     {
@@ -5061,7 +5385,8 @@
                 "Psychic"
             ],
             "perfect_cp": 1330,
-            "perfect_boosted": 1662
+            "perfect_boosted": 1662,
+            "perfect_cp_boosted": 1662
         }
     },
     {
@@ -5074,7 +5399,8 @@
                 "Ground"
             ],
             "perfect_cp": 468,
-            "perfect_boosted": 585
+            "perfect_boosted": 585,
+            "perfect_cp_boosted": 585
         }
     },
     {
@@ -5087,7 +5413,8 @@
                 "Ground"
             ],
             "perfect_cp": 1186,
-            "perfect_boosted": 1482
+            "perfect_boosted": 1482,
+            "perfect_cp_boosted": 1482
         }
     },
     {
@@ -5099,7 +5426,8 @@
                 "Water"
             ],
             "perfect_cp": 703,
-            "perfect_boosted": 879
+            "perfect_boosted": 879,
+            "perfect_cp_boosted": 879
         }
     },
     {
@@ -5112,7 +5440,8 @@
                 "Dark"
             ],
             "perfect_cp": 1413,
-            "perfect_boosted": 1767
+            "perfect_boosted": 1767,
+            "perfect_cp_boosted": 1767
         }
     },
     {
@@ -5125,7 +5454,8 @@
                 "Psychic"
             ],
             "perfect_cp": 449,
-            "perfect_boosted": 562
+            "perfect_boosted": 562,
+            "perfect_cp_boosted": 562
         }
     },
     {
@@ -5135,7 +5465,7 @@
             "id": "344",
             "raid_level": 3,
             "perfect_cp": 1126,
-            "perfect_cp_boosted": 1272,
+            "perfect_cp_boosted": 1408,
             "types": [
                 "Ground",
                 "Psychic"
@@ -5162,7 +5492,8 @@
                 "Grass"
             ],
             "perfect_cp": 738,
-            "perfect_boosted": 922
+            "perfect_boosted": 922,
+            "perfect_cp_boosted": 922
         }
     },
     {
@@ -5175,7 +5506,8 @@
                 "Grass"
             ],
             "perfect_cp": 1263,
-            "perfect_boosted": 1579
+            "perfect_boosted": 1579,
+            "perfect_cp_boosted": 1579
         }
     },
     {
@@ -5188,7 +5520,8 @@
                 "Bug"
             ],
             "perfect_cp": 874,
-            "perfect_boosted": 1092
+            "perfect_boosted": 1092,
+            "perfect_cp_boosted": 1092
         }
     },
     {
@@ -5201,7 +5534,8 @@
                 "Bug"
             ],
             "perfect_cp": 1627,
-            "perfect_boosted": 2035
+            "perfect_boosted": 2035,
+            "perfect_cp_boosted": 2035
         }
     },
     {
@@ -5213,7 +5547,8 @@
                 "Water"
             ],
             "perfect_cp": 157,
-            "perfect_boosted": 196
+            "perfect_boosted": 196,
+            "perfect_cp_boosted": 196
         }
     },
     {
@@ -5225,7 +5560,8 @@
                 "Water"
             ],
             "perfect_cp": 1717,
-            "perfect_boosted": 2147
+            "perfect_boosted": 2147,
+            "perfect_cp_boosted": 2147
         }
     },
     {
@@ -5237,7 +5573,8 @@
                 "Fire"
             ],
             "perfect_cp": 932,
-            "perfect_boosted": 1165
+            "perfect_boosted": 1165,
+            "perfect_cp_boosted": 1165
         }
     },
     {
@@ -5249,7 +5586,8 @@
                 "Normal"
             ],
             "perfect_cp": 1169,
-            "perfect_boosted": 1462
+            "perfect_boosted": 1462,
+            "perfect_cp_boosted": 1462
         }
     },
     {
@@ -5271,7 +5609,8 @@
                         "end": "2010-06-07T20:00:00Z"
                     }
                 ]
-            ]
+            ],
+            "perfect_cp_boosted": 727
         }
     },
     {
@@ -5283,7 +5622,8 @@
                 "Ghost"
             ],
             "perfect_cp": 1313,
-            "perfect_boosted": 1642
+            "perfect_boosted": 1642,
+            "perfect_cp_boosted": 1642
         }
     },
     {
@@ -5305,7 +5645,8 @@
                         "end": "2010-06-07T20:00:00Z"
                     }
                 ]
-            ]
+            ],
+            "perfect_cp_boosted": 504
         }
     },
     {
@@ -5317,7 +5658,8 @@
                 "Ghost"
             ],
             "perfect_cp": 909,
-            "perfect_boosted": 1136
+            "perfect_boosted": 1136,
+            "perfect_cp_boosted": 1136
         }
     },
     {
@@ -5330,7 +5672,8 @@
                 "Flying"
             ],
             "perfect_cp": 1109,
-            "perfect_boosted": 1386
+            "perfect_boosted": 1386,
+            "perfect_cp_boosted": 1386
         }
     },
     {
@@ -5342,7 +5685,8 @@
                 "Psychic"
             ],
             "perfect_cp": 1291,
-            "perfect_boosted": 1614
+            "perfect_boosted": 1614,
+            "perfect_cp_boosted": 1614
         }
     },
     {
@@ -5352,7 +5696,7 @@
             "id": "359",
             "raid_level": 4,
             "perfect_cp": 1443,
-            "perfect_cp_boosted": 1629,
+            "perfect_cp_boosted": 1805,
             "shiny": true,
             "types": [
                 "Dark"
@@ -5367,7 +5711,8 @@
                     }
                 ]
             ]
-        }
+        },
+        "availability_rules": []
     },
     {
         "type": "pokemon",
@@ -5378,7 +5723,8 @@
                 "Psychic"
             ],
             "perfect_cp": 305,
-            "perfect_boosted": 381
+            "perfect_boosted": 381,
+            "perfect_cp_boosted": 381
         }
     },
     {
@@ -5400,7 +5746,8 @@
                         "end": "2010-06-07T20:00:00Z"
                     }
                 ]
-            ]
+            ],
+            "perfect_cp_boosted": 634
         }
     },
     {
@@ -5412,7 +5759,8 @@
                 "Ice"
             ],
             "perfect_cp": 1203,
-            "perfect_boosted": 1504
+            "perfect_boosted": 1504,
+            "perfect_cp_boosted": 1504
         }
     },
     {
@@ -5425,7 +5773,8 @@
                 "Water"
             ],
             "perfect_cp": 550,
-            "perfect_boosted": 687
+            "perfect_boosted": 687,
+            "perfect_cp_boosted": 687
         }
     },
     {
@@ -5438,7 +5787,8 @@
                 "Water"
             ],
             "perfect_cp": 979,
-            "perfect_boosted": 1225
+            "perfect_boosted": 1225,
+            "perfect_cp_boosted": 1225
         }
     },
     {
@@ -5448,7 +5798,7 @@
             "id": "365",
             "raid_level": 4,
             "perfect_cp": 1557,
-            "perfect_cp_boosted": 1862,
+            "perfect_cp_boosted": 1947,
             "availability_rules": [
                 [
                     {
@@ -5474,7 +5824,8 @@
                 "Water"
             ],
             "perfect_cp": 726,
-            "perfect_boosted": 907
+            "perfect_boosted": 907,
+            "perfect_cp_boosted": 907
         }
     },
     {
@@ -5486,7 +5837,8 @@
                 "Water"
             ],
             "perfect_cp": 1337,
-            "perfect_boosted": 1671
+            "perfect_boosted": 1671,
+            "perfect_cp_boosted": 1671
         }
     },
     {
@@ -5498,7 +5850,8 @@
                 "Water"
             ],
             "perfect_cp": 1425,
-            "perfect_boosted": 1781
+            "perfect_boosted": 1781,
+            "perfect_cp_boosted": 1781
         }
     },
     {
@@ -5511,7 +5864,8 @@
                 "Rock"
             ],
             "perfect_cp": 1444,
-            "perfect_boosted": 1806
+            "perfect_boosted": 1806,
+            "perfect_cp_boosted": 1806
         }
     },
     {
@@ -5523,7 +5877,8 @@
                 "Water"
             ],
             "perfect_cp": 484,
-            "perfect_boosted": 605
+            "perfect_boosted": 605,
+            "perfect_cp_boosted": 605
         }
     },
     {
@@ -5535,7 +5890,8 @@
                 "Dragon"
             ],
             "perfect_cp": 660,
-            "perfect_boosted": 826
+            "perfect_boosted": 826,
+            "perfect_cp_boosted": 826
         }
     },
     {
@@ -5547,7 +5903,8 @@
                 "Dragon"
             ],
             "perfect_cp": 1160,
-            "perfect_boosted": 1451
+            "perfect_boosted": 1451,
+            "perfect_cp_boosted": 1451
         }
     },
     {
@@ -5560,7 +5917,8 @@
                 "Flying"
             ],
             "perfect_cp": 2142,
-            "perfect_boosted": 2678
+            "perfect_boosted": 2678,
+            "perfect_cp_boosted": 2678
         }
     },
     {
@@ -5573,7 +5931,8 @@
                 "Psychic"
             ],
             "perfect_cp": 558,
-            "perfect_boosted": 697
+            "perfect_boosted": 697,
+            "perfect_cp_boosted": 697
         }
     },
     {
@@ -5586,7 +5945,8 @@
                 "Psychic"
             ],
             "perfect_cp": 983,
-            "perfect_boosted": 1229
+            "perfect_boosted": 1229,
+            "perfect_cp_boosted": 1229
         }
     },
     {
@@ -5599,7 +5959,8 @@
                 "Psychic"
             ],
             "perfect_cp": 2166,
-            "perfect_boosted": 2708
+            "perfect_boosted": 2708,
+            "perfect_cp_boosted": 2708
         }
     },
     {
@@ -5611,7 +5972,7 @@
                 "Rock"
             ],
             "perfect_cp": 1784,
-            "perfect_cp_boosted": 2205,
+            "perfect_cp_boosted": 2230,
             "raid_level": 5,
             "availability_rules": [
                 [
@@ -5635,7 +5996,7 @@
             ],
             "raid_level": 5,
             "perfect_cp": 1784,
-            "perfect_cp_boosted": 2205,
+            "perfect_cp_boosted": 2230,
             "availability_rules": [
                 [
                     {
@@ -5657,7 +6018,7 @@
                 "Steel"
             ],
             "perfect_cp": 1398,
-            "perfect_cp_boosted": 1615,
+            "perfect_cp_boosted": 1748,
             "raid_level": 5,
             "availability_rules": [
                 [
@@ -5691,7 +6052,8 @@
                 "Psychic"
             ],
             "perfect_cp": 2006,
-            "perfect_boosted": 2507
+            "perfect_boosted": 2507,
+            "perfect_cp_boosted": 2507
         }
     },
     {
@@ -5705,7 +6067,7 @@
                 "Psychic"
             ],
             "perfect_cp": 2178,
-            "perfect_cp_boosted": 2603,
+            "perfect_cp_boosted": 2723,
             "availability_rules": [
                 [
                     {
@@ -5729,7 +6091,7 @@
             ],
             "shiny": true,
             "perfect_cp": 2351,
-            "perfect_cp_boosted": 2910,
+            "perfect_cp_boosted": 2939,
             "availability_rules": [
                 [
                     {
@@ -5761,7 +6123,8 @@
                 "Ground"
             ],
             "perfect_cp": 2351,
-            "perfect_boosted": 2939
+            "perfect_boosted": 2939,
+            "perfect_cp_boosted": 2939
         }
     },
     {
@@ -5784,7 +6147,8 @@
                 "Flying"
             ],
             "perfect_cp": 2191,
-            "perfect_boosted": 2739
+            "perfect_boosted": 2739,
+            "perfect_cp_boosted": 2739
         }
     },
     {
@@ -5793,7 +6157,7 @@
             "name": "Deoxys",
             "id": "386",
             "perfect_cp": 1645,
-            "perfect_cp_boosted": 1963,
+            "perfect_cp_boosted": 2056,
             "raid_level": 5,
             "ex": true,
             "types": [
@@ -5879,7 +6243,8 @@
                     }
                 ]
             ]
-        }
+        },
+        "availability_rules": []
     },
     {
         "type": "pokemon",
@@ -5911,7 +6276,7 @@
             "id": "487",
             "raid_level": 5,
             "perfect_cp": 2105,
-            "perfect_cp_boosted": 2414,
+            "perfect_cp_boosted": 2631,
             "availability_rules": [
                 [
                     {
@@ -6304,8 +6669,10 @@
             "perfect_cp_boosted": 753,
             "types": [
                 "Water"
-            ]
-        }
+            ],
+            "raid_level": 1
+        },
+        "availability_rules": []
     },
     {
         "type": "pokemon",
@@ -7156,8 +7523,10 @@
             "perfect_cp_boosted": 2041,
             "types": [
                 "Psychic"
-            ]
-        }
+            ],
+            "raid_level": 5
+        },
+        "availability_rules": []
     },
     {
         "type": "pokemon",
