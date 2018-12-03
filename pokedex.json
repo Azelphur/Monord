@@ -394,7 +394,8 @@
             "perfect_cp": 1306,
             "perfect_boosted": 1633,
             "perfect_cp_boosted": 1633
-        }
+        },
+        "availability_rules": []
     },
     {
         "type": "pokemon",
@@ -1009,7 +1010,8 @@
                     }
                 ]
             ]
-        }
+        },
+        "availability_rules": []
     },
     {
         "type": "pokemon",
@@ -1451,7 +1453,8 @@
                 ]
             ],
             "perfect_cp_boosted": 2055
-        }
+        },
+        "availability_rules": []
     },
     {
         "type": "pokemon",
@@ -1959,7 +1962,8 @@
             "perfect_cp": 1546,
             "perfect_boosted": 1933,
             "perfect_cp_boosted": 1933
-        }
+        },
+        "availability_rules": []
     },
     {
         "type": "pokemon",
@@ -2053,7 +2057,8 @@
             "perfect_cp": 1690,
             "perfect_boosted": 2113,
             "perfect_cp_boosted": 2113
-        }
+        },
+        "availability_rules": []
     },
     {
         "type": "pokemon",
@@ -2837,7 +2842,16 @@
             "perfect_cp": 1191,
             "perfect_boosted": 1489,
             "perfect_cp_boosted": 1489,
-            "raid_level": 2
+            "raid_level": 2,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-07T20:00:00Z"
+                    }
+                ]
+            ]
         },
         "availability_rules": []
     },
@@ -2957,7 +2971,16 @@
             "perfect_cp": 566,
             "perfect_boosted": 708,
             "perfect_cp_boosted": 708,
-            "raid_level": 1
+            "raid_level": 1,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-07T20:00:00Z"
+                    }
+                ]
+            ]
         },
         "availability_rules": []
     },
@@ -3198,7 +3221,16 @@
             "perfect_cp": 1811,
             "perfect_boosted": 2264,
             "perfect_cp_boosted": 2264,
-            "raid_level": 3
+            "raid_level": 3,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-07T20:00:00Z"
+                    }
+                ]
+            ]
         },
         "availability_rules": []
     },
@@ -3213,7 +3245,16 @@
             "perfect_cp": 1221,
             "perfect_boosted": 1526,
             "perfect_cp_boosted": 1526,
-            "raid_level": 3
+            "raid_level": 3,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-07T20:00:00Z"
+                    }
+                ]
+            ]
         },
         "availability_rules": []
     },
@@ -3266,7 +3307,8 @@
                 ]
             ],
             "perfect_cp_boosted": 1376
-        }
+        },
+        "availability_rules": []
     },
     {
         "type": "pokemon",
@@ -3490,7 +3532,8 @@
                 ]
             ],
             "perfect_cp_boosted": 1465
-        }
+        },
+        "availability_rules": []
     },
     {
         "type": "pokemon",
@@ -3701,7 +3744,8 @@
                 ]
             ],
             "perfect_cp_boosted": 1882
-        }
+        },
+        "availability_rules": []
     },
     {
         "type": "pokemon",
@@ -4003,7 +4047,8 @@
                     }
                 ]
             ]
-        }
+        },
+        "availability_rules": []
     },
     {
         "type": "pokemon",
@@ -4816,7 +4861,8 @@
                 ]
             ],
             "perfect_cp_boosted": 1054
-        }
+        },
+        "availability_rules": []
     },
     {
         "type": "pokemon",
@@ -4841,7 +4887,8 @@
                     }
                 ]
             ]
-        }
+        },
+        "availability_rules": []
     },
     {
         "type": "pokemon",
@@ -5110,7 +5157,8 @@
                     }
                 ]
             ]
-        }
+        },
+        "availability_rules": []
     },
     {
         "type": "pokemon",
@@ -5611,7 +5659,8 @@
                 ]
             ],
             "perfect_cp_boosted": 727
-        }
+        },
+        "availability_rules": []
     },
     {
         "type": "pokemon",
@@ -5647,7 +5696,8 @@
                 ]
             ],
             "perfect_cp_boosted": 504
-        }
+        },
+        "availability_rules": []
     },
     {
         "type": "pokemon",
@@ -5748,7 +5798,8 @@
                 ]
             ],
             "perfect_cp_boosted": 634
-        }
+        },
+        "availability_rules": []
     },
     {
         "type": "pokemon",
@@ -6670,7 +6721,16 @@
             "types": [
                 "Water"
             ],
-            "raid_level": 1
+            "raid_level": 1,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-07T20:00:00Z"
+                    }
+                ]
+            ]
         },
         "availability_rules": []
     },
@@ -6757,8 +6817,10 @@
             "types": [
                 "Ghost",
                 "Flying"
-            ]
-        }
+            ],
+            "raid_level": 1
+        },
+        "availability_rules": []
     },
     {
         "type": "pokemon",
@@ -7524,7 +7586,16 @@
             "types": [
                 "Psychic"
             ],
-            "raid_level": 5
+            "raid_level": 5,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-07T20:00:00Z"
+                    }
+                ]
+            ]
         },
         "availability_rules": []
     },
