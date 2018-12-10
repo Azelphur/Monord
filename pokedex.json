@@ -382,12 +382,10 @@
                 "Electric",
                 "Psychic"
             ],
-            "availability_rules": [],
             "perfect_cp": 1306,
             "perfect_boosted": 1633,
             "perfect_cp_boosted": 1633
-        },
-        "availability_rules": []
+        }
     },
     {
         "type": "pokemon",
@@ -992,10 +990,8 @@
             "types": [
                 "Fighting"
             ],
-            "perfect_boosted": 2183,
-            "availability_rules": []
-        },
-        "availability_rules": []
+            "perfect_boosted": 2183
+        }
     },
     {
         "type": "pokemon",
@@ -1427,10 +1423,8 @@
             ],
             "perfect_cp": 1644,
             "perfect_boosted": 2055,
-            "availability_rules": [],
             "perfect_cp_boosted": 2055
-        },
-        "availability_rules": []
+        }
     },
     {
         "type": "pokemon",
@@ -1608,10 +1602,8 @@
                 "Fire",
                 "Ghost"
             ],
-            "perfect_boosted": 1311,
-            "availability_rules": []
-        },
-        "availability_rules": []
+            "perfect_boosted": 1311
+        }
     },
     {
         "type": "pokemon",
@@ -1914,7 +1906,6 @@
             "name": "Scyther",
             "id": "123",
             "raid_level": 3,
-            "availability_rules": [],
             "types": [
                 "Bug",
                 "Flying"
@@ -1922,8 +1913,7 @@
             "perfect_cp": 1546,
             "perfect_boosted": 1933,
             "perfect_cp_boosted": 1933
-        },
-        "availability_rules": []
+        }
     },
     {
         "type": "pokemon",
@@ -2002,15 +1992,13 @@
             "name": "Pinsir",
             "id": "127",
             "raid_level": 3,
-            "availability_rules": [],
             "types": [
                 "Bug"
             ],
             "perfect_cp": 1690,
             "perfect_boosted": 2113,
             "perfect_cp_boosted": 2113
-        },
-        "availability_rules": []
+        }
     },
     {
         "type": "pokemon",
@@ -3249,10 +3237,8 @@
             ],
             "perfect_cp": 1100,
             "perfect_boosted": 1376,
-            "availability_rules": [],
             "perfect_cp_boosted": 1376
-        },
-        "availability_rules": []
+        }
     },
     {
         "type": "pokemon",
@@ -3466,10 +3452,8 @@
             ],
             "perfect_cp": 1172,
             "perfect_boosted": 1465,
-            "availability_rules": [],
             "perfect_cp_boosted": 1465
-        },
-        "availability_rules": []
+        }
     },
     {
         "type": "pokemon",
@@ -3670,10 +3654,8 @@
             ],
             "perfect_cp": 1505,
             "perfect_boosted": 1882,
-            "availability_rules": [],
             "perfect_cp_boosted": 1882
-        },
-        "availability_rules": []
+        }
     },
     {
         "type": "pokemon",
@@ -3965,10 +3947,8 @@
                 "Rock",
                 "Dark"
             ],
-            "perfect_boosted": 2739,
-            "availability_rules": []
-        },
-        "availability_rules": []
+            "perfect_boosted": 2739
+        }
     },
     {
         "type": "pokemon",
@@ -4771,10 +4751,8 @@
             ],
             "perfect_cp": 843,
             "perfect_boosted": 1054,
-            "availability_rules": [],
             "perfect_cp_boosted": 1054
-        },
-        "availability_rules": []
+        }
     },
     {
         "type": "pokemon",
@@ -4789,10 +4767,8 @@
                 "Steel",
                 "Fairy"
             ],
-            "perfect_boosted": 1167,
-            "availability_rules": []
-        },
-        "availability_rules": []
+            "perfect_boosted": 1167
+        }
     },
     {
         "type": "pokemon",
@@ -5051,10 +5027,8 @@
                 "Water",
                 "Dark"
             ],
-            "perfect_boosted": 1558,
-            "availability_rules": []
-        },
-        "availability_rules": []
+            "perfect_boosted": 1558
+        }
     },
     {
         "type": "pokemon",
@@ -5545,10 +5519,8 @@
             ],
             "perfect_cp": 581,
             "perfect_boosted": 727,
-            "availability_rules": [],
             "perfect_cp_boosted": 727
-        },
-        "availability_rules": []
+        }
     },
     {
         "type": "pokemon",
@@ -5574,10 +5546,8 @@
             ],
             "perfect_cp": 403,
             "perfect_boosted": 504,
-            "availability_rules": [],
             "perfect_cp_boosted": 504
-        },
-        "availability_rules": []
+        }
     },
     {
         "type": "pokemon",
@@ -5631,10 +5601,8 @@
             "types": [
                 "Dark"
             ],
-            "perfect_boosted": 1805,
-            "availability_rules": []
-        },
-        "availability_rules": []
+            "perfect_boosted": 1805
+        }
     },
     {
         "type": "pokemon",
@@ -5660,10 +5628,8 @@
             ],
             "perfect_cp": 507,
             "perfect_boosted": 634,
-            "availability_rules": [],
             "perfect_cp_boosted": 634
-        },
-        "availability_rules": []
+        }
     },
     {
         "type": "pokemon",
@@ -6148,10 +6114,8 @@
             "types": [
                 "Electric"
             ],
-            "perfect_boosted": 625,
-            "availability_rules": []
-        },
-        "availability_rules": []
+            "perfect_boosted": 625
+        }
     },
     {
         "type": "pokemon",
@@ -6577,10 +6541,8 @@
             "types": [
                 "Water"
             ],
-            "raid_level": 1,
-            "availability_rules": []
-        },
-        "availability_rules": []
+            "raid_level": 1
+        }
     },
     {
         "type": "pokemon",
@@ -6666,10 +6628,8 @@
                 "Ghost",
                 "Flying"
             ],
-            "raid_level": 1,
-            "availability_rules": []
-        },
-        "availability_rules": []
+            "raid_level": 1
+        }
     },
     {
         "type": "pokemon",
@@ -7435,10 +7395,8 @@
             "types": [
                 "Psychic"
             ],
-            "raid_level": 5,
-            "availability_rules": []
-        },
-        "availability_rules": []
+            "raid_level": 5
+        }
     },
     {
         "type": "pokemon",
