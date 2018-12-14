@@ -157,7 +157,7 @@ class Monord:
             <gym> - The title or ID of the gym
         """
         gym = self.session.query(models.Gym).filter_by(id=gym.meta["id"])
-        title = gym.title
+        title = gym.first().title
         gym.delete()
         es_models.Gym.get(id=gym.meta["id"]).delete()
         await ctx.send(_("Gym removed"))
