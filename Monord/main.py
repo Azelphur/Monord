@@ -185,7 +185,11 @@ class Monord:
         sql_gym.title = title
         self.session.add(sql_gym)
         self.session.commit()
-        es_models.Gym(meta={'id': sql_gym.id}, name=title).save()
+        es_models.Gym(
+            meta={'id': sql_gym.id},
+            title=title,
+            location={"lat": es_gym.location['lat'], "lon": es_gym.location['lon']},
+        ).save()
         await ctx.tick()
 
     @commands.group(name="raid", invoke_without_command=True, case_insensitive=True)
