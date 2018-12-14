@@ -156,10 +156,11 @@ class Monord:
             
             <gym> - The title or ID of the gym
         """
+        gym = self.session.query(models.Gym).filter_by(id=gym.meta["id"])
         title = gym.title
-        self.session.query(models.Gym).filter_by(id=gym.meta["id"]).delete()
+        gym.delete()
         es_models.Gym.get(id=gym.meta["id"]).delete()
-        await ctx.send(_("Gym \"{}\" removed").format(title))
+        await ctx.send(_("Gym removed"))
 
     @checks.mod_or_permissions(manage_guild=True)
     @gym.group(name="set", invoke_without_command=True, case_insensitive=True)
