@@ -183,10 +183,9 @@ class Monord:
     async def gym_set_title(self, ctx, title: str, *, gym: converters.GymWithSQL):
         es_gym, sql_gym = gym
         sql_gym.title = title
-        es_gym.title = title
-        es_gym.save()
         self.session.add(sql_gym)
         self.session.commit()
+        es_models.Gym(meta={'id': sql_gym.id}, name=title).save()
         await ctx.tick()
 
     @commands.group(name="raid", invoke_without_command=True, case_insensitive=True)
@@ -210,9 +209,10 @@ class Monord:
         if isinstance(sql_pokemon, int): # User reported an egg
             time += utils.DESPAWN_TIME
 
-        if not isinstance(sql_pokemon, int) and utils.check_availability(sql_pokemon, sql_gym.location, time - utils.DESPAWN_TIME - utils.HATCH_TIME, sql_pokemon.raid_level) == False:
-            await ctx.send(_("{} is not currently available in raids").format(sql_pokemon.name))
-            return
+        # In practice this check just serves to annoy people during raid switchovers, so I'm disabling it for now.
+        #if not isinstance(sql_pokemon, int) and utils.check_availability(sql_pokemon, sql_gym.location, time - utils.DESPAWN_TIME - utils.HATCH_TIME, sql_pokemon.raid_level) == False:
+        #    await ctx.send(_("{} is not currently available in raids").format(sql_pokemon.name))
+        #    return
 
         raid = utils.get_raid_at_time(self.session, sql_gym, time)
         if raid:
