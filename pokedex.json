@@ -3956,15 +3956,6 @@
             "name": "Lugia",
             "id": "249",
             "raid_level": 5,
-            "availability_rules": [
-                [
-                    {
-                        "type": "time",
-                        "start": "2010-06-07T20:00:00Z",
-                        "end": "2010-06-07T20:00:00Z"
-                    }
-                ]
-            ],
             "types": [
                 "Psychic",
                 "Flying"
@@ -3980,15 +3971,6 @@
             "name": "Ho-Oh",
             "id": "250",
             "raid_level": 5,
-            "availability_rules": [
-                [
-                    {
-                        "type": "time",
-                        "start": "2010-06-07T20:00:00Z",
-                        "end": "2010-06-07T20:00:00Z"
-                    }
-                ]
-            ],
             "types": [
                 "Fire",
                 "Flying"
