@@ -347,6 +347,15 @@ class Monord:
         await ctx.tick()
 
     @raid.command(case_insensitive=True)
+    async def hatch(self, ctx, time: converters.Time, *, raid: converters.Raid):
+        despawn_time = pytz.utc.localize(raid.despawn_time)
+        raid.despawn_time = time + datetime.timedelta(minutes=DESPAWN_TIME)
+        self.session.add(raid)
+        await utils.update_raid(self, raid)
+        timers.raid_reschedule(self)
+        await ctx.tick()
+
+    @raid.command(case_insensitive=True)
     async def possibilities(self, ctx, *, gym: converters.GymWithSQL):
         es_gym, sql_gym = gym
         now = pytz.utc.localize(datetime.datetime.now())
