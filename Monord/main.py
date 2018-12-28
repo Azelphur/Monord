@@ -349,7 +349,7 @@ class Monord:
     @raid.command(case_insensitive=True)
     async def hatch(self, ctx, time: converters.Time, *, raid: converters.Raid):
         despawn_time = pytz.utc.localize(raid.despawn_time)
-        raid.despawn_time = time + datetime.timedelta(minutes=DESPAWN_TIME)
+        raid.despawn_time = time + datetime.timedelta(minutes=utils.DESPAWN_TIME)
         self.session.add(raid)
         await utils.update_raid(self, raid)
         timers.raid_reschedule(self)
