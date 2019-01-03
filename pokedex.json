@@ -412,7 +412,8 @@
             ],
             "perfect_cp": 1390,
             "perfect_boosted": 1737,
-            "perfect_cp_boosted": 1737
+            "perfect_cp_boosted": 1737,
+            "raid_level": 2
         }
     },
     {
@@ -1107,15 +1108,6 @@
             "name": "Golem",
             "id": "076",
             "raid_level": 4,
-            "availability_rules": [
-                [
-                    {
-                        "type": "time",
-                        "start": "2010-06-07T20:00:00Z",
-                        "end": "2010-06-07T20:00:00Z"
-                    }
-                ]
-            ],
             "types": [
                 "Rock",
                 "Electric"
@@ -1305,7 +1297,16 @@
             "perfect_cp": 1134,
             "perfect_boosted": 1418,
             "perfect_cp_boosted": 1418,
-            "raid_level": 2
+            "raid_level": 2,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-07T20:00:00Z"
+                    }
+                ]
+            ]
         }
     },
     {
@@ -1358,7 +1359,16 @@
             "types": [
                 "Water"
             ],
-            "perfect_boosted": 771
+            "perfect_boosted": 771,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-07T20:00:00Z"
+                    }
+                ]
+            ]
         }
     },
     {
@@ -1565,7 +1575,16 @@
                 "Grass",
                 "Dragon"
             ],
-            "perfect_boosted": 2153
+            "perfect_boosted": 2153,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-07T20:00:00Z"
+                    }
+                ]
+            ]
         }
     },
     {
@@ -1725,15 +1744,6 @@
                 "Ground",
                 "Rock"
             ],
-            "availability_rules": [
-                [
-                    {
-                        "type": "time",
-                        "start": "2010-06-07T20:00:00Z",
-                        "end": "2010-06-07T20:00:00Z"
-                    }
-                ]
-            ],
             "perfect_cp": 1816,
             "perfect_boosted": 2270,
             "perfect_cp_boosted": 2270
@@ -1861,15 +1871,6 @@
             "raid_level": 3,
             "perfect_cp": 1476,
             "perfect_cp_boosted": 1846,
-            "availability_rules": [
-                [
-                    {
-                        "type": "time",
-                        "start": "2010-06-07T20:00:00Z",
-                        "end": "2010-06-07T20:00:00Z"
-                    }
-                ]
-            ],
             "types": [
                 "Water",
                 "Psychic"
@@ -1927,7 +1928,16 @@
             ],
             "perfect_cp": 1460,
             "perfect_boosted": 1825,
-            "perfect_cp_boosted": 1825
+            "perfect_cp_boosted": 1825,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-07T20:00:00Z"
+                    }
+                ]
+            ]
         }
     },
     {
@@ -2054,7 +2064,16 @@
             ],
             "perfect_cp": 1509,
             "perfect_boosted": 1886,
-            "perfect_cp_boosted": 1886
+            "perfect_cp_boosted": 1886,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-07T20:00:00Z"
+                    }
+                ]
+            ]
         }
     },
     {
@@ -2586,15 +2605,6 @@
             "raid_level": 2,
             "perfect_cp": 984,
             "perfect_cp_boosted": 1230,
-            "availability_rules": [
-                [
-                    {
-                        "type": "time",
-                        "start": "2010-06-07T20:00:00Z",
-                        "end": "2010-06-07T20:00:00Z"
-                    }
-                ]
-            ],
             "types": [
                 "Water"
             ],
@@ -3443,7 +3453,16 @@
             ],
             "perfect_cp": 1172,
             "perfect_boosted": 1465,
-            "perfect_cp_boosted": 1465
+            "perfect_cp_boosted": 1465,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-07T20:00:00Z"
+                    }
+                ]
+            ]
         }
     },
     {
@@ -3525,7 +3544,16 @@
             ],
             "perfect_cp": 1340,
             "perfect_boosted": 1675,
-            "perfect_cp_boosted": 1675
+            "perfect_cp_boosted": 1675,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-07T20:00:00Z"
+                    }
+                ]
+            ]
         }
     },
     {
@@ -3681,15 +3709,6 @@
             "name": "Donphan",
             "id": "232",
             "raid_level": 3,
-            "availability_rules": [
-                [
-                    {
-                        "type": "time",
-                        "start": "2010-06-07T20:00:00Z",
-                        "end": "2010-06-07T20:00:00Z"
-                    }
-                ]
-            ],
             "types": [
                 "Ground"
             ],
@@ -4501,16 +4520,7 @@
         "data": {
             "name": "Breloom",
             "id": "286",
-            "raid_level": 3,
-            "availability_rules": [
-                [
-                    {
-                        "type": "time",
-                        "start": "2010-06-07T20:00:00Z",
-                        "end": "2010-06-07T20:00:00Z"
-                    }
-                ]
-            ],
+            "raid_level": 2,
             "types": [
                 "Grass",
                 "Fighting"
@@ -4647,15 +4657,6 @@
             "id": "296",
             "shiny": true,
             "raid_level": 1,
-            "availability_rules": [
-                [
-                    {
-                        "type": "time",
-                        "start": "2010-06-07T20:00:00Z",
-                        "end": "2010-06-07T20:00:00Z"
-                    }
-                ]
-            ],
             "types": [
                 "Fighting"
             ],
@@ -5027,16 +5028,7 @@
                 "Water",
                 "Dark"
             ],
-            "perfect_boosted": 1558,
-            "availability_rules": [
-                [
-                    {
-                        "type": "time",
-                        "start": "2010-06-07T20:00:00Z",
-                        "end": "2010-06-07T20:00:00Z"
-                    }
-                ]
-            ]
+            "perfect_boosted": 1558
         }
     },
     {
@@ -5050,15 +5042,6 @@
             "shiny": true,
             "types": [
                 "Water"
-            ],
-            "availability_rules": [
-                [
-                    {
-                        "type": "time",
-                        "start": "2010-06-07T20:00:00Z",
-                        "end": "2010-06-07T20:00:00Z"
-                    }
-                ]
             ],
             "perfect_boosted": 1048
         }
@@ -5664,7 +5647,16 @@
             ],
             "perfect_cp": 507,
             "perfect_boosted": 634,
-            "perfect_cp_boosted": 634
+            "perfect_cp_boosted": 634,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-07T20:00:00Z"
+                    }
+                ]
+            ]
         }
     },
     {
@@ -5720,7 +5712,16 @@
                 "Ice",
                 "Water"
             ],
-            "perfect_boosted": 1947
+            "perfect_boosted": 1947,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-07T20:00:00Z"
+                    }
+                ]
+            ]
         }
     },
     {
@@ -6071,16 +6072,7 @@
             "types": [
                 "Psychic"
             ],
-            "perfect_boosted": 2056,
-            "availability_rules": [
-                [
-                    {
-                        "type": "time",
-                        "start": "2010-06-07T20:00:00Z",
-                        "end": "2010-06-07T20:00:00Z"
-                    }
-                ]
-            ]
+            "perfect_boosted": 2056
         }
     },
     {
