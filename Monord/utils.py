@@ -34,7 +34,7 @@ def prepare_gym_embed(gym):
     else:
         description = _("This gym is not EX Eligible")
     embed=discord.Embed(title=title, url="https://www.google.com/maps/dir/Current+Location/{},{}".format(es_gym.location['lat'], es_gym.location['lon']), description=description)
-    embed.set_image(url='https://api.mapbox.com/styles/v1/{3}/static/pin-s({1},{0})/{1},{0},14,0,0/250x125?access_token={2}'.format(es_gym.location['lat'], es_gym.location['lon'], 'pk.eyJ1IjoiamF5dHVybnIiLCJhIjoiY2pxaTM0YjN6MGdvcjQ4bm0za25ucGpmbCJ9.qJmqwYw24tq_5WaKlOCzVg', 'jayturnr/cjqi34t5walqo2rmwu032ra0a'))
+    embed.set_image(url='https://api.mapbox.com/styles/v1/{3}/static/pin-s+97F0F9({1},{0})/{1},{0},14,0,0/250x125?access_token={2}'.format(es_gym.location['lat'], es_gym.location['lon'], 'pk.eyJ1IjoiamF5dHVybnIiLCJhIjoiY2pxaTM0YjN6MGdvcjQ4bm0za25ucGpmbCJ9.qJmqwYw24tq_5WaKlOCzVg', 'jayturnr/cjqi34t5walqo2rmwu032ra0a'))
     embed.set_footer(text="Gym ID {}.".format(es_gym.meta["id"]))
     return embed
 
