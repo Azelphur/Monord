@@ -6075,6 +6075,7 @@
             "types": [
                 "Ground"
             ],
+            "shiny": true,
             "perfect_cp": 2351,
             "perfect_boosted": 2939,
             "perfect_cp_boosted": 2939
