@@ -384,7 +384,16 @@
             ],
             "perfect_cp": 1306,
             "perfect_boosted": 1633,
-            "perfect_cp_boosted": 1633
+            "perfect_cp_boosted": 1633,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-07T20:00:00Z"
+                    }
+                ]
+            ]
         }
     },
     {
@@ -413,7 +422,16 @@
             "perfect_cp": 1390,
             "perfect_boosted": 1737,
             "perfect_cp_boosted": 1737,
-            "raid_level": 2
+            "raid_level": 2,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-07T20:00:00Z"
+                    }
+                ]
+            ]
         }
     },
     {
@@ -991,7 +1009,16 @@
             "types": [
                 "Fighting"
             ],
-            "perfect_boosted": 2183
+            "perfect_boosted": 2183,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-07T20:00:00Z"
+                    }
+                ]
+            ]
         }
     },
     {
@@ -1114,7 +1141,16 @@
             ],
             "perfect_cp": 1685,
             "perfect_boosted": 2106,
-            "perfect_cp_boosted": 2106
+            "perfect_cp_boosted": 2106,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-07T20:00:00Z"
+                    }
+                ]
+            ]
         }
     },
     {
@@ -1612,7 +1648,16 @@
                 "Fire",
                 "Ghost"
             ],
-            "perfect_boosted": 1311
+            "perfect_boosted": 1311,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-07T20:00:00Z"
+                    }
+                ]
+            ]
         }
     },
     {
@@ -1746,7 +1791,16 @@
             ],
             "perfect_cp": 1816,
             "perfect_boosted": 2270,
-            "perfect_cp_boosted": 2270
+            "perfect_cp_boosted": 2270,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-07T20:00:00Z"
+                    }
+                ]
+            ]
         }
     },
     {
@@ -1875,7 +1929,16 @@
                 "Water",
                 "Psychic"
             ],
-            "perfect_boosted": 1846
+            "perfect_boosted": 1846,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-07T20:00:00Z"
+                    }
+                ]
+            ]
         }
     },
     {
@@ -2035,7 +2098,16 @@
             "types": [
                 "Water"
             ],
-            "perfect_boosted": 196
+            "perfect_boosted": 196,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-07T20:00:00Z"
+                    }
+                ]
+            ]
         }
     },
     {
@@ -2608,7 +2680,16 @@
             "types": [
                 "Water"
             ],
-            "perfect_boosted": 1230
+            "perfect_boosted": 1230,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-07T20:00:00Z"
+                    }
+                ]
+            ]
         }
     },
     {
@@ -3714,7 +3795,16 @@
             ],
             "perfect_cp": 1722,
             "perfect_boosted": 2152,
-            "perfect_cp_boosted": 2152
+            "perfect_cp_boosted": 2152,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-07T20:00:00Z"
+                    }
+                ]
+            ]
         }
     },
     {
@@ -3957,7 +4047,16 @@
                 "Rock",
                 "Dark"
             ],
-            "perfect_boosted": 2739
+            "perfect_boosted": 2739,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-07T20:00:00Z"
+                    }
+                ]
+            ]
         }
     },
     {
@@ -4045,7 +4144,8 @@
             ],
             "perfect_cp": 956,
             "perfect_boosted": 1195,
-            "perfect_cp_boosted": 1195
+            "perfect_cp_boosted": 1195,
+            "raid_level": 2
         }
     },
     {
@@ -4080,15 +4180,6 @@
             "name": "Combusken",
             "id": "256",
             "raid_level": 2,
-            "availability_rules": [
-                [
-                    {
-                        "type": "time",
-                        "start": "2010-06-07T20:00:00Z",
-                        "end": "2010-06-07T20:00:00Z"
-                    }
-                ]
-            ],
             "types": [
                 "Fire",
                 "Fighting"
@@ -4134,15 +4225,6 @@
             "perfect_cp": 1015,
             "perfect_cp_boosted": 1269,
             "shiny": true,
-            "availability_rules": [
-                [
-                    {
-                        "type": "time",
-                        "start": "2010-06-07T20:00:00Z",
-                        "end": "2010-06-07T20:00:00Z"
-                    }
-                ]
-            ],
             "types": [
                 "Water",
                 "Ground"
@@ -4363,7 +4445,8 @@
             ],
             "perfect_cp": 1333,
             "perfect_boosted": 1666,
-            "perfect_cp_boosted": 1666
+            "perfect_cp_boosted": 1666,
+            "raid_level": 4
         }
     },
     {
@@ -4405,7 +4488,8 @@
             ],
             "perfect_cp": 437,
             "perfect_boosted": 546,
-            "perfect_cp_boosted": 546
+            "perfect_cp_boosted": 546,
+            "raid_level": 1
         }
     },
     {
@@ -4448,15 +4532,6 @@
             ],
             "perfect_cp": 552,
             "perfect_boosted": 690,
-            "availability_rules": [
-                [
-                    {
-                        "type": "time",
-                        "start": "2010-06-07T20:00:00Z",
-                        "end": "2010-06-07T20:00:00Z"
-                    }
-                ]
-            ],
             "perfect_cp_boosted": 690
         }
     },
@@ -4527,7 +4602,16 @@
             ],
             "perfect_cp": 1502,
             "perfect_boosted": 1877,
-            "perfect_cp_boosted": 1877
+            "perfect_cp_boosted": 1877,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-07T20:00:00Z"
+                    }
+                ]
+            ]
         }
     },
     {
@@ -4662,7 +4746,16 @@
             ],
             "perfect_cp": 467,
             "perfect_boosted": 583,
-            "perfect_cp_boosted": 583
+            "perfect_cp_boosted": 583,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-07T20:00:00Z"
+                    }
+                ]
+            ]
         }
     },
     {
@@ -4743,16 +4836,7 @@
             ],
             "perfect_cp": 843,
             "perfect_boosted": 1054,
-            "perfect_cp_boosted": 1054,
-            "availability_rules": [
-                [
-                    {
-                        "type": "time",
-                        "start": "2010-06-07T20:00:00Z",
-                        "end": "2010-06-07T20:00:00Z"
-                    }
-                ]
-            ]
+            "perfect_cp_boosted": 1054
         }
     },
     {
@@ -4807,22 +4891,12 @@
             "raid_level": 4,
             "perfect_cp": 1714,
             "perfect_cp_boosted": 2143,
-            "availability_rules": [
-                [
-                    {
-                        "type": "time",
-                        "start": "2010-06-07T20:00:00Z",
-                        "end": "2010-06-07T20:00:00Z"
-                    }
-                ]
-            ],
             "types": [
                 "Steel",
                 "Rock"
             ],
             "perfect_boosted": 2143
-        },
-        "availability_rules": []
+        }
     },
     {
         "type": "pokemon",
@@ -4909,7 +4983,8 @@
             ],
             "perfect_cp": 1016,
             "perfect_boosted": 1270,
-            "perfect_cp_boosted": 1270
+            "perfect_cp_boosted": 1270,
+            "raid_level": 1
         }
     },
     {
@@ -4922,7 +4997,8 @@
             ],
             "perfect_cp": 968,
             "perfect_boosted": 1210,
-            "perfect_cp_boosted": 1210
+            "perfect_cp_boosted": 1210,
+            "raid_level": 1
         }
     },
     {
@@ -5028,7 +5104,16 @@
                 "Water",
                 "Dark"
             ],
-            "perfect_boosted": 1558
+            "perfect_boosted": 1558,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-07T20:00:00Z"
+                    }
+                ]
+            ]
         }
     },
     {
@@ -5043,7 +5128,16 @@
             "types": [
                 "Water"
             ],
-            "perfect_boosted": 1048
+            "perfect_boosted": 1048,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-07T20:00:00Z"
+                    }
+                ]
+            ]
         }
     },
     {
@@ -5282,7 +5376,8 @@
             ],
             "perfect_cp": 1330,
             "perfect_boosted": 1662,
-            "perfect_cp_boosted": 1662
+            "perfect_cp_boosted": 1662,
+            "raid_level": 3
         }
     },
     {
@@ -5296,7 +5391,8 @@
             ],
             "perfect_cp": 1330,
             "perfect_boosted": 1662,
-            "perfect_cp_boosted": 1662
+            "perfect_cp_boosted": 1662,
+            "raid_level": 3
         }
     },
     {
@@ -5351,7 +5447,8 @@
             ],
             "perfect_cp": 1413,
             "perfect_boosted": 1767,
-            "perfect_cp_boosted": 1767
+            "perfect_cp_boosted": 1767,
+            "raid_level": 3
         }
     },
     {
@@ -5379,15 +5476,6 @@
             "types": [
                 "Ground",
                 "Psychic"
-            ],
-            "availability_rules": [
-                [
-                    {
-                        "type": "time",
-                        "start": "2010-06-07T20:00:00Z",
-                        "end": "2010-06-07T20:00:00Z"
-                    }
-                ]
             ],
             "perfect_boosted": 1408
         }
@@ -5511,16 +5599,7 @@
             ],
             "perfect_cp": 581,
             "perfect_boosted": 727,
-            "perfect_cp_boosted": 727,
-            "availability_rules": [
-                [
-                    {
-                        "type": "time",
-                        "start": "2010-06-07T20:00:00Z",
-                        "end": "2010-06-07T20:00:00Z"
-                    }
-                ]
-            ]
+            "perfect_cp_boosted": 727
         }
     },
     {
@@ -5547,16 +5626,7 @@
             ],
             "perfect_cp": 403,
             "perfect_boosted": 504,
-            "perfect_cp_boosted": 504,
-            "availability_rules": [
-                [
-                    {
-                        "type": "time",
-                        "start": "2010-06-07T20:00:00Z",
-                        "end": "2010-06-07T20:00:00Z"
-                    }
-                ]
-            ]
+            "perfect_cp_boosted": 504
         }
     },
     {
@@ -5611,16 +5681,7 @@
             "types": [
                 "Dark"
             ],
-            "perfect_boosted": 1805,
-            "availability_rules": [
-                [
-                    {
-                        "type": "time",
-                        "start": "2010-06-07T20:00:00Z",
-                        "end": "2010-06-07T20:00:00Z"
-                    }
-                ]
-            ]
+            "perfect_boosted": 1805
         }
     },
     {
@@ -5869,7 +5930,8 @@
             ],
             "perfect_cp": 2166,
             "perfect_boosted": 2708,
-            "perfect_cp_boosted": 2708
+            "perfect_cp_boosted": 2708,
+            "raid_level": 4
         }
     },
     {
@@ -6001,15 +6063,6 @@
             "shiny": true,
             "perfect_cp": 2351,
             "perfect_cp_boosted": 2939,
-            "availability_rules": [
-                [
-                    {
-                        "type": "time",
-                        "start": "2010-06-07T20:00:00Z",
-                        "end": "2010-06-07T20:00:00Z"
-                    }
-                ]
-            ],
             "perfect_boosted": 2939
         }
     },
@@ -6019,15 +6072,6 @@
             "name": "Groudon",
             "id": "383",
             "raid_level": 5,
-            "availability_rules": [
-                [
-                    {
-                        "type": "time",
-                        "start": "2010-06-07T20:00:00Z",
-                        "end": "2010-06-07T20:00:00Z"
-                    }
-                ]
-            ],
             "types": [
                 "Ground"
             ],
@@ -6133,7 +6177,16 @@
             "types": [
                 "Electric"
             ],
-            "perfect_boosted": 625
+            "perfect_boosted": 625,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-07T20:00:00Z"
+                    }
+                ]
+            ]
         }
     },
     {
@@ -6560,7 +6613,16 @@
             "types": [
                 "Water"
             ],
-            "raid_level": 1
+            "raid_level": 1,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-07T20:00:00Z"
+                    }
+                ]
+            ]
         }
     },
     {
@@ -7399,7 +7461,16 @@
                 "Fire",
                 "Steel"
             ],
-            "raid_level": 5
+            "raid_level": 5,
+            "availability_rules": [
+                [
+                    {
+                        "type": "time",
+                        "start": "2010-06-07T20:00:00Z",
+                        "end": "2010-06-07T20:00:00Z"
+                    }
+                ]
+            ]
         }
     },
     {
