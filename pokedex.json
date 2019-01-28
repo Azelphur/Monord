@@ -7448,6 +7448,16 @@
             "types": [
                 "Water",
                 "Dragon"
+            ],
+            "raid_level":5,
+            "availability_rules":[
+                [
+                    {
+                        "type":"time",
+                        "start":"2019-01-29T21:00:00Z",
+                        "end":"2019-02-28T21:00:00Z"
+                    }
+                ]
             ]
         }
     },
