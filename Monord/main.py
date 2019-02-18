@@ -83,10 +83,8 @@ class Monord:
         """
             Add an alias for a gym
             
-            <latitude> - Latitude of the gym
-            <longitude> - Longitude of the gym
-            <ex> - Is the gym an EX location (yes/no)
-            <title> - The title of the gym
+            <title> - The new alias to add
+            <gym> - The current title or ID of the gym
         """
         es_gym, sql_gym = gym
 
@@ -115,7 +113,7 @@ class Monord:
         """
             List aliases for a gym
             
-            <title> - The title of the gym
+            <gym> - The title of the gym
         """
         es_gym, sql_gym = gym
 
@@ -133,6 +131,12 @@ class Monord:
     @checks.mod_or_permissions(manage_guild=True)
     @alias.command(name="remove", case_insensitive=True)
     async def remove_alias(self, ctx, title, *, gym: converters.GymWithSQL):
+        """
+            Remove an alias from a gym
+            
+            <title> - The new alias to add
+            <gym> - The current title or ID of the gym
+        """
         es_gym, sql_gym = gym
 
         title = title.lower()
@@ -215,6 +219,9 @@ class Monord:
             time += utils.DESPAWN_TIME
 
         # In practice this check just serves to annoy people during raid switchovers, so I'm disabling it for now.
+        #
+        # Note: Possibly you could check when the last time a pokemon dropped out of rotation, if recent, don't raise. If not recent, do raise?
+        #
         #if not isinstance(sql_pokemon, int) and utils.check_availability(sql_pokemon, sql_gym.location, time - utils.DESPAWN_TIME - utils.HATCH_TIME, sql_pokemon.raid_level) == False:
         #    await ctx.send(_("{} is not currently available in raids").format(sql_pokemon.name))
         #    return
