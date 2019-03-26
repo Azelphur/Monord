@@ -4,7 +4,7 @@ from . import utils
 from . import models
 from elasticsearch_dsl import Search
 from sqlalchemy.orm.exc import NoResultFound
-from redbot.core import commands
+from discord.ext import commands
 from geoalchemy2.shape import to_shape
 import elasticsearch
 import re
@@ -32,7 +32,7 @@ def get_es_gym_by_id(ctx, argument):
         gym = es_models.Gym.get(id=argument)
         return gym
     except elasticsearch.exceptions.NotFoundError:
-        raise commands.ConversionFailure(ctx, argument, _("Gym with id {} not found").format(argument))
+        raise commands.CommandError(_("Gym with id {} not found").format(argument))
 
 
 class Gym(commands.Converter):
@@ -52,7 +52,7 @@ class Gym(commands.Converter):
 
             region = config.get(ctx.cog.session, "region", ctx.message.channel)
             if region is None:
-                raise commands.ConversionFailure(ctx, argument, _("This guild/channel does not have a region set"))
+                raise commands.CommandError(_("This guild/channel does not have a region set"))
 
             region = to_shape(region)
             points = []
@@ -63,9 +63,9 @@ class Gym(commands.Converter):
             s.doc_type(es_models.Gym)
             response = s.execute()
             if response.hits.total == 0:
-                raise commands.ConversionFailure(ctx, argument, _("Gym \"{}\" not found").format(argument))
+                raise commands.CommandError(_("Gym \"{}\" not found").format(argument))
             return response[0]
-        except (commands.ConversionFailure, commands.BadArgument):
+        except (commands.CommandError, commands.BadArgument):
             raise
         except Exception as e:
             logger.exception("Exception in Gym converter")
@@ -79,15 +79,15 @@ class GymWithSQL(Gym):
             es_gym = await super(GymWithSQL, self).convert(ctx, argument)
             sql_gym = ctx.cog.session.query(models.Gym).get(es_gym.meta["id"])
             if sql_gym is None:
-                raise commands.ConversionFailure(ctx, argument, _("Gym \"{}\" not found").format(argument))
+                raise commands.CommandError(_("Gym \"{}\" not found").format(argument))
             return (es_gym, sql_gym)
-        except (commands.ConversionFailure, commands.BadArgument):
+        except (commands.CommandError, commands.BadArgument):
             raise
         except Exception as e:
             logger.exception("Exception in GymWithSQL converter")
             await ctx.send(_("Error in GymWithSQL converter. Check your console or logs for details"))
             raise
-            
+
 
 class Time(commands.Converter):
     def hours_minutes_to_dt(self, ctx, start_time, fmt):
@@ -139,9 +139,9 @@ class Time(commands.Converter):
             except ValueError:
                 pass
             if start_dt is None:
-                raise commands.ConversionFailure(ctx, argument, _("\"{}\" is not a known time format").format(argument))
+                raise commands.CommandError(_("\"{}\" is not a known time format").format(argument))
             return start_dt
-        except (commands.ConversionFailure, commands.BadArgument):
+        except (commands.CommandError, commands.BadArgument):
             raise
         except Exception as e:
             logger.exception("Exception in Time converter")
@@ -154,14 +154,14 @@ class Pokemon(commands.Converter):
         try:
             if argument.isnumeric():
                 if not 0 < int(argument) < 6:
-                    raise commands.ConversionFailure(ctx, argument, _("{} is not a valid egg level, must be between 1 and 5").format(argument))
+                    raise commands.CommandError(_("{} is not a valid egg level, must be between 1 and 5").format(argument))
                 return int(argument)
             s = Search(index="pokemon").query("match", name={'query': argument, 'fuzziness': 2})
             response = s.execute()
             if response.hits.total == 0:
-                raise commands.ConversionFailure(ctx, argument, _("Pokemon \"{}\" not found").format(argument))
+                raise commands.CommandError(_("Pokemon \"{}\" not found").format(argument))
             return response[0]
-        except (commands.ConversionFailure, commands.BadArgument):
+        except (commands.CommandError, commands.BadArgument):
             raise
         except Exception as e:
             logger.exception("Exception in Pokemon converter")
@@ -177,9 +177,9 @@ class PokemonWithSQL(Pokemon):
                 return (es_pokemon, es_pokemon)
             sql_pokemon = ctx.cog.session.query(models.Pokemon).get(es_pokemon.meta["id"])
             if sql_pokemon is None:
-                raise commands.ConversionFailure(ctx, argument, _("Pokemon \"{}\" not found").format(argument))
+                raise commands.CommandError(_("Pokemon \"{}\" not found").format(argument))
             return (es_pokemon, sql_pokemon)
-        except (commands.ConversionFailure, commands.BadArgument):
+        except (commands.CommandError, commands.BadArgument):
             raise
         except Exception as e:
             logger.exception("Exception in PokemonWithSQL converter")
@@ -194,14 +194,14 @@ class Raid(commands.Converter):
                 try:
                     return ctx.cog.session.query(models.Raid).get(argument)
                 except NoResultFound:
-                    raise commands.ConversionFailure(ctx, argument, _("Raid with ID \"{}\" not found").format(argument))
+                    raise commands.CommandError(_("Raid with ID \"{}\" not found").format(argument))
 
             gym = await GymWithSQL().convert(ctx, argument)
             raid = utils.get_raid_at_time(ctx.cog.session, gym[1], datetime.datetime.utcnow())
             if raid is None:
-                raise commands.ConversionFailure(ctx, argument, _("There is no raid on \"{}\".").format(gym.title))
+                raise commands.CommandError(_("There is no raid on \"{}\".").format(gym.title))
             return raid
-        except (commands.ConversionFailure, commands.BadArgument):
+        except (commands.CommandError, commands.BadArgument):
             raise
         except Exception as e:
             logger.exception("Exception in Raid converter")
@@ -231,9 +231,9 @@ class MembersWithExtra(commands.Converter):
                         skip_next = True
                     members.append((member, extra))
                 else:
-                    raise commands.ConversionFailure(ctx, argument, _("\"{}\" is not a member").format(argument))
+                    raise commands.CommandError(_("\"{}\" is not a member").format(argument))
             return members
-        except (commands.ConversionFailure, commands.BadArgument):
+        except (commands.CommandError, commands.BadArgument):
             raise
         except Exception as e:
             logger.exception("Exception in MembersWithExtra")

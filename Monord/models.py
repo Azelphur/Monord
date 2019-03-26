@@ -19,7 +19,7 @@ Base = declarative_base()
 
 class Gym(Base):
     __tablename__ = 'gym'
-    id = Column(Integer, primary_key=True)
+    id = Column(String, primary_key=True)
     title = Column(String)
     location = Column(Geometry(geometry_type='POINT', srid=4326))
     ex = Column(Boolean, default=False)
@@ -29,8 +29,8 @@ class GymAlias(Base):
     __tablename__ = 'gymalias'
     id = Column(Integer, primary_key=True)
     title = Column(String)
-    gym_id = Column(Integer, ForeignKey("gym.id"))
-    gym = relationship(Gym, foreign_keys=[gym_id])
+    gym_id = Column(String, ForeignKey("gym.id"))
+    gym = relationship(Gym)
     guild_id = Column(BigInteger)
 
 
@@ -45,6 +45,8 @@ class Pokestop(Base):
 class Pokemon(Base):
     __tablename__ = 'pokemon'
     id = Column(Integer, primary_key=True)
+    pokedex_id = Column(Integer)
+    form = Column(Integer)
     name = Column(String)
     raid_level = Column(Integer, nullable=True)
     ex = Column(Boolean, default=False)
@@ -60,8 +62,8 @@ class Raid(Base):
     id = Column(Integer, primary_key=True)
     pokemon_id = Column(Integer, ForeignKey("pokemon.id"), nullable=True)
     pokemon = relationship(Pokemon, foreign_keys=[pokemon_id])
-    gym_id = Column(Integer, ForeignKey("gym.id"))
-    gym = relationship(Gym, foreign_keys=[gym_id])
+    gym_id = Column(String, ForeignKey("gym.id"))
+    gym = relationship(Gym)
     despawn_time = Column(DateTime)
     start_time = Column(DateTime)
     level = Column(Integer, nullable=True)

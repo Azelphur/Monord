@@ -1,0 +1,8 @@
+git+https://github.com/Rapptz/discord.py@rewrite#egg=discord.py
+Red-DiscordBot
+elasticsearch_dsl
+GeoAlchemy2
+pytz
+Shapely
+psycopg2
+alembic

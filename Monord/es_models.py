@@ -1,8 +1,8 @@
 from elasticsearch_dsl.connections import connections
 from elasticsearch_dsl import DocType, Text, Keyword, GeoPoint, Boolean, Integer
+from os import environ
 
-connections.create_connection(hosts=['localhost'])
-
+connections.create_connection(hosts=[environ.get('ELASTICSEARCH_HOST') or 'localhost'])
 
 class Gym(DocType):
     name = Text(analyzer='snowball', fields={'raw': Keyword()})

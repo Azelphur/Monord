@@ -38,8 +38,9 @@ def prepare_gym_embed(gym):
     embed.set_footer(text="Gym ID {}.".format(es_gym.meta["id"]))
     return embed
 
-def add_gym(session, latitude, longitude, ex, title):
+def add_gym(session, id, latitude, longitude, ex, title):
     gym = models.Gym(
+        id=id,
         title=title,
         location=from_shape(Point(longitude, latitude), srid=4326),
         ex=ex,

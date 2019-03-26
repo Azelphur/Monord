@@ -5,7 +5,9 @@ from . import converters
 from . import config
 from . import timers
 from . import stats
-from redbot.core import checks, commands
+from . import webhook
+import asyncio
+from discord.ext import commands
 from elasticsearch import Elasticsearch
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
@@ -20,15 +22,16 @@ import datetime
 import pytz
 import re
 import gettext
+from os import environ
 _ = gettext.gettext
 
-class Monord:
+class Monord(commands.Cog):
     """
         Find gyms, report raids, get notifications, and more!
     """
     def __init__(self, bot):
         self.bot = bot
-        engine = create_engine('postgresql://pokemongo:pokemongo@localhost/pokemongo', connect_args={"options": "-c timezone=utc"})
+        engine = create_engine(environ.get('POSTGRES_CS'), connect_args={"options": "-c timezone=utc"})
         models.Base.metadata.create_all(engine)
         self.session = sessionmaker(bind=engine)()
         self.raid_timers_task = None
@@ -37,6 +40,11 @@ class Monord:
         self.embed_time_stale = False
         timers.raid_reschedule(self)
         timers.embed_reschedule(self)
+        self.webhook = webhook.Webhook(self.bot)
+        self.bot.loop.create_task(self.webhook.webserver())
+
+    def __unload(self):
+        asyncio.ensure_future(self.webhook.site.stop())
 
     @commands.group(name="gym", invoke_without_command=True, case_insensitive=True)
     async def gym(self, ctx):
@@ -49,27 +57,27 @@ class Monord:
     async def find(self, ctx, *, gym: converters.GymWithSQL):
         """
             Find a gym, and show its location
-            
+
             <gym> - The title or ID of the gym
         """
         embed = utils.prepare_gym_embed(gym)
         await ctx.send(embed=embed)
 
-    @checks.mod_or_permissions(manage_guild=True)
+    @commands.has_permissions(manage_guild=True)
     @gym.command(case_insensitive=True)
-    async def add(self, ctx, latitude: float, longitude: float, ex: bool, *, title: str):
+    async def add(self, ctx, id: str, latitude: float, longitude: float, ex: bool, *, title: str):
         """
             Add a gym to the database
-            
+
             <latitude> - Latitude of the gym
             <longitude> - Longitude of the gym
             <ex> - Is the gym an EX location (yes/no)
             <title> - The title of the gym
         """
-        gym, gymdoc = utils.add_gym(self.session, latitude, longitude, ex, title)
+        gym, gymdoc = utils.add_gym(self.session, id, latitude, longitude, ex, title)
         await ctx.send("Gym created", embed=utils.prepare_gym_embed((gymdoc, gym)))
 
-    @checks.mod_or_permissions(manage_guild=True)
+    @commands.has_permissions(manage_guild=True)
     @gym.group(name="alias", invoke_without_command=True, case_insensitive=True)
     async def alias(self, ctx):
         """
@@ -77,12 +85,12 @@ class Monord:
         """
         await ctx.send_help()
 
-    @checks.mod_or_permissions(manage_guild=True)
+    @commands.has_permissions(manage_guild=True)
     @alias.command(name="add", case_insensitive=True)
     async def add_alias(self, ctx, title: str, *, gym: converters.GymWithSQL):
         """
             Add an alias for a gym
-            
+
             <title> - The new alias to add
             <gym> - The current title or ID of the gym
         """
@@ -112,7 +120,7 @@ class Monord:
     async def list_(self, ctx, *, gym: converters.GymWithSQL):
         """
             List aliases for a gym
-            
+
             <gym> - The title of the gym
         """
         es_gym, sql_gym = gym
@@ -128,12 +136,12 @@ class Monord:
             alias_list.append(alias.title)
         await ctx.send(_("{} has the following aliases: {}").format(sql_gym.title, ", ".join(alias_list)))
 
-    @checks.mod_or_permissions(manage_guild=True)
+    @commands.has_permissions(manage_guild=True)
     @alias.command(name="remove", case_insensitive=True)
     async def remove_alias(self, ctx, title, *, gym: converters.GymWithSQL):
         """
             Remove an alias from a gym
-            
+
             <title> - The new alias to add
             <gym> - The current title or ID of the gym
         """
@@ -152,12 +160,12 @@ class Monord:
         alias.delete()
         await ctx.send(_("Alias \"{}\" on {} removed").format(title, sql_gym.title))
 
-    @checks.mod_or_permissions(manage_guild=True)
+    @commands.has_permissions(manage_guild=True)
     @gym.command(case_insensitive=True)
     async def remove(self, ctx, *, gym: converters.Gym):
         """
             Remove a gym from the database
-            
+
             <gym> - The title or ID of the gym
         """
         sql_gym = self.session.query(models.Gym).filter_by(id=gym.meta["id"])
@@ -166,7 +174,6 @@ class Monord:
         es_models.Gym.get(id=gym.meta["id"]).delete()
         await ctx.send(_("Gym removed"))
 
-    @checks.mod_or_permissions(manage_guild=True)
     @gym.group(name="set", invoke_without_command=True, case_insensitive=True)
     async def set_(self, ctx):
         """
@@ -174,7 +181,7 @@ class Monord:
         """
         await ctx.send_help()
 
-    @checks.mod_or_permissions(manage_guild=True)
+    @commands.has_permissions(manage_guild=True)
     @set_.group(name="ex", case_insensitive=True)
     async def gym_set_ex(self, ctx, ex: bool, *, gym: converters.GymWithSQL):
         es_gym, sql_gym = gym
@@ -183,7 +190,7 @@ class Monord:
         self.session.commit()
         await ctx.tick()
 
-    @checks.mod_or_permissions(manage_guild=True)
+    @commands.has_permissions(manage_guild=True)
     @set_.group(name="title")
     async def gym_set_title(self, ctx, title: str, *, gym: converters.GymWithSQL):
         es_gym, sql_gym = gym
@@ -208,7 +215,7 @@ class Monord:
     async def report(self, ctx, time: converters.Time, pokemon: converters.PokemonWithSQL, *, gym: converters.GymWithSQL):
         """
             Report a raid
-            
+
             <time> Can be minutes left on the timer, or a HH:MM time
             <pokemon> Either the name of the pokemon, or the eggs level
             <gym> The title of the gym
@@ -242,7 +249,7 @@ class Monord:
     async def ex(self, ctx, time: converters.Time, *, gym: converters.GymWithSQL):
         """
             Report an EX raid
-            
+
             <time> Start time of the EX raid in YYYY-MM-DD.HH:MM format
             <gym> The title of the gym
         """
@@ -322,7 +329,7 @@ class Monord:
     async def start(self, ctx, time: converters.Time, *, raid: converters.Raid):
         """
             Set the start time of a raid
-            
+
             <time> - Can be minutes (in the future), or a HH:MM time
             <raid> Either the title of a gym, or a raid ID
         """
@@ -342,7 +349,7 @@ class Monord:
     async def despawn(self, ctx, time: converters.Time, *, raid: converters.Raid):
         """
             Set the despawn time of a raid
-            
+
             <time> - Can be minutes (in the future), or a HH:MM time
             <raid> Either the title of a gym, or a raid ID
         """
@@ -384,7 +391,7 @@ class Monord:
     async def pokemon(self, ctx, pokemon: converters.PokemonWithSQL, *, raid: converters.Raid):
         """
             Set the pokemon on a raid.
-            
+
             <pokemon> - The name of the pokemon
             <raid> Either the title of a gym, or a raid ID
         """
@@ -399,7 +406,7 @@ class Monord:
         await utils.update_raid(self, raid)
         await ctx.tick()
 
-    @checks.mod_or_permissions(manage_guild=True)
+    @commands.has_permissions(manage_guild=True)
     @commands.group(name="config", invoke_without_command=True, case_insensitive=True)
     async def config(self, ctx):
         """
@@ -438,12 +445,12 @@ class Monord:
         except config.ValidationError as e:
             await ctx.send(e)
 
-    @checks.mod_or_permissions(manage_guild=True)
+    @commands.has_permissions(manage_guild=True)
     @config.command(case_insensitive=True)
     async def channel(self, ctx, key: str = None, value: str = None, channel: discord.TextChannel = None):
         """
             Sets config setting for a channel
-            
+
             <channel> a discord channel
             <key> the key to set, or nothing to see a list of keys
             <value> the value to set, or nothing to see the value of <key>
@@ -452,12 +459,12 @@ class Monord:
             channel = ctx.message.channel
         await self.set_config(ctx, True, key, value, channel)
 
-    @checks.mod_or_permissions(manage_guild=True)
+    @commands.has_permissions(manage_guild=True)
     @config.command(case_insensitive=True)
     async def guild(self, ctx, key: str = None, *, value: str = None):
         """
             Sets config setting for this guild
-            
+
             <key> the key to set, or nothing to see a list of keys
             <value> the value to set, or nothing to see the value of <key>
         """
@@ -474,7 +481,7 @@ class Monord:
     async def pokemon_subscribe(self, ctx, *, pokemon: converters.Pokemon):
         """
             Subscribe to notifications for a pokemon
-            
+
             <pokemon> the name of the pokemon
         """
         await utils.subscribe_with_message(ctx, ctx.message.author, pokemon.name)
@@ -504,7 +511,7 @@ class Monord:
     async def pokemon_unsubscribe(self, ctx, pokemon: converters.Pokemon):
         """
             Unsubscribe from notifications for a pokemon
-            
+
             <pokemon> the name of the pokemon
         """
         await utils.unsubscribe_with_message(ctx, ctx.message.author, pokemon.name)
@@ -589,9 +596,9 @@ class Monord:
             member_names.append(member.display_name)
         await ctx.send(_("You are in a party with: {}").format(", ".join(member_names)))
 
-    @checks.is_owner()
+    @commands.has_permissions(manage_guild=True)
     @commands.command(case_insensitive=True)
-    async def loaddata(self, ctx, *, csv_path="pokemongodata.json"):
+    async def loaddata(self, ctx, *, csv_path):
         """
             Load pokemon and gyms from json file
         """
@@ -659,7 +666,7 @@ class Monord:
         if member == self.bot.user:
             # Ignore reactions that we add
             return
-        
+
         if message.author != self.bot.user:
             # Ignore reactions on any messages that weren't created by us
             return
@@ -740,9 +747,8 @@ class Monord:
             except discord.errors.NotFound:
                 pass
 
-        
+
         self.session.query(models.RaidGoing).filter_by(raid=deleted_embed.raid).delete()
         self.session.query(models.Embed).filter_by(raid=deleted_embed.raid).delete()
         self.session.query(models.Raid).filter_by(id=deleted_embed.raid_id).delete()
         timers.raid_reschedule(self)
-

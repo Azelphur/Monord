@@ -1,0 +1,36 @@
+version: "2"
+services:
+  monord:
+    build: .
+    container_name: monord
+    restart: unless-stopped
+    env_file:
+      - environment.env
+    environment:
+      ELASTICSEARCH_HOST: monord_es
+      POSTGRES_CS: "postgresql://monord:monord@monord_db/monord"
+    links:
+      - monord_es
+      - monord_db
+    depends_on:
+      - monord_es
+      - monord_db
+    ports:
+      - 8999:8999
+
+  monord_es:
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.3.2
+    container_name: monord_es
+    environment:
+      discovery.type: single-node
+
+  monord_db:
+    container_name: monord_db
+    image: kartoza/postgis
+    restart: always
+    volumes:
+      - /opt/monord_db:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=monord
+      - POSTGRES_DB=monord
+      - POSTGRES_USER=monord
