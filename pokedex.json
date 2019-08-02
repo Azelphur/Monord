@@ -5909,6 +5909,7 @@
         "data": {
             "name": "Rayquaza",
             "id": "384",
+            "shiny": true,
             "raid_level": 5,
             "availability_rules": [
                 [
@@ -5916,6 +5917,11 @@
                         "type": "time",
                         "start": "2019-03-16T00:00:00Z",
                         "end": "2019-03-17T23:00:00Z"
+                    },
+                    {
+                        "type": "time",
+                        "start": "2019-07-314T20:00:00Z",
+                        "end": "2019-09-01T20:00:00Z"
                     }
                 ]
             ],
