@@ -1,5 +1,4 @@
-git+https://github.com/Rapptz/discord.py@rewrite#egg=discord.py
-Red-DiscordBot
+discord.py>=1.0.0
 elasticsearch_dsl
 GeoAlchemy2
 pytz
