@@ -110,6 +110,14 @@ async def wait_for_tasks(tasks):
     for task in done:
         task.result()
 
+def get_pokemon_image_url(dex, form=0, shiny=False):
+    DOMAIN = "https://www.trainerdex.co.uk/"
+    BASE = "pokemon/pokemon_icon_{dex:03}_{form:02}.png".format(dex=dex, form=form)
+    BASE_SHINY = "pokemon/pokemon_icon_{dex:03}_{form:02}_shiny.png".format(dex=dex, form=form)
+    if shiny and random.randrange(1,11) == 1:
+        return DOMAIN+BASE_SHINY
+    return DOMAIN+SHINY
+        
 def format_raid(cog, channel, raid):
     title = raid.gym.title
     title = "{} (#{})".format(title, raid.id)
@@ -137,10 +145,7 @@ def format_raid(cog, channel, raid):
         description = _("**Level**: {}").format(raid.level) + "\n"
         image = "https://www.trainerdex.co.uk/egg/{}.png".format(raid.level)
     else:
-        if raid.pokemon.shiny and random.randrange(1,26) == 1 and raid.pokemon.id not in (114,132):
-            image = "https://www.trainerdex.co.uk/pokemon/{}_shiny.png".format(str(raid.pokemon.id).zfill(3))
-        else:
-            image = "https://www.trainerdex.co.uk/pokemon/{}.png".format(str(raid.pokemon.id).zfill(3))
+        image = get_pokemon_image_url(raid.pokemon.id, 0, raid.pokemon.shiny)
         name = raid.pokemon.name
         if raid.pokemon.shiny:
             name += ":sparkles:"
