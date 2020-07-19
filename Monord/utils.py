@@ -116,7 +116,7 @@ def get_pokemon_image_url(dex, form=0, shiny=False):
     BASE_SHINY = "pokemon/pokemon_icon_{dex:03}_{form:02}_shiny.png".format(dex=dex, form=form)
     if shiny and random.randrange(1,11) == 1:
         return DOMAIN+BASE_SHINY
-    return DOMAIN+SHINY
+    return DOMAIN+BASE
         
 def format_raid(cog, channel, raid):
     title = raid.gym.title
